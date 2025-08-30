@@ -1,0 +1,379 @@
+import React, { useMemo, useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, MapPin, Linkedin, Facebook, Calendar, BookOpen, Award, Rocket, Target, FileText, Brain, Globe, Landmark, CheckCircle2, LineChart, Phone, ShieldCheck } from "lucide-react";
+
+// ──────────────────────────────────────────────────────────────────────────────
+// MENTORA • Personal Brand + Project Showcase (Single-file React Component)
+// - TailwindCSS for styling
+// - Framer Motion for subtle animations
+// - No external component libraries required
+// - Bilingual (English / Vietnamese) toggle
+// - Designed for printing / exporting as PDF as well
+// ──────────────────────────────────────────────────────────────────────────────
+
+// i18n dictionary (concise)
+const dict = {
+  vi: {
+    brand: "Mentora",
+    role: "Nhà nghiên cứu giáo dục AI–STEM | Nhà sáng lập Mentora",
+    heroTitle: "Đặng Minh Tuấn",
+    heroTag: "Xây hệ sinh thái AI–STEM vì một nền giáo dục bình đẳng & bền vững",
+    nav: {
+      profile: "Hồ sơ",
+      projects: "Dự án",
+      roadmap: "Lộ trình Mỹ 2–3 năm",
+      publications: "Công bố",
+      funding: "Gọi vốn",
+      contact: "Liên hệ",
+    },
+    profile: {
+      about: "Hơn 15 năm cố vấn học sinh đạt học bổng quốc tế, đào tạo giáo viên & phát triển mô hình 5C-AI. Tầm nhìn: kết nối Việt Nam – Hoa Kỳ qua hệ sinh thái AI–STEM & mạng lưới mentor toàn cầu.",
+      stats: [
+        { label: "Năm kinh nghiệm", value: "15+" },
+        { label: "Học viên/giáo viên", value: "3,000+" },
+        { label: "Bài báo quốc tế", value: "Q1/Q2" },
+        { label: "Study Hubs (VN)", value: "34" },
+      ],
+      ctas: {
+        resume: "Tải CV",
+        bookCall: "Đặt lịch trao đổi",
+      },
+    },
+    projTitle: "Dự án trọng điểm",
+    projects: [
+      {
+        icon: <Brain className="w-6 h-6" />,
+        title: "5C-AI Competency Framework",
+        desc: "Mô hình năng lực tích hợp AI dành cho giáo viên & học sinh; bài báo, workshop & khóa học bằng tiếng Anh.",
+        tags: ["Pedagogy", "AI", "Teacher Training"],
+      },
+      {
+        icon: <Globe className="w-6 h-6" />,
+        title: "AI-STEM Mentoring Hub",
+        desc: "Nền tảng cố vấn AI + mentor con người cho học sinh gốc Á tại Mỹ; mô hình subscription & chứng chỉ.",
+        tags: ["EdTech", "Mentoring", "Subscription"],
+      },
+      {
+        icon: <Landmark className="w-6 h-6" />,
+        title: "Mentora – 34 Study Hubs",
+        desc: "Mạng lưới trung tâm học tập tại 34 tỉnh thành; không gian tự học – mentor – AI-STEM; hướng đến nhượng quyền.",
+        tags: ["Franchise", "Impact", "Vietnam"],
+      },
+      {
+        icon: <Award className="w-6 h-6" />,
+        title: "MEI Foundation Scholarships",
+        desc: "Quỹ học bổng & chương trình Toán/Science song ngữ cho học sinh Việt Nam – cầu nối đến Hoa Kỳ.",
+        tags: ["Scholarship", "Equity", "Bilingual"],
+      },
+    ],
+    roadmapTitle: "Lộ trình phát triển tại Hoa Kỳ (24–36 tháng)",
+    roadmap: [
+      {
+        period: "Quý 4/2025 – Q2/2026",
+        items: [
+          "Hoàn tất hồ sơ EB2-NIW / visiting scholar",
+          "Xuất bản ≥ 2 bài Q1 bằng tiếng Anh; trình bày AERA/NARST",
+          "Thiết kế syllabus ‘AI–STEM Integration’ & dạy thử (adjunct)",
+        ],
+      },
+      {
+        period: "Q3/2026 – Q2/2027",
+        items: [
+          "Mở AI-STEM Mentoring Hub (pilot tại CA/TX/MA)",
+          "Gọi vốn seed $100k; hợp tác 2 charter/private schools",
+          "Ra mắt khóa 5C-AI cho pre-service teachers (EN)"
+        ],
+      },
+      {
+        period: "Q3/2027 – Q4/2027",
+        items: [
+          "Mở rộng sang 3 bang; 1 grant NSF/Spencer",
+          "Mentora VN ↔ USA: trại hè AI–STEM & trao đổi giáo viên",
+          "Doanh thu bền vững: 500 paid users + 2 hợp đồng B2B",
+        ],
+      },
+    ],
+    pubsTitle: "Công bố – học thuật",
+    pubsHint: "(điền DOI/Google Scholar liên kết sau)",
+    fundingTitle: "Gọi vốn & hợp tác",
+    fundingCopy: "Đang tìm nhà đầu tư thiên thần/đối tác chiến lược cho AI-STEM Mentoring Hub & Mentora (VN↔US). Nhu cầu: $100k seed cho phát triển nền tảng, nội dung song ngữ & go-to-market.",
+    contactTitle: "Kết nối",
+    footer: "© Mentora – Dẫn đường tư duy, gieo mầm tương lai",
+  },
+  en: {
+    brand: "Mentora",
+    role: "AI–STEM Education Researcher | Founder of Mentora",
+    heroTitle: "Tuan Dang, Ph.D.",
+    heroTag: "Building AI–STEM ecosystems for equity & sustainable learning",
+    nav: {
+      profile: "Profile",
+      projects: "Projects",
+      roadmap: "US Roadmap (2–3y)",
+      publications: "Publications",
+      funding: "Funding",
+      contact: "Contact",
+    },
+    profile: {
+      about: "15+ years mentoring scholarship winners and training teachers; author of the 5C-AI model. Vision: connect Vietnam & the U.S. through AI–STEM ecosystems and a global mentor network.",
+      stats: [
+        { label: "Years Experience", value: "15+" },
+        { label: "Learners/Teachers", value: "3,000+" },
+        { label: "International Papers", value: "Q1/Q2" },
+        { label: "Study Hubs (VN)", value: "34" },
+      ],
+      ctas: {
+        resume: "Download CV",
+        bookCall: "Book a Call",
+      },
+    },
+    projTitle: "Flagship Projects",
+    projects: [
+      {
+        icon: <Brain className="w-6 h-6" />,
+        title: "5C-AI Competency Framework",
+        desc: "AI-integrated competency model for teachers & students; papers, workshops, and an English course.",
+        tags: ["Pedagogy", "AI", "Teacher Training"],
+      },
+      {
+        icon: <Globe className="w-6 h-6" />,
+        title: "AI-STEM Mentoring Hub",
+        desc: "AI + human mentorship for Asian-origin students in the U.S.; subscription & certification model.",
+        tags: ["EdTech", "Mentoring", "Subscription"],
+      },
+      {
+        icon: <Landmark className="w-6 h-6" />,
+        title: "Mentora – 34 Study Hubs",
+        desc: "A 34-province network for self-study, mentoring, and AI–STEM; built for franchising & impact.",
+        tags: ["Franchise", "Impact", "Vietnam"],
+      },
+      {
+        icon: <Award className="w-6 h-6" />,
+        title: "MEI Foundation Scholarships",
+        desc: "Scholarships & bilingual Math/Science programs connecting Vietnam and the U.S.",
+        tags: ["Scholarship", "Equity", "Bilingual"],
+      },
+    ],
+    roadmapTitle: "US Development Roadmap (24–36 months)",
+    roadmap: [
+      {
+        period: "Q4/2025 – Q2/2026",
+        items: [
+          "Complete EB2-NIW / visiting scholar path",
+          "Publish ≥ 2 Q1 English papers; present at AERA/NARST",
+          "Design ‘AI–STEM Integration’ syllabus & teach (adjunct)",
+        ],
+      },
+      {
+        period: "Q3/2026 – Q2/2027",
+        items: [
+          "Launch AI-STEM Mentoring Hub (pilot in CA/TX/MA)",
+          "Raise $100k seed; partner with 2 charter/private schools",
+          "Release 5C-AI course for pre-service teachers (EN)"
+        ],
+      },
+      {
+        period: "Q3/2027 – Q4/2027",
+        items: [
+          "Expand to 3 states; win 1 NSF/Spencer grant",
+          "Mentora VN ↔ US: AI–STEM summer camps & teacher exchange",
+          "Sustainable revenue: 500 paid users + 2 B2B contracts",
+        ],
+      },
+    ],
+    pubsTitle: "Publications",
+    pubsHint: "(add DOI/Google Scholar links later)",
+    fundingTitle: "Funding & Partnerships",
+    fundingCopy: "Seeking angel/strategic partners for the AI-STEM Mentoring Hub & Mentora (VN↔US). Ask: $100k seed for platform, bilingual content, and GTM.",
+    contactTitle: "Contact",
+    footer: "© Mentora – Where mentors create impact",
+  },
+};
+
+// Tiny UI helpers
+const Section: React.FC<{ id?: string; title: string; children: React.ReactNode }> = ({ id, title, children }) => (
+  <section id={id} className="w-full max-w-6xl mx-auto px-4 md:px-6 py-10">
+    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6 text-slate-800 dark:text-slate-100">{title}</h2>
+    {children}
+  </section>
+);
+
+const Pill: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <span className="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-3 py-1 text-xs font-medium mr-2 mb-2">{children}</span>
+);
+
+const Card: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/60 backdrop-blur p-5 shadow-sm hover:shadow-md transition-shadow">{children}</div>
+);
+
+export default function MentoraSite() {
+  const [lang, setLang] = useState<'vi' | 'en'>("vi");
+  const t = useMemo(() => dict[lang], [lang]);
+  const [dark, setDark] = useState(false);
+
+  return (
+    <div className={dark ? "dark" : ""}>
+      <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 text-slate-800 dark:text-slate-100 font-inter">
+        {/* NAV */}
+        <div className="sticky top-0 z-50 backdrop-blur bg-white/60 dark:bg-slate-900/60 border-b border-slate-200/70 dark:border-slate-800">
+          <nav className="max-w-6xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-indigo-600 text-white font-bold">M</span>
+              <span className="font-semibold tracking-tight">{t.brand}</span>
+              <span className="hidden md:inline text-slate-400">• {t.role}</span>
+            </div>
+            <div className="hidden md:flex items-center gap-6 text-sm">
+              <a href="#profile" className="hover:text-indigo-600">{t.nav.profile}</a>
+              <a href="#projects" className="hover:text-indigo-600">{t.nav.projects}</a>
+              <a href="#roadmap" className="hover:text-indigo-600">{t.nav.roadmap}</a>
+              <a href="#publications" className="hover:text-indigo-600">{t.nav.publications}</a>
+              <a href="#funding" className="hover:text-indigo-600">{t.nav.funding}</a>
+              <a href="#contact" className="hover:text-indigo-600">{t.nav.contact}</a>
+            </div>
+            <div className="flex items-center gap-2">
+              <button onClick={() => setLang(lang === 'vi' ? 'en' : 'vi')} className="text-xs px-3 py-1 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900">
+                {lang === 'vi' ? 'EN' : 'VI'}
+              </button>
+              <button onClick={() => setDark(!dark)} className="text-xs px-3 py-1 rounded-lg border border-slate-300 dark:border-slate-700">{dark ? '☀️' : '🌙'}</button>
+            </div>
+          </nav>
+        </div>
+
+        {/* HERO */}
+        <header className="w-full max-w-6xl mx-auto px-4 md:px-6 py-14">
+          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">{t.heroTitle}</h1>
+                <p className="mt-3 text-lg text-slate-600 dark:text-slate-300">{t.heroTag}</p>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <a href="#contact" className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white"><Rocket className="w-4 h-4"/> {lang==='vi' ? 'Kết nối ngay' : 'Connect Now'}</a>
+                  <a href="#funding" className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700"><Target className="w-4 h-4"/> {lang==='vi' ? 'Gọi vốn' : 'Funding'}</a>
+                </div>
+                <div className="mt-5 flex items-center gap-4 text-sm text-slate-500">
+                  <span className="inline-flex items-center gap-1"><MapPin className="w-4 h-4"/> VN ↔ USA</span>
+                  <span className="inline-flex items-center gap-1"><Calendar className="w-4 h-4"/> 2025–2027</span>
+                </div>
+              </div>
+              <Card>
+                <div className="grid grid-cols-2 gap-4">
+                  {t.profile.stats.map((s, i) => (
+                    <div key={i} className="rounded-xl bg-slate-50 dark:bg-slate-800 p-4">
+                      <div className="text-2xl font-bold text-indigo-600">{s.value}</div>
+                      <div className="text-xs uppercase tracking-wide text-slate-500">{s.label}</div>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm text-slate-600 dark:text-slate-300">{t.profile.about}</p>
+                <div className="mt-4 flex gap-3">
+                  <a href="#" className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700"><FileText className="w-4 h-4"/> {t.profile.ctas.resume}</a>
+                  <a href="#contact" className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-600 text-white"><Phone className="w-4 h-4"/> {t.profile.ctas.bookCall}</a>
+                </div>
+              </Card>
+            </div>
+          </motion.div>
+        </header>
+
+        {/* PROJECTS */}
+        <Section id="projects" title={t.projTitle}>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {t.projects.map((p, i) => (
+              <Card key={i}>
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300">{p.icon}</div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 dark:text-white">{p.title}</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">{p.desc}</p>
+                    <div className="mt-3">{p.tags.map((t, idx) => <Pill key={idx}>{t}</Pill>)}</div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </Section>
+
+        {/* ROADMAP */}
+        <Section id="roadmap" title={t.roadmapTitle}>
+          <div className="relative pl-6 before:content-[''] before:absolute before:left-2 before:top-0 before:bottom-0 before:w-0.5 before:bg-slate-200 dark:before:bg-slate-700">
+            {t.roadmap.map((block, i) => (
+              <div key={i} className="mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-4 h-4 rounded-full bg-indigo-600"/>
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{block.period}</h3>
+                </div>
+                <ul className="mt-3 ml-7 list-disc text-sm text-slate-600 dark:text-slate-300">
+                  {block.items.map((it, j) => (
+                    <li key={j} className="mb-1 flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5"/> <span>{it}</span></li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        {/* PUBLICATIONS */}
+        <Section id="publications" title={`${t.pubsTitle} ${t.pubsHint}`}> 
+          <div className="grid md:grid-cols-2 gap-6">
+            {[1,2,3,4].map((i)=> (
+              <Card key={i}>
+                <div className="flex items-start gap-3">
+                  <BookOpen className="w-5 h-5 text-indigo-600"/>
+                  <div>
+                    <h4 className="font-semibold">[Paper/Chapter Title] – 20{i+24}</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">Journal / Conference • DOI: _link_ • Co-authors</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </Section>
+
+        {/* FUNDING */}
+        <Section id="funding" title={t.fundingTitle}>
+          <Card>
+            <div className="grid md:grid-cols-3 gap-6 items-center">
+              <div className="md:col-span-2">
+                <p className="text-slate-700 dark:text-slate-200">{t.fundingCopy}</p>
+                <div className="mt-4 grid sm:grid-cols-3 gap-3 text-sm">
+                  <div className="rounded-xl bg-slate-50 dark:bg-slate-800 p-4 flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-600"/> Equity & Access</div>
+                  <div className="rounded-xl bg-slate-50 dark:bg-slate-800 p-4 flex items-center gap-2"><LineChart className="w-4 h-4 text-indigo-600"/> Sustainable Revenue</div>
+                  <div className="rounded-xl bg-slate-50 dark:bg-slate-800 p-4 flex items-center gap-2"><Award className="w-4 h-4 text-amber-500"/> Research-backed</div>
+                </div>
+              </div>
+              <div className="md:pl-4">
+                <a href="#contact" className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white"><Rocket className="w-4 h-4"/> {lang==='vi' ? 'Liên hệ đầu tư' : 'Invest / Partner'}</a>
+              </div>
+            </div>
+          </Card>
+        </Section>
+
+        {/* CONTACT */}
+        <Section id="contact" title={t.contactTitle}>
+          <Card>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">{lang==='vi' ? "Hãy để lại lời nhắn. Em sẽ phản hồi trong 24h làm việc." : "Leave a note and we’ll get back within 1 business day."}</p>
+                <form className="grid gap-3">
+                  <input placeholder={lang==='vi' ? 'Họ và tên' : 'Full name'} className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white/60 dark:bg-slate-900/60 px-3 py-2"/>
+                  <input placeholder="Email" type="email" className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white/60 dark:bg-slate-900/60 px-3 py-2"/>
+                  <textarea placeholder={lang==='vi' ? 'Nội dung' : 'Message'} rows={4} className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white/60 dark:bg-slate-900/60 px-3 py-2"/>
+                  <button type="button" className="justify-self-start inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 text-white"><Mail className="w-4 h-4"/> {lang==='vi' ? 'Gửi' : 'Send'}</button>
+                </form>
+              </div>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300"><Mail className="w-4 h-4"/> team@ai-stemhub.org</div>
+                <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300"><Linkedin className="w-4 h-4"/> linkedin.com/in/tuan-dang</div>
+                <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300"><Facebook className="w-4 h-4"/> facebook.com/dangminhtuan.edu</div>
+                <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300"><MapPin className="w-4 h-4"/> Vietnam ↔ United States</div>
+              </div>
+            </div>
+          </Card>
+        </Section>
+
+        {/* FOOTER */}
+        <footer className="py-10 text-center text-sm text-slate-500">
+          {t.footer}
+        </footer>
+      </main>
+    </div>
+  );
+}
