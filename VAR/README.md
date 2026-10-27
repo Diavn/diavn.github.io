@@ -1,25 +1,13 @@
-# Vietnam Academic Retreat (VAR) — Website
+# VAR — source package update record (2026-10-27)
 
-Bilingual landing page for **Vietnam Academic Retreat – Green Research & Writing**.
+The uploaded ZIP `VAR_Green_Research_Writing_Website_V1(1).zip` was inspected and includes:
+- `VAR_Website/index.html` (38,069 bytes)
+- `VAR_Website/assets/hero.png` (3,203,402 bytes)
+- `VAR_Website/assets/landscape.jpg` (373,395 bytes)
+- `VAR_Website/README.txt` (793 bytes)
 
-- Vietnamese default; English toggle.
-- Academic Core programme, audience screening and V0–V2 outputs.
-- Viet Hai / Cat Ba nature and optional exploration.
-- Founder: Dr. Tuan Minh Dang.
-- Contact: minhtuan.dang@gmail.com.
-- Fees are not publicly displayed.
-- Registration form composes an email using the visitor's email application; **there is no backend or stored submission**.
-- The hero scenery is a CSS/SVG illustration, not a photograph of a completed facility.
-- This is an independent pilot concept, not affiliated with or endorsed by UNESCO.
+**Important**: This GitHub folder currently contains a previously created, self-contained adapted bilingual version of the site, **not** a byte-for-byte copy of the uploaded ZIP. The original photos have **not** been uploaded, because the connected GitHub text-update interface cannot access the uploaded ZIP’s binary bytes. Do not treat this entry as evidence of a complete migration.
 
-## Preview
+The original website uses two assets at `assets/hero.png` and `assets/landscape.jpg` and has a mailto enquiry form. To finish exact migration, add both assets and replace `index.html` with the ZIP's original `VAR_Website/index.html` and verify that image references resolve. No registration backend is provided.
 
-If GitHub Pages is enabled for `Diavn/diavn.github.io`, the expected path is `https://diavn.github.io/VAR/`. **Deployment status must be checked separately**.
-
-## Source fidelity
-
-This repository version is a **self-contained adaptation** of the earlier VAR Website V1.0 draft: all HTML/CSS/JS is embedded in `index.html`. The original large PNG concept illustration from the ZIP is **not yet uploaded**, and is replaced here by a lightweight inline SVG landscape.
-
-## Before public launch
-
-Verify travel/conservation permissions, partner safety, accessibility, privacy policy, appropriate secure form backend and active hosting. No bookings or dates are confirmed.
+Contact: minhtuan.dang@gmail.com
