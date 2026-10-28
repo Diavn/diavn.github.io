@@ -1,0 +1,42 @@
+name: Import licensed VAR photographs
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/var-photographs.yml'
+permissions:
+  contents: write
+jobs:
+  import-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Commons images and validate
+        run: |
+          set -euo pipefail
+          mkdir -p VAR/assets
+          python3 - <<'PY'
+          import urllib.request,urllib.parse,time
+          photos = {
+            "viet-hai-fields.jpg":"Việt Hải, Cát Bà Island, Vietnam, 20240131 1211 4613.jpg",
+            "viet-hai-road.jpg":"Road to Việt Hải, Cát Bà Island, Vietnam, 20240131 1323 4619.jpg",
+            "cat-ba-cycling.jpg":"Cat Ba Island 2025.jpg",
+            "lan-ha-bay.jpg":"Vịnh Lan Hạ - Quần đảo Cát Bà.jpg",
+          }
+          for target, source in photos.items():
+            url="https://commons.wikimedia.org/wiki/Special:Redirect/file/"+urllib.parse.quote(source)
+            req=urllib.request.Request(url,headers={"User-Agent":"VAR-website-image-import/1.0 (educational website; attribution in page)"})
+            with urllib.request.urlopen(req,timeout=90) as resp:
+              data=resp.read()
+            if not data.startswith(bytes.fromhex("ffd8")): raise RuntimeError("Not JPEG: "+source)
+            with open("VAR/assets/"+target,"wb") as f:f.write(data)
+            print(target,len(data))
+            time.sleep(1)
+          PY
+      - name: Commit photographs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add VAR/assets/*.jpg
+          git diff --cached --quiet || git commit -m "Host properly attributed real Cat Ba photos"
+          git push
