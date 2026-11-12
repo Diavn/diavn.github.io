@@ -6,7 +6,7 @@ Website tiếng Việt về phát triển tài năng và giáo dục trường T
 
 ## Nội dung
 - Tầm nhìn và các nguyên tắc V-TALENT 2045
-- Khám phá 11 môn chuyên và các hướng phát triển
+- Khám phá 12 môn chuyên (bổ sung chuyên Nga) và các hướng phát triển
 - Lộ trình Toán – Vật lý theo 6 học kỳ lớp 10–12
 - 10 nhóm công nghệ chiến lược và học tập liên ngành
 - Kho học liệu có dẫn nguồn
