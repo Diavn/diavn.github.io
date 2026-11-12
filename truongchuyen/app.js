@@ -10,7 +10,8 @@ const subjects=[
 ["Địa lý","social","◎","Không gian, môi trường, dân cư, địa lý kinh tế và GIS.","Quy hoạch · môi trường · xã hội"],
 ["Tiếng Anh","language","EN","Ngôn ngữ học, đọc và viết học thuật, giao tiếp liên văn hóa.","Nghiên cứu · ngoại giao · giáo dục"],
 ["Tiếng Pháp","language","FR","Pháp ngữ, dịch thuật học thuật và nghiên cứu văn hóa.","Pháp ngữ · ngoại giao · giáo dục"],
-["Tiếng Trung","language","中","Hán ngữ, nghiên cứu khu vực và phân tích nguồn đa ngôn ngữ.","Nghiên cứu khu vực · thương mại"]];
+["Tiếng Trung","language","中","Hán ngữ, nghiên cứu khu vực và phân tích nguồn đa ngôn ngữ.","Nghiên cứu khu vực · thương mại"],
+["Nga","language","RU","Ngôn ngữ Nga, văn học và văn hóa Nga, kỹ năng dịch thuật, nghiên cứu khu vực và đọc hiểu tài liệu học thuật.","Ngôn ngữ học · nghiên cứu khu vực · ngoại giao"]];
 const math=[
 ["Lập luận và chứng minh","Logic, tập hợp, biến đổi đại số, số học và kỹ thuật chứng minh.","Seminar nhiều cách giải; tìm phản ví dụ.","Bài chứng minh độc lập và thử thách chuyển giao."],
 ["Hình học, tổ hợp và xác suất","Hình học Euclid, vectơ, nguyên lý đếm và xác suất hữu hạn.","Phân tích bài toán tổ hợp mở; mô phỏng để kiểm chứng.","Báo cáo hai phương pháp và nhật ký kiểm chứng."],
