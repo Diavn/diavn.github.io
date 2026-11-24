@@ -1,5 +1,5 @@
 {
-  "version": "1.5",
+  "version": "1.6",
   "updated": "2026-11-25",
   "posts": [
     {
@@ -670,6 +670,94 @@
         "title": "Video YouTube — chờ kiểm chứng thông tin",
         "summary": "Đường dẫn video được lưu dưới dạng tham chiếu. Chưa truy xuất được tiêu đề, kênh đăng, ngày phát hành và nội dung video.",
         "insights": "Chưa công bố bản phiên âm, tóm tắt, danh tính người phát biểu hay phân loại chủ đề. Có thể mở đường dẫn gốc nếu video còn truy cập được. Mục này sẽ được hoàn thiện khi có thông tin video hoặc bản phiên âm."
+      }
+    },
+    {
+      "id": "tienphong-philosophy-olympiad-global-academic-pathways",
+      "date": "2026-02-02",
+      "year": 2026,
+      "cat": "media",
+      "topic": [
+        "philosophy",
+        "talent",
+        "ai",
+        "curriculum"
+      ],
+      "authors": "P.V. · Tiền Phong · Featuring Đặng Minh Tuấn, Vietnamese IPO delegation head",
+      "source": "Tiền Phong · Giáo dục",
+      "url": "https://tienphong.vn/tu-bai-luan-triet-hoc-den-yale-cambridge-virginia-khi-tu-duy-viet-buoc-ra-the-gioi-post1817864.tpo",
+      "basis": "full-report",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "From philosophical essays to Yale, Cambridge and Virginia: Vietnamese thinking on the global stage",
+        "summary": "The article traces Vietnam's participation in the International Philosophy Olympiad (IPO) from 2023 to 2025, reporting Honorable Mentions in three consecutive years. Delegation head Đặng Minh Tuấn highlights philosophical argumentation, independent reasoning and ethical reflection as important educational capacities in the AI era.",
+        "insights": "The report discusses individual university admission stories and announces the 2026 national selection pathway. These cases illustrate possible academic trajectories; they do not establish a causal effect of IPO participation on university admission. The February 2026 selection dates are historical announcements, not current registration information."
+      },
+      "vi": {
+        "title": "Từ bài luận triết học đến Yale, Cambridge, Virginia: Khi tư duy Việt bước ra thế giới",
+        "summary": "Bài báo nhìn lại hành trình Việt Nam tham dự IPO giai đoạn 2023–2025, ghi nhận ba năm liên tiếp có học sinh đạt Honorable Mention. Trưởng đoàn Đặng Minh Tuấn nhấn mạnh giá trị của lập luận triết học, tư duy độc lập và phản tư đạo đức trong kỷ nguyên AI.",
+        "insights": "Bài viết giới thiệu những trường hợp trúng tuyển đại học và công bố kế hoạch tuyển chọn quốc gia VPO 2026. Các trường hợp cá nhân minh họa hành trình học thuật, không chứng minh quan hệ nhân quả giữa tham gia IPO và kết quả tuyển sinh. Lịch thi tháng 2/2026 là thông tin lịch sử."
+      }
+    },
+    {
+      "id": "vov-vietnam-philosophy-olympiad-helsinki-2024",
+      "date": "2024-05-27",
+      "year": 2024,
+      "cat": "media",
+      "topic": [
+        "philosophy",
+        "talent",
+        "ai"
+      ],
+      "authors": "Nguyễn Trang / VOV.VN · Featuring Đặng Minh Tuấn, Vietnamese delegation head",
+      "source": "Voice of Vietnam · VOV official portal",
+      "url": "https://vov.gov.vn/hoc-sinh-lop-11-ha-noi-doat-giai-olympic-triet-hoc-quoc-te-dtnew-826865",
+      "basis": "full-report",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "Hanoi Grade 11 student receives an International Philosophy Olympiad distinction",
+        "summary": "VOV reports on Vietnam's second participation in IPO, held in Helsinki, Finland, from 16 to 19 May 2024. Nguyễn Doãn Đức Vinh and Lê Ngọc Châu Anh represented Vietnam under delegation head Đặng Minh Tuấn; Đức Vinh received an Honorable Mention.",
+        "insights": "Both students wrote on AI-related philosophical questions. The article highlights critical thinking, essay writing and international academic exchange. This is a documented competition result, not an intervention study; the award is specifically attributed to Đức Vinh, as clarified in the body of the report."
+      },
+      "vi": {
+        "title": "Học sinh lớp 11 Hà Nội đoạt giải Olympic Triết học quốc tế",
+        "summary": "VOV ghi nhận lần thứ hai Việt Nam tham dự IPO, tổ chức tại Helsinki, Phần Lan, từ 16 đến 19/05/2024. Nguyễn Doãn Đức Vinh và Lê Ngọc Châu Anh đại diện Việt Nam dưới sự dẫn dắt của trưởng đoàn Đặng Minh Tuấn; Đức Vinh được trao Honorable Mention.",
+        "insights": "Hai học sinh viết luận về chủ đề AI. Bài báo đề cao tư duy phản biện, kỹ năng viết luận và giao lưu học thuật quốc tế. Đây là kết quả cuộc thi được báo chí ghi nhận, không phải nghiên cứu thực nghiệm; theo nội dung bài báo, người nhận giải là Đức Vinh."
+      }
+    },
+    {
+      "id": "vietnam-philosophy-olympiad-vpo",
+      "date": null,
+      "year": "unknown",
+      "sort": "0000",
+      "cat": "engagement",
+      "topic": [
+        "philosophy",
+        "talent",
+        "curriculum"
+      ],
+      "authors": "Vietnam Philosophy Olympiad (VPO) · Website reference",
+      "source": "VPO Vietnam · Supplied website",
+      "url": "https://vpovietnam.org/",
+      "verificationUrl": "https://tienphong.vn/tu-bai-luan-triet-hoc-den-yale-cambridge-virginia-khi-tu-duy-viet-buoc-ra-the-gioi-post1817864.tpo",
+      "basis": "website-reference-external-report",
+      "format": "website",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "Vietnam Philosophy Olympiad (VPO) — programme website",
+        "summary": "A link to the VPO Vietnam website, supplied for this academic portfolio. Tiền Phong's 2 February 2026 article describes VPO 2026 as a national selection pathway for secondary-school students to develop philosophical essay writing and compete for places on Vietnam's IPO delegation.",
+        "insights": "The reported 2026 pathway involved English-language individual essays, an online preliminary round and an in-person national final. The website itself could not be retrieved, so its current content, ownership, publication date and upcoming registration arrangements are not verified. Consult the linked programme site for updates."
+      },
+      "vi": {
+        "title": "Vietnam Philosophy Olympiad (VPO) — Website Olympic Triết học Việt Nam",
+        "summary": "Liên kết website VPO Vietnam được cung cấp cho hồ sơ học thuật. Theo bài Tiền Phong ngày 02/02/2026, VPO 2026 là vòng tuyển chọn quốc gia dành cho học sinh THPT, tạo cơ hội rèn luyện viết luận triết học và lựa chọn đại diện Việt Nam tham dự IPO.",
+        "insights": "Kế hoạch năm 2026 gồm viết luận cá nhân bằng tiếng Anh, sơ loại trực tuyến và chung kết trực tiếp. Chưa truy xuất được website nên chưa xác minh nội dung hiện tại, đơn vị quản lý, ngày công bố và lịch đăng ký sắp tới. Độc giả có thể truy cập liên kết chương trình để theo dõi cập nhật."
       }
     }
   ]
