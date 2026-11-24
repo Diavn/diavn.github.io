@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "updated": "2026-11-25",
   "posts": [
     {
@@ -204,6 +204,96 @@
       "related": [
         "shd"
       ]
+    },
+    {
+      "id": "vov2-ielts-toefl-early-test-preparation",
+      "date": "2023-06-25",
+      "year": 2023,
+      "cat": "media",
+      "topic": [
+        "language",
+        "assessment",
+        "policy",
+        "equity",
+        "talent"
+      ],
+      "authors": "VOV2 interview with Đặng Minh Tuấn",
+      "source": "VOV2 · Voice of Vietnam · Education & Training",
+      "url": "https://vov2.vov.vn/giao-duc-dao-tao/chay-dua-cho-con-luyen-thi-ielts-toefl-tu-nho-la-dieu-ky-quac-42965.vov2",
+      "basis": "full-interview",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "Racing to prepare young children for IELTS and TOEFL: A misplaced educational priority",
+        "summary": "In this VOV2 interview, Đặng Minh Tuấn distinguishes the value of foreign-language proficiency from its use as a proxy for talent. He questions early certificate preparation when admissions incentives divert time and resources from other areas of development.",
+        "insights": "He advocates using language certificates as one relevant admissions indicator, not an automatic entry ticket, and encourages learning languages through access to disciplinary knowledge. He also raises concerns about unequal preparation opportunities. These are interview perspectives, not empirical findings."
+      },
+      "vi": {
+        "title": "Chạy đua cho con luyện thi IELTS, TOEFL từ nhỏ là điều kỳ quặc",
+        "summary": "Trong cuộc trao đổi với VOV2, giảng viên Đặng Minh Tuấn phân biệt giá trị của năng lực ngoại ngữ với việc dùng chứng chỉ để nhận diện tài năng. Thầy đặt vấn đề về chi phí thời gian, nguồn lực khi luyện thi sớm vì ưu tiên tuyển sinh.",
+        "insights": "Chứng chỉ nên là một chỉ số phù hợp, không phải vé tuyển thẳng; ngoại ngữ cần phục vụ tiếp cận tri thức. Bài phỏng vấn cũng đặt vấn đề công bằng cơ hội chuẩn bị. Đây là quan điểm giáo dục, không phải kết quả thực nghiệm."
+      }
+    },
+    {
+      "id": "vov2-gifted-education-ages-11-15",
+      "date": "2026-02-26",
+      "year": 2026,
+      "cat": "media",
+      "topic": [
+        "talent",
+        "policy"
+      ],
+      "authors": "Bá Duy (VOV2); interview guest: Đặng Minh Tuấn",
+      "source": "VOV2 · Voice of Vietnam · Podcast",
+      "url": "https://vov2.vov.vn/podcast/lua-tuoi-11-den-15-hoan-toan-phu-hop-de-dao-tao-chuyen-nang-khieu-57324.vov2",
+      "basis": "podcast-description",
+      "format": "podcast",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "Ages 11–15: An appropriate period for gifted and specialised education",
+        "summary": "Responding to Hanoi's proposal to invest in specialised lower-secondary schools, Đặng Minh Tuấn argues that ages 11–15 are appropriate for nurturing talent as logical thinking and learning interests emerge.",
+        "insights": "The available VOV2 episode description establishes this position. The audio has not been transcribed or reviewed here; listen to the original podcast for the complete discussion."
+      },
+      "vi": {
+        "title": "Lứa tuổi 11 đến 15 hoàn toàn phù hợp để đào tạo chuyên, năng khiếu",
+        "summary": "Trước đề xuất của Hà Nội về đầu tư trường chuyên từ cấp THCS, TS. Đặng Minh Tuấn nhận định giai đoạn 11–15 tuổi phù hợp để bồi dưỡng năng khiếu khi tư duy logic và sở thích học tập hình thành.",
+        "insights": "Nội dung trên dựa vào phần mô tả podcast của VOV2. Chưa nghe hoặc phiên âm toàn bộ bản ghi; mời độc giả nghe chương trình gốc để hiểu đầy đủ cuộc trao đổi."
+      }
+    },
+    {
+      "id": "vov2-specialised-schools-talent-development",
+      "date": "2026-11-15",
+      "year": 2026,
+      "cat": "media",
+      "topic": [
+        "talent",
+        "assessment",
+        "policy",
+        "equity",
+        "ai"
+      ],
+      "authors": "VOV2 interview with TS. Đặng Minh Tuấn",
+      "source": "VOV2 · Voice of Vietnam · Education & Training",
+      "url": "https://vov2.vov.vn/giao-duc-dao-tao/truong-chuyen-la-noi-phat-hien-phat-trien-tai-nang-cho-dat-nuoc-61650.vov2",
+      "verificationUrl": "https://vov2.vov.vn/giao-duc-dao-tao/?page=16",
+      "basis": "indexed-interview",
+      "related": [
+        "shd",
+        "pgj"
+      ],
+      "en": {
+        "title": "Specialised schools as institutions for discovering and developing talent",
+        "summary": "Discussing proposed reforms, Đặng Minh Tuấn distinguishes rehearsed examination performance from developmental potential. He supports broader admissions pathways, exploration before specialisation and research-oriented learning, while cautioning against overlooking exceptional subject-specific talent.",
+        "insights": "He proposes complementary talent-identification routes, equitable preparation opportunities, empirical evaluation of reforms and longitudinal tracking of graduates. In the AI era, independent reasoning remains essential. Success should reflect sustained development and social contribution, not medals alone; no national progression percentage is asserted."
+      },
+      "vi": {
+        "title": "Trường chuyên là nơi phát hiện, phát triển tài năng cho đất nước",
+        "summary": "Trao đổi về dự thảo đổi mới trường chuyên, TS. Đặng Minh Tuấn phân biệt thành tích luyện thi với tiềm năng phát triển. Thầy ủng hộ tuyển sinh theo lĩnh vực rộng, trải nghiệm trước khi chuyên sâu và tăng cường nghiên cứu, đồng thời lưu ý nguy cơ bỏ sót năng khiếu đặc biệt.",
+        "insights": "Đề xuất kết hợp cơ chế nhận diện tài năng, hỗ trợ công bằng cơ hội, thí điểm cải cách và theo dõi cựu học sinh dài hạn. Trong kỷ nguyên AI, cần duy trì tư duy độc lập; giá trị trường chuyên không chỉ ở huy chương. Bài phỏng vấn không khẳng định tỷ lệ quốc gia về học đúng ngành."
+      }
     }
   ]
 }
