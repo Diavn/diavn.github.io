@@ -1,0 +1,4 @@
+# Academic Blog V1.0
+English index: /blog/; Vietnamese: /blog/vi/.
+
+Edit posts.json (both en and vi, source URL, authors, year, category, topics, verification basis), then run `node blog/build.mjs` from repository root and commit generated pages, SVGs, RSS and sitemap. Dates are original publication dates when verified; year-only records omit RSS pubDate. A metadata-only entry is not a verified research summary. Do not publish empirical claims not supported by the source. The 2022 proceedings entry in About is omitted pending primary-source access. No article PDFs or third-party images are republished. Covers are original illustrative SVGs, with the public academic portrait used for social previews.
