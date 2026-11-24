@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "updated": "2026-11-25",
   "posts": [
     {
@@ -293,6 +293,94 @@
         "title": "Trường chuyên là nơi phát hiện, phát triển tài năng cho đất nước",
         "summary": "Trao đổi về dự thảo đổi mới trường chuyên, TS. Đặng Minh Tuấn phân biệt thành tích luyện thi với tiềm năng phát triển. Thầy ủng hộ tuyển sinh theo lĩnh vực rộng, trải nghiệm trước khi chuyên sâu và tăng cường nghiên cứu, đồng thời lưu ý nguy cơ bỏ sót năng khiếu đặc biệt.",
         "insights": "Đề xuất kết hợp cơ chế nhận diện tài năng, hỗ trợ công bằng cơ hội, thí điểm cải cách và theo dõi cựu học sinh dài hạn. Trong kỷ nguyên AI, cần duy trì tư duy độc lập; giá trị trường chuyên không chỉ ở huy chương. Bài phỏng vấn không khẳng định tỷ lệ quốc gia về học đúng ngành."
+      }
+    },
+    {
+      "id": "vov2-vietnam-first-international-philosophy-olympiad",
+      "date": "2023-05-17",
+      "year": 2023,
+      "cat": "media",
+      "topic": [
+        "talent",
+        "philosophy"
+      ],
+      "authors": "VOV2 report featuring Đặng Minh Tuấn, head of the Vietnamese delegation",
+      "source": "VOV2 · Voice of Vietnam · Education & Training",
+      "url": "https://vov2.vov.vn/giao-duc-dao-tao/hoc-sinh-viet-nam-lan-dau-co-ten-tren-dau-truong-olympic-triet-hoc-quoc-te-ipo",
+      "basis": "full-report",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "Vietnam's first participation in the International Philosophy Olympiad (IPO)",
+        "summary": "VOV2 reports on Vietnam's debut at the International Philosophy Olympiad in Olympia, Greece, in May 2023. The two-student delegation, led by Đặng Minh Tuấn of VNU University of Education, achieved an Honorable Mention through Phạm Bùi Gia Khanh.",
+        "insights": "The report highlights the opportunity for secondary-school students to explore philosophy, engage in philosophical essay writing and meet peers internationally. This is a documented competition milestone, not an empirical evaluation of a talent-development programme."
+      },
+      "vi": {
+        "title": "Học sinh Việt Nam lần đầu có tên trên đấu trường Olympic Triết học quốc tế IPO",
+        "summary": "VOV2 đưa tin về lần đầu Việt Nam tham dự Olympic Triết học quốc tế tại Olympia, Hy Lạp, tháng 5/2023. Đoàn gồm hai học sinh do giảng viên Đặng Minh Tuấn, Trường Đại học Giáo dục, ĐHQGHN, làm trưởng đoàn; học sinh Phạm Bùi Gia Khanh đạt Honorable Mention (giải Khuyến khích).",
+        "insights": "Bài báo nhấn mạnh cơ hội để học sinh phổ thông tiếp cận triết học, viết luận triết học và giao lưu quốc tế với bạn bè cùng sở thích. Đây là dấu mốc hoạt động học thuật, không phải nghiên cứu thực nghiệm về hiệu quả đào tạo tài năng."
+      }
+    },
+    {
+      "id": "vov1-ai-in-schools-use-and-verification",
+      "date": "2026-10-14",
+      "year": 2026,
+      "cat": "media",
+      "topic": [
+        "ai",
+        "assessment",
+        "teachers",
+        "policy"
+      ],
+      "authors": "VOV1 · Guest: Dr Tuan Minh Dang",
+      "source": "VOV1 · Voice of Vietnam · Dòng chảy sự kiện",
+      "url": "https://vov1.vov.vn/goc-nhin-vov1/dong-chay-su-kien/dua-ai-vao-truong-hoc-biet-dung-biet-kiem-chung-137111.vov",
+      "basis": "indexed-programme-description",
+      "format": "podcast",
+      "related": [
+        "pgj",
+        "shd"
+      ],
+      "en": {
+        "title": "Introducing AI into schools: Learning to use and verify it",
+        "summary": "VOV1's current-affairs programme addresses the tension between the convenience of AI-generated explanations and students' ability to recognise errors. Its introduction identifies independent learning and thinking as central considerations in school AI integration. Dr Tuan Minh Dang of VNU University of Education is the featured guest.",
+        "insights": "The programme description raises the question of how learners can judge the reliability of AI outputs before they possess sufficient subject knowledge. This is a summary of the indexed official introduction, not a transcript or a claim about particular recommendations made during the broadcast. The recording has not been reviewed."
+      },
+      "vi": {
+        "title": "Đưa AI vào trường học: Biết dùng, biết kiểm chứng",
+        "summary": "Chương trình Dòng chảy sự kiện của VOV1 đặt vấn đề về sự tiện lợi của lời giải, giải thích do AI tạo ra và khả năng nhận biết sai sót của học sinh. Phần giới thiệu nhấn mạnh việc đưa AI vào nhà trường cần gắn với năng lực tự học và tư duy độc lập. Khách mời là TS. Đặng Minh Tuấn, Trường Đại học Giáo dục, ĐHQGHN.",
+        "insights": "Chương trình nêu câu hỏi về cách học sinh đánh giá độ tin cậy của câu trả lời AI khi kiến thức nền còn hạn chế. Bản giới thiệu này dựa trên phần văn bản chính thức được lập chỉ mục, không phải bản phiên âm hoặc tóm tắt toàn bộ phát biểu của khách mời. Chưa nghe toàn bộ chương trình."
+      }
+    },
+    {
+      "id": "vov-grade-10-school-choice",
+      "date": "2024-05-09",
+      "year": 2024,
+      "cat": "media",
+      "topic": [
+        "talent",
+        "assessment",
+        "policy"
+      ],
+      "authors": "Nguyễn Trang / VOV.VN; featured educator: Đặng Minh Tuấn",
+      "source": "VOV.VN · Voice of Vietnam · Society",
+      "url": "https://vov.vn/xa-hoi/thi-vao-lop-10-dung-dat-nang-suy-nghi-truong-chuyen-hay-truong-thuong-post1093960.vov",
+      "alternate": "https://vov.gov.vn/thi-vao-lop-10-dung-dat-nang-suy-nghi-truong-chuyen-hay-truong-thuong-dtnew-803277",
+      "basis": "video-description",
+      "format": "video",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "Grade 10 admissions: Looking beyond the specialised versus mainstream school distinction",
+        "summary": "In a VOV report, Đặng Minh Tuấn emphasises that the Grade 10 entrance examination is important but does not determine a student's future. Families should select an educational environment that matches the learner's abilities and interests, rather than prioritising the specialised-school label.",
+        "insights": "The accompanying text foregrounds self-directed learning, independent reading and everyday problem solving. The summary is based on the published VOV.VN description; the complete video has not been reviewed. The originally supplied VOV portal URL was unavailable during verification."
+      },
+      "vi": {
+        "title": "Thi vào lớp 10: Đừng đặt nặng suy nghĩ trường chuyên hay trường thường",
+        "summary": "Trong bài của VOV, thầy Đặng Minh Tuấn cho rằng kỳ thi vào lớp 10 có ý nghĩa quan trọng nhưng không quyết định tương lai học sinh. Việc lựa chọn môi trường học tập phù hợp với năng lực, sở trường của mỗi em cần được đặt lên trên tên gọi trường chuyên hay trường thường.",
+        "insights": "Phần văn bản giới thiệu đề cao năng lực tự học, tự đọc và giải quyết vấn đề thực tế. Bản tóm tắt dựa trên trang VOV.VN đã truy cập được, chưa xem toàn bộ video. Đường dẫn cổng thông tin VOV do người dùng cung cấp chưa mở được trong lần kiểm chứng này."
       }
     }
   ]
