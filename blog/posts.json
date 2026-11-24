@@ -1,0 +1,209 @@
+{
+  "version": "1.0",
+  "updated": "2026-11-25",
+  "posts": [
+    {
+      "id": "teachers-in-the-ai-era",
+      "date": "2026-11-20",
+      "year": 2026,
+      "cat": "media",
+      "topic": [
+        "ai",
+        "assessment",
+        "teachers"
+      ],
+      "authors": "Interview with Tuan Minh Dang",
+      "source": "Vietnam National University, Hanoi",
+      "url": "https://vnu.edu.vn/nguoi-thay-va-nhung-chuyen-dong-can-thiet-cua-giao-duc-trong-thoi-dai-ai-post40866.html",
+      "basis": "indexed-interview",
+      "en": {
+        "title": "Teachers and educational transformation in the age of AI",
+        "summary": "An interview on the changing responsibilities of educators when AI can produce convincing academic work. It distinguishes the quality of a learning product from the learner’s independent understanding and highlights the importance of thoughtful instructional design and human relationships.",
+        "insights": "The interview encourages students to check AI-generated answers against evidence, textbooks and alternative reasoning. It asks teachers to assess what learners can do after assistance is withdrawn. These are educational perspectives, not experimental findings."
+      },
+      "vi": {
+        "title": "Người thầy và những chuyển động cần thiết của giáo dục trong thời đại AI",
+        "summary": "Bài phỏng vấn bàn về trách nhiệm của nhà giáo khi AI có thể tạo ra sản phẩm học tập thuyết phục. Trọng tâm là phân biệt chất lượng sản phẩm với hiểu biết độc lập của người học, đồng thời đề cao thiết kế sư phạm có chủ đích và quan hệ giữa người thầy với học sinh.",
+        "insights": "Bài phỏng vấn khuyến khích đối chiếu câu trả lời của AI với bằng chứng, sách và các cách lập luận khác; đánh giá khả năng người học tiếp tục thực hiện nhiệm vụ khi không còn hỗ trợ. Đây là quan điểm giáo dục, không phải kết quả thực nghiệm."
+      },
+      "alternate": "https://education.vnu.edu.vn/tin-tuc/hoat-dong-truong-dai-hoc-giao-duc/nguoi-thay-va-nhung-chuyen-dong-can-thiet-cua-giao-duc-trong-thoi-dai-ai/",
+      "related": [
+        "shd",
+        "pgj"
+      ]
+    },
+    {
+      "id": "ai-literacy-school-students",
+      "date": null,
+      "year": 2026,
+      "cat": "research",
+      "topic": [
+        "ai",
+        "policy"
+      ],
+      "authors": "Đặng Minh Tuấn",
+      "source": "Tạp chí Giáo dục, 26(17), 16–23 · September 2026",
+      "url": "https://tcgd.tapchigiaoduc.edu.vn/index.php/tapchi/article/view/6323",
+      "basis": "metadata",
+      "en": {
+        "title": "An initial AI literacy framework for school students: International review and implications for Vietnam",
+        "summary": "The article addresses AI literacy for school students through an international review and considers adaptation to the Vietnamese educational context. The publisher’s issue listing confirms the title and authorship; the abstract could not be retrieved in this verification session.",
+        "insights": "This entry records the topic and publication information only. Specific framework dimensions, review procedures and conclusions will be added after the original text is accessible."
+      },
+      "vi": {
+        "title": "Đề xuất bước đầu khung năng lực hiểu biết trí tuệ nhân tạo cho học sinh phổ thông: Tổng quan quốc tế và hàm ý thích ứng tại Việt Nam",
+        "summary": "Bài viết hướng đến khung năng lực hiểu biết AI của học sinh phổ thông trên cơ sở tổng quan quốc tế và xem xét khả năng thích ứng với giáo dục Việt Nam. Mục lục số tạp chí xác nhận tên bài và tác giả; chưa truy xuất được tóm tắt trong lần kiểm tra này.",
+        "insights": "Mục giới thiệu chỉ ghi nhận chủ đề và thông tin xuất bản. Các thành phần khung, quy trình tổng quan và kết luận cụ thể sẽ được bổ sung sau khi đọc được văn bản gốc."
+      },
+      "alternate": "https://www.vjol.info.vn/moet/vi/article/view/268374/",
+      "verificationUrl": "https://tcgd.tapchigiaoduc.edu.vn/index.php/tapchi/issue/view/180",
+      "sort": "2026-09",
+      "related": [
+        "shd"
+      ]
+    },
+    {
+      "id": "pedagogical-genai-judgment",
+      "date": "2026-08-11",
+      "year": 2026,
+      "cat": "research",
+      "topic": [
+        "ai",
+        "assessment",
+        "teachers"
+      ],
+      "authors": "Tuan Minh Dang",
+      "source": "Journal of Digital Learning in Teacher Education, 42(3), 168–181",
+      "url": "https://doi.org/10.1080/21532974.2026.2701010",
+      "basis": "indexed-abstract",
+      "en": {
+        "title": "Rethinking digital competence for pre-service teachers in the GenAI era: A conceptual framework for pedagogical GenAI judgment",
+        "summary": "The conceptual article proposes DigiGen-PST 2030, placing pedagogical GenAI judgment within a wider framework of digital competence, pedagogical transformation and future-oriented skills. It compares existing teacher technology and AI competency frameworks to clarify what prospective teachers need to decide and evaluate when using generative AI.",
+        "insights": "The contribution is a conceptual framework, not a validated measurement instrument. It provides a rationale for subsequent studies of situated judgment and professional competence. The next research question is whether PGJ provides explanatory value beyond existing constructs."
+      },
+      "vi": {
+        "title": "Tái tư duy năng lực số của sinh viên sư phạm trong kỷ nguyên GenAI: Khung lý thuyết về phán đoán sư phạm GenAI",
+        "summary": "Bài báo lý thuyết đề xuất DigiGen-PST 2030, đặt phán đoán sư phạm GenAI trong hệ thống năng lực số, chuyển đổi sư phạm và kỹ năng hướng tới tương lai. Công trình đối chiếu các khung năng lực công nghệ và AI để làm rõ yêu cầu ra quyết định và đánh giá khi giáo viên tương lai sử dụng GenAI.",
+        "insights": "Đóng góp là khung lý thuyết, chưa phải công cụ đo lường đã được kiểm định. Hướng nghiên cứu tiếp theo là kiểm chứng giá trị giải thích của PGJ so với các cấu trúc năng lực hiện có."
+      },
+      "verificationUrl": "https://www.tandfonline.com/doi/full/10.1080/21532974.2026.2701010",
+      "related": [
+        "pgj",
+        "shd"
+      ]
+    },
+    {
+      "id": "designing-genai-learning",
+      "date": "2026-07-15",
+      "year": 2026,
+      "cat": "research",
+      "topic": [
+        "ai",
+        "teachers",
+        "assessment"
+      ],
+      "authors": "Đặng Minh Tuấn & Vũ Thị Thúy",
+      "source": "Tạp chí Giáo dục, 26 (special issue 8), 276–283",
+      "url": "https://tcgd.tapchigiaoduc.edu.vn/index.php/tapchi/article/view/6302",
+      "basis": "abstract",
+      "en": {
+        "title": "Designing GenAI-supported learning activities in teacher education: Cognitive effort, pedagogical judgment and academic integrity",
+        "summary": "A design-oriented theoretical review integrates selected research in cognition, learning sciences and teacher education with Vietnamese policy documents. It proposes seven points of pedagogical control and argues that using GenAI effectively depends on how tasks, assistance and evidence of reasoning are organised.",
+        "insights": "The framework protects cognitive operations such as retrieval, explanation, verification and transfer. Its focus is responsible task design and evidence of learning rather than tool adoption alone. No new empirical data are reported; classroom and design-based studies are needed."
+      },
+      "vi": {
+        "title": "Định hướng thiết kế hoạt động học tập với trí tuệ nhân tạo tạo sinh trong đào tạo giáo viên: Bảo toàn nỗ lực nhận thức, phán đoán sư phạm và liêm chính học thuật",
+        "summary": "Tổng quan lý thuyết định hướng thiết kế kết nối các nghiên cứu được chọn lọc về nhận thức, khoa học học tập, đào tạo giáo viên và văn bản chính sách Việt Nam. Bài báo đề xuất bảy điểm kiểm soát sư phạm, nhấn mạnh cách tổ chức nhiệm vụ, hỗ trợ và minh chứng tư duy khi sử dụng GenAI.",
+        "insights": "Khung chú trọng bảo toàn các hoạt động nhận thức như nhớ lại, giải thích, kiểm chứng và chuyển giao. Bài báo không báo cáo dữ liệu thực nghiệm mới; cần kiểm chứng bằng nghiên cứu thiết kế và thực nghiệm trong đào tạo giáo viên."
+      },
+      "related": [
+        "pgj",
+        "shd"
+      ]
+    },
+    {
+      "id": "educational-robotics",
+      "date": null,
+      "year": 2024,
+      "cat": "research",
+      "topic": [
+        "stem",
+        "teachers",
+        "technology"
+      ],
+      "authors": "Kim Chung Pham, Minh Tuan Dang & Hai Yen Pham",
+      "source": "Intelligent Learning Paradigms and Student Empowerment · Apple Academic Press / CRC Press",
+      "url": "https://www.routledge.com/Intelligent-Learning-Paradigm-and-Student-Empowerment-Digital-Integration-and-Transformation/Pal-Cuong-Nehru/p/book/9781032721699",
+      "basis": "preview",
+      "en": {
+        "title": "Integrating educational robotics into the training program for developing students’ ICT competence in teaching",
+        "summary": "This book chapter describes a teacher-education curriculum at VNU University of Education that uses educational robotics to develop future natural science teachers’ ICT competence. Illustrative science experiments connect sensors, mobile devices and constructivist instructional approaches.",
+        "insights": "The chapter focuses on curriculum design and practical integration of robotics rather than merely learning to operate devices. The available chapter preview supports this description; no effect size or causal claim is inferred from it. The profile lists 2024, whereas the book preview displays copyright 2025."
+      },
+      "vi": {
+        "title": "Tích hợp robot giáo dục vào chương trình đào tạo nhằm phát triển năng lực CNTT trong dạy học",
+        "summary": "Chương sách trình bày chương trình đào tạo tại Trường Đại học Giáo dục, ĐHQGHN, sử dụng robot giáo dục để phát triển năng lực CNTT của giáo viên khoa học tự nhiên tương lai. Các thí nghiệm khoa học minh họa kết nối cảm biến, thiết bị di động và dạy học kiến tạo.",
+        "insights": "Trọng tâm là thiết kế chương trình và vận dụng robot trong dạy học. Bản xem trước chương sách hỗ trợ nội dung mô tả; không suy luận kích thước tác động hay quan hệ nhân quả. Hồ sơ ghi năm 2024, trong khi bản xem trước ghi bản quyền 2025."
+      },
+      "alternate": "https://api.pageplace.de/preview/DT0400.9781003859642_A50151958/preview-9781003859642_A50151958.pdf",
+      "related": [
+        "shd"
+      ],
+      "yearLabel": "2024 / ©2025"
+    },
+    {
+      "id": "stem-primary-teacher-competence",
+      "date": "2023-08-29",
+      "year": 2023,
+      "cat": "research",
+      "topic": [
+        "stem",
+        "teachers"
+      ],
+      "authors": "Tiep Quang Pham, Tuan Minh Dang, Huong Thi Nguyen & Lien Thi Ngo",
+      "source": "ICMMCS 2023 · Springer, pp. 107–124",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-99-3611-3_9",
+      "basis": "abstract",
+      "en": {
+        "title": "Fostering STEM Education Competency for Elementary Education Students at Universities of Pedagogy in Vietnam",
+        "summary": "Using questionnaires and interviews with final-year primary-education students in Vietnam, the study reports moderate overall STEM teaching competence, with some components below that level. It identifies training content and instructional organisation as concerns and proposes improvements to technology-supported preparation.",
+        "insights": "The study combines survey and interview evidence to inform curriculum development before graduation. The abstract does not establish causal effects of the proposed training. Access to the full chapter may require a subscription."
+      },
+      "vi": {
+        "title": "Bồi dưỡng năng lực giáo dục STEM cho sinh viên giáo dục tiểu học tại các trường sư phạm Việt Nam",
+        "summary": "Nghiên cứu khảo sát bằng bảng hỏi và phỏng vấn sinh viên năm cuối ngành giáo dục tiểu học ở Việt Nam, ghi nhận năng lực giáo dục STEM nhìn chung ở mức trung bình và một số năng lực thành phần thấp hơn. Công trình đề xuất cải thiện nội dung và cách tổ chức đào tạo có hỗ trợ công nghệ.",
+        "insights": "Nghiên cứu kết hợp minh chứng khảo sát và phỏng vấn để định hướng phát triển chương trình trước khi sinh viên tốt nghiệp. Tóm tắt chưa chứng minh tác động nhân quả của phương án đào tạo đề xuất. Toàn văn có thể yêu cầu quyền truy cập."
+      },
+      "related": [
+        "shd"
+      ]
+    },
+    {
+      "id": "blended-primary-teacher-training",
+      "date": "2023-08-29",
+      "year": 2023,
+      "cat": "research",
+      "topic": [
+        "teachers",
+        "technology"
+      ],
+      "authors": "Tiep Quang Pham, Tuan Minh Dang, Hung Van Nguyen & Huong Thi Nguyen",
+      "source": "ICMMCS 2023 · Springer, pp. 219–234",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-99-3611-3_18",
+      "basis": "abstract",
+      "en": {
+        "title": "Training Elementary Teachers in Vietnam by Blended Learning Model",
+        "summary": "The study examines how lecturers in Vietnamese primary teacher-education programmes view the balance between face-to-face and online instruction. Questionnaire and interview responses reveal differing preferences and emphasise technological conditions and participants’ digital skills.",
+        "insights": "The authors propose a balance of delivery modes and recommendations for improving blended teacher education. The numerical ratio is not reproduced because it is not available in the abstract; the full chapter may require a subscription."
+      },
+      "vi": {
+        "title": "Đào tạo giáo viên tiểu học ở Việt Nam theo mô hình dạy học kết hợp",
+        "summary": "Nghiên cứu xem xét quan điểm của giảng viên các cơ sở đào tạo giáo viên tiểu học tại Việt Nam về cân đối giữa học trực tiếp và trực tuyến. Kết quả bảng hỏi và phỏng vấn cho thấy quan điểm khác nhau, đồng thời nhấn mạnh điều kiện công nghệ và kỹ năng số của giảng viên, người học.",
+        "insights": "Các tác giả đề xuất tỷ lệ phối hợp hình thức học và khuyến nghị cải thiện dạy học kết hợp. Không nêu con số cụ thể vì tóm tắt không cung cấp; toàn văn có thể yêu cầu quyền truy cập."
+      },
+      "related": [
+        "shd"
+      ]
+    }
+  ]
+}
