@@ -1,5 +1,5 @@
 {
-  "version": "1.4",
+  "version": "1.5",
   "updated": "2026-11-25",
   "posts": [
     {
@@ -585,6 +585,91 @@
         "title": "Thầy giáo dìu dắt nhiều học sinh Hà Nội đoạt giải cao chia sẻ cách giúp trẻ học siêu Toán",
         "summary": "Cuộc phỏng vấn chia sẻ cách nuôi dưỡng hứng thú học Toán qua cảm nhận số lượng, khám phá và nhiệm vụ phù hợp với năng lực từng trẻ. Bài viết đề cao việc trẻ trình bày suy nghĩ và tự giải quyết vấn đề thay vì tích lũy kiến thức trước chương trình.",
         "insights": "Các gợi ý gồm nhận diện tiềm năng, tránh so sánh trẻ với nhau và hỗ trợ quy trình giải toán từ đọc hiểu, phân tích đề đến kiểm tra kết quả. Đây là quan điểm dựa trên trải nghiệm dạy học, không phải minh chứng thực nghiệm về hiệu quả của một phương pháp."
+      }
+    },
+    {
+      "id": "cafef-mathematics-learning-roadmap",
+      "date": "2025-02-25",
+      "year": 2025,
+      "cat": "media",
+      "topic": [
+        "mathematics",
+        "curriculum",
+        "talent",
+        "inquiry"
+      ],
+      "authors": "Hiểu Đan · Educational recommendations from Đặng Minh Tuấn",
+      "source": "CafeF · Sống · Republished from Phụ nữ mới",
+      "url": "https://cafef.vn/thay-giao-ha-noi-bat-mi-lo-trinh-hoc-toan-chi-tiet-cho-tung-cap-hoc-cha-me-muon-con-gioi-toan-nen-tham-khao-ngay-188250225110412451.chn",
+      "alternate": "https://phunumoi.net.vn/thay-giao-ha-noi-bat-mi-lo-trinh-hoc-toan-chi-tiet-cho-tung-cap-hoc-cha-me-muon-con-gioi-toan-nen-tham-khao-ngay-d326102.html",
+      "basis": "full-republication",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "A mathematics learning roadmap from primary to upper-secondary education",
+        "summary": "Đặng Minh Tuấn proposes a developmental approach to school mathematics. Primary education should nurture curiosity, conceptual understanding and independent exploration. Lower-secondary education should develop depth, flexible problem solving and mathematical communication. Upper-secondary education should connect strong foundations with research, practical applications and adaptation.",
+        "insights": "The article recommends games and everyday contexts for younger learners, discussion and interdisciplinary projects at lower secondary, and open-ended problems and small research projects at upper secondary. It prioritises durable reasoning over premature exam preparation and short-term competitive achievement. These are pedagogical recommendations, not results of a controlled study. The complete CafeF republication was reviewed; its linked original at Phụ nữ mới could not be retrieved."
+      },
+      "vi": {
+        "title": "Thầy giáo Hà Nội bật mí lộ trình học Toán chi tiết cho từng cấp học",
+        "summary": "Thầy Đặng Minh Tuấn đề xuất lộ trình phát triển năng lực toán học theo từng giai đoạn. Tiểu học nuôi dưỡng hứng thú, hiểu bản chất và khám phá độc lập. THCS chú trọng học sâu, giải quyết vấn đề linh hoạt và diễn đạt toán học. THPT kết nối nền tảng vững chắc với nghiên cứu, ứng dụng và khả năng thích nghi.",
+        "insights": "Bài viết gợi ý trò chơi và tình huống đời sống ở tiểu học, thảo luận và dự án liên môn ở THCS, bài toán mở và dự án nghiên cứu nhỏ ở THPT. Định hướng ưu tiên tư duy bền vững hơn luyện thi sớm hay thành tích ngắn hạn. Đây là khuyến nghị sư phạm, không phải kết quả thực nghiệm đối chứng. Đã đọc đầy đủ bản đăng lại trên CafeF; chưa truy xuất được bài gốc Phụ nữ mới."
+      }
+    },
+    {
+      "id": "vietnamplus-science-fair-beyond-school-knowledge",
+      "date": null,
+      "year": "unknown",
+      "sort": "0000",
+      "cat": "media",
+      "topic": [
+        "stem",
+        "inquiry",
+        "curriculum",
+        "talent"
+      ],
+      "authors": "VietnamPlus · Excerpt featuring Đặng Minh Tuấn; article byline unverified",
+      "source": "VietnamPlus · Vietnam News Agency",
+      "url": "https://www.vietnamplus.vn/thi-khoa-hoc-ky-thuat-khong-the-chi-dung-kien-thuc-pho-thong-post704602.vnp",
+      "verificationUrl": "https://baomoi.com/du-an-t14716963.epi",
+      "basis": "indexed-report-excerpt",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "Science and engineering competitions: Research beyond the school curriculum",
+        "summary": "An indexed excerpt attributes to Đặng Minh Tuấn the view that student research requires knowledge across disciplines and often involves learning beyond the school curriculum.",
+        "insights": "The accessible excerpt supports this point about interdisciplinary learning and independent knowledge acquisition. The complete VietnamPlus article, publication date and byline could not be retrieved. No additional statements, findings or recommendations are attributed to the educator. The Báo Mới topic listing is the source of the excerpt."
+      },
+      "vi": {
+        "title": "Thi khoa học kỹ thuật: Không thể chỉ dùng kiến thức phổ thông",
+        "summary": "Theo trích đoạn được lập chỉ mục, thầy Đặng Minh Tuấn nhận định rằng nghiên cứu khoa học của học sinh đòi hỏi vận dụng tri thức liên môn và tìm hiểu thêm kiến thức ngoài chương trình nhà trường.",
+        "insights": "Trích đoạn hỗ trợ nhận định về học tập liên môn và tự tìm hiểu tri thức. Chưa truy xuất được toàn văn VietnamPlus, ngày đăng và tên tác giả. Không quy kết thêm phát biểu, kết quả hay khuyến nghị khi chưa có nguồn đầy đủ. Trích đoạn được tìm thấy trong danh mục chủ đề của Báo Mới."
+      }
+    },
+    {
+      "id": "youtube-cqa-c6sxl-m",
+      "date": null,
+      "year": "unknown",
+      "sort": "0000",
+      "cat": "media",
+      "topic": [],
+      "authors": "YouTube · Channel and author unverified",
+      "source": "YouTube · Video reference",
+      "url": "https://www.youtube.com/watch?v=CqA-c6SxL-M",
+      "basis": "link-pending",
+      "format": "video",
+      "related": [],
+      "en": {
+        "title": "YouTube video — source verification pending",
+        "summary": "The supplied video link has been retained as a reference. Its title, channel, publication date and content could not be retrieved during verification.",
+        "insights": "No transcript, summary, speaker identity or thematic classification is asserted. The original link is available for direct viewing if accessible. This reference can be updated once the video metadata or transcript is available."
+      },
+      "vi": {
+        "title": "Video YouTube — chờ kiểm chứng thông tin",
+        "summary": "Đường dẫn video được lưu dưới dạng tham chiếu. Chưa truy xuất được tiêu đề, kênh đăng, ngày phát hành và nội dung video.",
+        "insights": "Chưa công bố bản phiên âm, tóm tắt, danh tính người phát biểu hay phân loại chủ đề. Có thể mở đường dẫn gốc nếu video còn truy cập được. Mục này sẽ được hoàn thiện khi có thông tin video hoặc bản phiên âm."
       }
     }
   ]
