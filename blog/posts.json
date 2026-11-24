@@ -1,5 +1,5 @@
 {
-  "version": "1.3",
+  "version": "1.4",
   "updated": "2026-11-25",
   "posts": [
     {
@@ -438,6 +438,153 @@
         "title": "Ban đại diện phụ huynh: Nếu minh bạch, sao phải ồn ào?",
         "summary": "Liên kết nguồn đang chờ kiểm chứng. Theo tiêu đề trong đường dẫn được cung cấp, bài viết đề cập tính minh bạch trong hoạt động của ban đại diện phụ huynh. Chưa truy xuất được nội dung gốc, ngày đăng và thông tin tác giả.",
         "insights": "Đây là mục lưu liên kết, chưa phải bản tóm tắt nội dung bài báo. Chưa quy kết lập luận, khuyến nghị, danh tính người được phỏng vấn hay phát biểu cụ thể khi chưa đọc được nguồn gốc."
+      }
+    },
+    {
+      "id": "vov2-academic-acceleration-without-achievement-pressure",
+      "date": "2025-12-30",
+      "year": 2025,
+      "cat": "media",
+      "topic": [
+        "talent",
+        "assessment",
+        "equity",
+        "policy"
+      ],
+      "authors": "VOV2 interview with Đặng Minh Tuấn",
+      "source": "VOV2 · Voice of Vietnam · Education & Training",
+      "url": "https://vov2.vov.vn/giao-duc-dao-tao/cho-phep-hoc-sinh-hoc-vuot-lop-can-tranh-benh-thanh-tich-56605.vov2",
+      "basis": "full-interview",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "Academic acceleration without achievement pressure",
+        "summary": "Discussing opportunities for exceptionally advanced learners, Đặng Minh Tuấn presents grade acceleration as an educational means rather than a goal. He argues for matching the pace of learning to individual readiness while protecting children's emotional well-being.",
+        "insights": "The interview proposes multiple sources of assessment, appropriate acceleration pathways, mentoring and equitable access. It warns against parental pressure and recommends careful piloting before wider implementation. These are policy and pedagogical recommendations, not evaluated intervention effects."
+      },
+      "vi": {
+        "title": "Cho phép học sinh học vượt lớp cần tránh bệnh thành tích",
+        "summary": "TS. Đặng Minh Tuấn trao đổi về cơ hội học tăng tốc cho học sinh có năng lực đặc biệt. Học vượt lớp là phương tiện đáp ứng nhịp độ phát triển cá nhân, không phải đích đến; cần chú ý sức khỏe tinh thần và khả năng thích nghi của trẻ.",
+        "insights": "Bài phỏng vấn đề xuất đánh giá đa nguồn, lựa chọn hình thức tăng tốc phù hợp, hỗ trợ cố vấn và bảo đảm cơ hội công bằng. Cần tránh sức ép thành tích từ gia đình và thí điểm thận trọng trước khi mở rộng. Đây là khuyến nghị sư phạm và chính sách, chưa phải kết quả kiểm định thực nghiệm."
+      }
+    },
+    {
+      "id": "cafef-semiconductor-ai-learning-roadmap",
+      "date": "2025-03-26",
+      "year": 2025,
+      "cat": "media",
+      "topic": [
+        "stem",
+        "ai",
+        "technology",
+        "curriculum",
+        "language"
+      ],
+      "authors": "Hiểu Đan · Educational roadmap shared by Đặng Minh Tuấn",
+      "source": "CafeF · Education & Society",
+      "url": "https://cafef.vn/thay-giao-o-ha-noi-chia-se-lo-trinh-hoc-tap-cong-nghe-ban-dan-va-tri-tue-nhan-tao-tu-tieu-hoc-den-thpt-cuc-ki-chi-tiet-188250326142825379.chn",
+      "basis": "full-report",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "A learning roadmap for semiconductor technology and AI from primary to upper-secondary education",
+        "summary": "The article presents a proposed progression for Vietnamese learners preparing for STEM fields. Primary education emphasises curiosity, numeracy and scientific exploration; lower-secondary education builds mathematics, physics and programming foundations; upper-secondary education develops advanced disciplinary knowledge and project experience.",
+        "insights": "The roadmap connects English-language access to scientific resources with practical experiments, computing and interdisciplinary projects. It offers guidance for families and teachers, with adaptation to learners' strengths and available resources. It is a proposed educational pathway rather than an empirically validated curriculum; historical admissions and tuition examples are not current requirements."
+      },
+      "vi": {
+        "title": "Lộ trình học tập công nghệ bán dẫn và trí tuệ nhân tạo từ tiểu học đến THPT",
+        "summary": "Bài viết giới thiệu lộ trình chuẩn bị cho học sinh Việt Nam theo đuổi các lĩnh vực STEM. Tiểu học chú trọng hứng thú, tư duy toán và khám phá khoa học; THCS củng cố Toán, Vật lý và lập trình; THPT phát triển kiến thức chuyên sâu và trải nghiệm dự án.",
+        "insights": "Lộ trình kết nối năng lực tiếng Anh để tiếp cận tài liệu khoa học với thí nghiệm, tin học và học tập liên môn. Phụ huynh, giáo viên cần điều chỉnh theo sở trường và điều kiện của học sinh. Đây là đề xuất định hướng học tập, chưa phải chương trình được kiểm định; các ví dụ tuyển sinh và học phí năm 2025 không được coi là thông tin hiện hành."
+      }
+    },
+    {
+      "id": "vietnamnet-isef-2023-judge",
+      "date": null,
+      "year": 2023,
+      "cat": "media",
+      "topic": [
+        "stem",
+        "talent",
+        "assessment",
+        "inquiry"
+      ],
+      "authors": "Thanh Hùng · VietNamNet report featuring Đặng Minh Tuấn",
+      "source": "VietNamNet · Education",
+      "url": "https://vietnamnet.vn/thay-giao-viet-lam-giam-khao-cuoc-thi-khoa-hoc-ky-thuat-quoc-te-tai-my-2090615.html",
+      "basis": "full-report",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "Vietnamese educator selected to judge the 2023 International Science and Engineering Fair",
+        "summary": "VietNamNet reports the selection of VNU University of Education lecturer Đặng Minh Tuấn as a judge for the 2023 International Science and Engineering Fair in the United States, in Physics and Astronomy. The article connects his earlier student research mentoring with his interest in international approaches to STEM education.",
+        "insights": "The report emphasises objective scientific evaluation, engagement with unfamiliar research problems and the value of introducing inquiry in school. It describes the selection and anticipated professional learning, not a retrospective account of judging outcomes. The exact publication day is not visible in the retrieved article; the year is supported by the report and contemporary coverage."
+      },
+      "vi": {
+        "title": "Thầy giáo Việt được chọn làm giám khảo cuộc thi khoa học kỹ thuật ở Mỹ",
+        "summary": "VietNamNet đưa tin giảng viên Đặng Minh Tuấn, Trường Đại học Giáo dục, ĐHQGHN, được chọn làm giám khảo ISEF 2023 tại Mỹ ở lĩnh vực Vật lý và Thiên văn học. Bài báo kết nối kinh nghiệm hướng dẫn nghiên cứu của học sinh với mong muốn học hỏi giáo dục STEM quốc tế.",
+        "insights": "Bài báo nhấn mạnh đánh giá khoa học khách quan, tiếp cận vấn đề mới và cho học sinh làm quen với nghiên cứu từ sớm. Nội dung ghi nhận việc được chọn và kỳ vọng học hỏi chuyên môn, không phải báo cáo kết quả sau khi chấm thi. Bản truy xuất chưa hiển thị ngày công bố cụ thể; năm 2023 phù hợp với nội dung và tin đương thời."
+      }
+    },
+    {
+      "id": "tienphong-vietnamese-teacher-development",
+      "date": "2019-04-28",
+      "year": 2019,
+      "cat": "media",
+      "topic": [
+        "teachers",
+        "equity",
+        "language",
+        "governance",
+        "stem"
+      ],
+      "authors": "Nghiêm Huê · Tiền Phong profile of Đặng Minh Tuấn",
+      "source": "Tiền Phong · Giáo dục",
+      "url": "https://tienphong.vn/giao-vien-viet-nam-dang-thieu-gi-post1107145.tpo",
+      "basis": "full-report",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "What support do Vietnamese teachers need?",
+        "summary": "This 2019 profile examines Đặng Minh Tuấn's experience developing UberMath, an English-medium mathematics and science initiative, and the difficulties of recruiting and preparing teachers for new approaches. It highlights the gap between initial teacher preparation and practical classroom responsibilities.",
+        "insights": "The article discusses structured support for novice teachers, preparation for teaching mathematics and science in English, and the time and institutional conditions needed for professional development. It also records aspirations to expand learning opportunities outside major cities. These are historical experiences and proposals, not a national survey of teachers or evidence that every planned initiative was completed."
+      },
+      "vi": {
+        "title": "Giáo viên Việt Nam đang thiếu gì?",
+        "summary": "Bài viết năm 2019 ghi nhận kinh nghiệm phát triển UberMath, sáng kiến dạy Toán và khoa học bằng tiếng Anh, cùng những khó khăn trong tuyển chọn và chuẩn bị giáo viên. Trọng tâm là khoảng cách giữa đào tạo ban đầu với yêu cầu nghề nghiệp thực tế.",
+        "insights": "Bài báo đề cập hỗ trợ giáo viên mới ra trường, chuẩn bị năng lực dạy Toán và khoa học bằng tiếng Anh, quỹ thời gian và cơ chế phát triển chuyên môn. Bài cũng ghi nhận mong muốn mở rộng cơ hội học tập ngoài đô thị lớn. Đây là kinh nghiệm và định hướng tại thời điểm 2019, không phải khảo sát đại diện quốc gia hoặc minh chứng mọi dự định đã hoàn thành."
+      }
+    },
+    {
+      "id": "24h-developing-childrens-mathematical-thinking",
+      "date": "2017-09-17",
+      "year": 2017,
+      "cat": "media",
+      "topic": [
+        "mathematics",
+        "talent",
+        "governance",
+        "assessment"
+      ],
+      "authors": "Hồng Nhung (Khám Phá) · Interview with Đặng Minh Tuấn",
+      "source": "24h · Giáo dục – Du học",
+      "url": "https://www.24h.com.vn/giao-duc-du-hoc/thay-giao-diu-dat-nhieu-hoc-sinh-ha-noi-doat-giai-cao-chia-se-cach-giup-tre-hoc-sieu-toan-c216a904009.html",
+      "basis": "full-interview",
+      "related": [
+        "shd"
+      ],
+      "en": {
+        "title": "Developing children's mathematical thinking: Interest, number sense and independent reasoning",
+        "summary": "The interview presents Đặng Minh Tuấn's advice to parents on cultivating interest in mathematics through everyday quantities, exploration and tasks adjusted to individual readiness. It emphasises children's willingness to express their thinking and solve problems independently rather than accumulating content ahead of school.",
+        "insights": "The discussion recommends identifying learning potential, avoiding comparisons between children, and supporting a problem-solving process from reading and interpreting the question to checking the result. These are practice-based educational perspectives rather than experimentally established effects of a particular method."
+      },
+      "vi": {
+        "title": "Thầy giáo dìu dắt nhiều học sinh Hà Nội đoạt giải cao chia sẻ cách giúp trẻ học siêu Toán",
+        "summary": "Cuộc phỏng vấn chia sẻ cách nuôi dưỡng hứng thú học Toán qua cảm nhận số lượng, khám phá và nhiệm vụ phù hợp với năng lực từng trẻ. Bài viết đề cao việc trẻ trình bày suy nghĩ và tự giải quyết vấn đề thay vì tích lũy kiến thức trước chương trình.",
+        "insights": "Các gợi ý gồm nhận diện tiềm năng, tránh so sánh trẻ với nhau và hỗ trợ quy trình giải toán từ đọc hiểu, phân tích đề đến kiểm tra kết quả. Đây là quan điểm dựa trên trải nghiệm dạy học, không phải minh chứng thực nghiệm về hiệu quả của một phương pháp."
       }
     }
   ]
