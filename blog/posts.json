@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "updated": "2026-11-25",
   "posts": [
     {
@@ -381,6 +381,63 @@
         "title": "Thi vào lớp 10: Đừng đặt nặng suy nghĩ trường chuyên hay trường thường",
         "summary": "Trong bài của VOV, thầy Đặng Minh Tuấn cho rằng kỳ thi vào lớp 10 có ý nghĩa quan trọng nhưng không quyết định tương lai học sinh. Việc lựa chọn môi trường học tập phù hợp với năng lực, sở trường của mỗi em cần được đặt lên trên tên gọi trường chuyên hay trường thường.",
         "insights": "Phần văn bản giới thiệu đề cao năng lực tự học, tự đọc và giải quyết vấn đề thực tế. Bản tóm tắt dựa trên trang VOV.VN đã truy cập được, chưa xem toàn bộ video. Đường dẫn cổng thông tin VOV do người dùng cung cấp chưa mở được trong lần kiểm chứng này."
+      }
+    },
+    {
+      "id": "vov1-ai-entering-our-classrooms",
+      "date": "2025-09-26",
+      "year": 2025,
+      "cat": "media",
+      "topic": [
+        "ai",
+        "technology",
+        "teachers"
+      ],
+      "authors": "VOV1 · Dòng chảy sự kiện",
+      "source": "VOV1 · Voice of Vietnam · Radio programme",
+      "url": "https://vov1.vov.vn/goc-nhin-vov1/dong-chay-su-kien/ai-da-va-dang-buoc-vao-lop-hoc-cua-con-em-chung-ta-116503.vov",
+      "alternate": "https://music.amazon.in/podcasts/1bcdb505-33c0-4da4-8593-d6dd64eb100d/episodes/d13768e9-8b01-4039-9baf-2c5b6a3104b6/vov---s%E1%BB%B1-ki%E1%BB%87n-b%C3%A0n-lu%E1%BA%ADn-d%C3%B2ng-ch%E1%BA%A3y-s%E1%BB%B1-ki%E1%BB%87n---ai-%C4%91%C3%A3-v%C3%A0-%C4%91ang-%E2%80%9Cb%C6%B0%E1%BB%9Bc-v%C3%A0o%E2%80%9D-l%E1%BB%9Bp-h%E1%BB%8Dc-c%E1%BB%A7a-con-em-ch%C3%BAng-ta",
+      "basis": "syndicated-programme-description",
+      "format": "podcast",
+      "related": [
+        "pgj",
+        "shd"
+      ],
+      "en": {
+        "title": "AI has entered our children's classrooms",
+        "summary": "The VOV1 current-affairs programme examines the presence of AI in school learning. The syndicated episode introduction illustrates the speed with which ChatGPT can complete tasks such as balancing a chemical equation or producing an essay. The distribution listing dates the episode to 26 September 2025 and gives a duration of 25 minutes.",
+        "insights": "The accessible evidence is limited to the indexed description on Amazon Music. The original VOV1 page and complete audio could not be accessed during verification. Guest identities, individual statements and the full discussion remain unverified. The links to PGJ and SHD-AI indicate thematic relevance, not claims made in the broadcast."
+      },
+      "vi": {
+        "title": "AI đã và đang “bước vào” lớp học của con em chúng ta",
+        "summary": "Chương trình Dòng chảy sự kiện của VOV1 đề cập sự hiện diện của AI trong học tập ở trường. Phần giới thiệu trên nền tảng phân phối podcast minh họa tốc độ ChatGPT thực hiện các nhiệm vụ như giải phương trình hóa học hoặc viết bài văn. Danh mục chương trình ghi ngày 26/09/2025 và thời lượng 25 phút.",
+        "insights": "Nội dung kiểm chứng được giới hạn ở phần mô tả được lập chỉ mục trên Amazon Music. Chưa truy xuất được trang VOV1 gốc và chưa nghe bản ghi đầy đủ; danh tính khách mời, phát biểu cá nhân và nội dung trao đổi chi tiết chưa được xác minh. Liên kết PGJ và SHD-AI chỉ thể hiện sự liên quan về chủ đề."
+      }
+    },
+    {
+      "id": "vov-parent-representatives-transparency",
+      "date": null,
+      "year": "unknown",
+      "sort": "0000",
+      "cat": "media",
+      "topic": [
+        "policy",
+        "governance"
+      ],
+      "authors": "VOV.VN · Author not yet verified",
+      "source": "VOV.VN · Voice of Vietnam · Society",
+      "url": "https://vov.vn/xa-hoi/ban-dai-dien-phu-huynh-neu-minh-bach-sao-phai-on-ao-post1127614.vov",
+      "basis": "link-pending",
+      "related": [],
+      "en": {
+        "title": "Parents' representative committees: If there is transparency, why the controversy?",
+        "summary": "Source link awaiting verification. The supplied article title concerns transparency in the activities of parent representative committees. The original text, publication date and authorship could not be retrieved.",
+        "insights": "This is a reference entry, not an article summary. No specific arguments, recommendations, interview participants or statements are attributed until the original source becomes accessible."
+      },
+      "vi": {
+        "title": "Ban đại diện phụ huynh: Nếu minh bạch, sao phải ồn ào?",
+        "summary": "Liên kết nguồn đang chờ kiểm chứng. Theo tiêu đề trong đường dẫn được cung cấp, bài viết đề cập tính minh bạch trong hoạt động của ban đại diện phụ huynh. Chưa truy xuất được nội dung gốc, ngày đăng và thông tin tác giả.",
+        "insights": "Đây là mục lưu liên kết, chưa phải bản tóm tắt nội dung bài báo. Chưa quy kết lập luận, khuyến nghị, danh tính người được phỏng vấn hay phát biểu cụ thể khi chưa đọc được nguồn gốc."
       }
     }
   ]
