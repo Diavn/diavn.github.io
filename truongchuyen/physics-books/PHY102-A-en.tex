@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper,openany]{book}
+\usepackage[margin=24mm]{geometry}
+\usepackage{fontspec}
+\IfFontExistsTF{Noto Serif}{\setmainfont{Noto Serif}}{\setmainfont{DejaVu Serif}}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist[enumerate]{leftmargin=*,itemsep=9pt}
+
+\renewcommand{\contentsname}{Contents}
+\begin{document}
+\title{V-TALENT 2045\\ PHY102-A --- Motion, graphs and relative velocity\\\large Level 1 · Foundation mechanics · Grades 8–9}
+\author{Dr. Dang Minh Tuan -- TS. Đặng Minh Tuấn}
+\date{2026 · v1.0}
+\maketitle
+\tableofcontents
+\chapter*{Learning objectives}\addcontentsline{toc}{chapter}{Learning objectives}
+Distinguish distance and displacement; interpret slopes and areas; construct piecewise motion models; solve meeting and pursuit problems; justify assumptions and verify results.
+
+First subject booklet, draft 1.0. Original problems; external archive references are for further study, not reproduced. Independently review before formal assessment.
+\chapter{Describing motion: a model, not a formula}
+\section{Theory and derivations}
+A position $x$ is a signed coordinate in a chosen frame. A displacement is $\Delta x=x_2-x_1$; the distance $s$ is the total length of the path and is non-negative. In one dimension, $s\geq|\Delta x|$, with equality only if there is no reversal (ignoring stationary intervals). A reference frame and positive direction must be stated before assigning signs. A position can be negative even when the object moves in the positive direction.
+
+Average speed is $\bar u=s/\Delta t$ and average velocity is $\bar v=\Delta x/\Delta t$. If two legs have durations $t_1,t_2$ and speeds $u_1,u_2$, $\bar u=(u_1t_1+u_2t_2)/(t_1+t_2)$. For equal distances, $\bar u=2u_1u_2/(u_1+u_2)$; for equal times, it is the arithmetic mean. These are different weighting conditions, not competing formulas.
+
+Uniform motion obeys $x=x_0+vt$. This follows from equal signed displacements in equal time intervals. For constant acceleration, a velocity--time graph is a straight line: $v=v_0+at$. Its signed area is a trapezium, so $\Delta x=(v_0+v)t/2=v_0t+at^2/2$. At Level 1 this is an optional bridge, derived geometrically without calculus. When acceleration varies these formulas no longer apply globally.
+
+\section{Worked example}
+\subsection*{Worked example 1.1}
+A student walks 120 m east in 60 s, waits 30 s, then walks 80 m west in 40 s. Find distance, displacement, average speed and average velocity.
+
+\textbf{Solution.} Choose east as positive. The entire elapsed time includes the wait: $t=130\,\mathrm{s}$. The distance is $120+80=200\,\mathrm{m}$, whereas $\Delta x=120-80=40\,\mathrm{m}$. Hence $\bar u=200/130=1.54\,\mathrm{m\,s^{-1}}$ and $\bar v=40/130=0.308\,\mathrm{m\,s^{-1}}$ east. Their units coincide but the physical meanings differ.
+\subsection*{Worked example 1.2}
+A cyclist travels equal distances at 12 km/h and 18 km/h. Derive the average speed and compare with the arithmetic mean.
+
+\textbf{Solution.} Let each distance be $d$ km. Then $t=d/12+d/18=5d/36$ h and $\bar u=2d/(5d/36)=14.4$ km/h. The arithmetic mean is 15 km/h. The slower leg lasts longer and receives greater time weight; the result lies between 12 and 18.
+\section{End-of-topic practice}
+\begin{enumerate}
+\item \textbf{PHY102-A-1.1}. Walk 90 m north in 45 s and 30 m south in 15 s. Determine the four motion quantities above.
+\item \textbf{PHY102-A-1.2}. A bus travels 40 km at 40 km/h, stops for 15 min, then travels 60 km at 60 km/h. Find the average speed including the stop.
+\item \textbf{PHY102-A-1.3}. For equal distances the overall speed is 24 km/h. One leg is 20 km/h. Determine the other speed.
+\item \textbf{PHY102-A-1.4}. An object starts at x = -5 m, moves uniformly at +3 m/s for 4 s, then at -2 m/s for 5 s. Find final position and distance.
+\end{enumerate}
+\chapter{Graphs, meetings and moving frames}
+\section{Theory and derivations}
+A position--time graph encodes motion: slope $v=\Delta x/\Delta t$ for a straight segment, horizontal means rest, negative slope means motion in the negative direction. Intersecting position graphs indicate coincidence at the same time, not necessarily a collision if objects occupy different lanes. On a velocity--time graph the signed area gives displacement; for distance split at changes of sign and add absolute areas. A steep position graph does not itself imply large acceleration.
+
+For uniform motion use one global clock: $x_A=x_{A0}+v_A t$, $x_B=x_{B0}+v_B t$. The separation is $D=x_B-x_A=D_0+(v_B-v_A)t$. Setting $D=0$ yields meeting time when the solution is non-negative and within the modeled interval. For delayed departure, use $x_B=x_{B0}+v_B(t-t_d)$ only for $t\ge t_d$; before departure B stays at $x_{B0}$.
+
+Relative velocity follows from subtracting positions: $v_{A/B}=v_A-v_B$. In two dimensions this is a vector identity. For a swimmer in a uniform river, $\vec v_{\rm ground}=\vec v_{\rm water}+\vec v_{\rm current}$. Pointing perpendicular to the banks minimizes crossing time for a fixed swimming speed, but allows downstream drift. Aiming upstream can eliminate drift only when the swimmer is faster than the current.
+\begin{center}
+\begin{tikzpicture}[x=.85cm,y=.52cm]
+\draw[->] (0,0)--(7,0) node[right] {$t$};
+\draw[->] (0,-3)--(0,5) node[above] {$v$};
+\draw[thick] (0,-2)--(6,4);
+\draw[dashed] (2,0)--(2,-2);
+\draw[dashed] (6,0)--(6,4);
+\node[below] at (2,0) {$t_0$};\node[below] at (6,0) {$t_1$};
+\end{tikzpicture}
+\end{center}
+\section{Worked example}
+\subsection*{Worked example 2.1}
+A leaves at 0 h at 5 km/h. B starts from the same place 0.5 h later at 8 km/h. When and where does B catch A?
+
+\textbf{Solution.} At $t=0.5$ h, A has a 2.5 km lead. The closing speed is $8-5=3$ km/h. The remaining time is $2.5/3=5/6$ h; the global time is $4/3$ h. Position is $5(4/3)=20/3$ km. Equivalently solve $5t=8(t-0.5)$ and check $t\ge0.5$.
+\subsection*{Worked example 2.2}
+A river is 120 m wide. A swimmer moves at 1.5 m/s relative to water, perpendicular to the banks. Current speed is 0.9 m/s. Find crossing time and drift. Then find the crossing time if the swimmer lands directly opposite.
+
+\textbf{Solution.} The across-river component is 1.5 m/s, so $t=120/1.5=80$ s and drift $=0.9(80)=72$ m. To cancel drift, the swimmer needs upstream component 0.9 m/s; by Pythagoras the across component is $\sqrt{1.5^2-0.9^2}=1.2$ m/s. Thus $t=100$ s. The direct route is slower because some swimming speed is allocated to cancelling the current.
+\section{Experimental investigation}
+Record a toy car against a ruler at known frame intervals. Extract at least six (t,x) pairs, graph x against t, estimate slope from two widely separated points, and compare slopes from different intervals. Report pixel-to-length calibration and timing uncertainty. If slopes differ beyond uncertainty, reject uniform motion rather than averaging away the disagreement.
+\section{End-of-topic practice}
+\begin{enumerate}
+\item \textbf{PHY102-A-2.1}. A and B are 42 km apart, travelling towards each other at 12 and 9 km/h. Find meeting time and distance from A's start.
+\item \textbf{PHY102-A-2.2}. A car moves at 60 km/h. A second car leaves the same point 20 min later at 75 km/h. Find the catch-up time from A's departure.
+\item \textbf{PHY102-A-2.3}. Velocity rises uniformly from -4 to +8 m/s in 6 s. Determine acceleration, displacement and distance.
+\item \textbf{PHY102-A-2.4}. A boat has speed 5 m/s relative to water. A river 240 m wide flows at 3 m/s. Determine minimum crossing time, drift, and the direct-opposite crossing time.
+\end{enumerate}
+\chapter*{Further study and sources}\addcontentsline{toc}{chapter}{Further study and sources}
+OpenStax Physics; PhET; Tracker; SJPO archive. VPhO book items are Level 2 extensions, not required at this stage.
+
+\url{https://diavn.github.io/truongchuyen/physics-vpho.html}
+
+\url{https://hyperphysics.gsu.edu/hbase/hph.html}
+
+\url{https://openstax.org/subjects/science}
+\appendix
+\chapter{Full solutions to practice}
+\section{Describing motion: a model, not a formula}
+\begin{enumerate}
+\item \textbf{PHY102-A-1.1}. North positive: $s=120$ m, $\Delta x=60$ m, $t=60$ s. Therefore $\bar u=2$ m/s, $\bar v=1$ m/s north.
+\item \textbf{PHY102-A-1.2}. The legs take 1 h each; the stop is 0.25 h. Thus $t=2.25$ h, $s=100$ km, $\bar u=100/2.25=44.44$ km/h. Excluding the stop would give 50 km/h, a different question.
+\item \textbf{PHY102-A-1.3}. Use $2/24=1/20+1/u$. Then $1/u=1/12-1/20=1/30$, so $u=30$ km/h. Check: $2(20)(30)/(20+30)=24$.
+\item \textbf{PHY102-A-1.4}. First displacement $+12$ m gives $x=7$ m. Second displacement $-10$ m gives $x_f=-3$ m. Distance is $12+10=22$ m, not $|-3-(-5)|=2$ m.
+\end{enumerate}
+\section{Graphs, meetings and moving frames}
+\begin{enumerate}
+\item \textbf{PHY102-A-2.1}. Take A's start as zero. $x_A=12t$, $x_B=42-9t$. Equality gives $21t=42$, $t=2$ h. $x=24$ km from A.
+\item \textbf{PHY102-A-2.2}. Delay $=1/3$ h, lead $=20$ km, closing speed 15 km/h. Catch-up takes $20/15=4/3$ h after B starts, hence total $5/3$ h = 100 min.
+\item \textbf{PHY102-A-2.3}. $a=(8-(-4))/6=2$ m/s\textsuperscript{2}. Zero velocity occurs at $t=2$ s. The negative triangle has area $-4(2)/2=-4$ m; positive triangle $8(4)/2=16$ m. Displacement $12$ m; distance $20$ m.
+\item \textbf{PHY102-A-2.4}. Minimum time $240/5=48$ s, drift $3(48)=144$ m. To cancel current use upstream component 3 m/s and across component $\sqrt{25-9}=4$ m/s. Direct crossing takes $240/4=60$ s. Check feasibility: $5>3$.
+\end{enumerate}
+\end{document}
