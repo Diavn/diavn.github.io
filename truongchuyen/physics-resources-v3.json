@@ -1,5 +1,5 @@
 {
-  "version": "6.1",
+  "version": "6.2",
   "date": "2026-11-28",
   "sources": [
     {
@@ -691,14 +691,15 @@
         "revision_target": "derivatives, integrals, Taylor, gradient and vectors",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
       },
-      "edition": "5.3",
+      "edition": "5.4",
       "learning_page": "physics-math-level2-v53.html",
       "companion": {
-        "chapters": 4,
-        "worked_examples": 4,
-        "practice_count": 8,
-        "version": "5.3",
-        "retains_prior_volume": true
+        "chapters": 5,
+        "worked_examples": 5,
+        "practice_count": 10,
+        "version": "5.4",
+        "retains_prior_volume": true,
+        "chapter_diagrams": 5
       },
       "review_status": "expanded_original_draft_not_independently_reviewed"
     },
@@ -731,14 +732,15 @@
         "revision_target": "ODE, complex impedance and normal-mode bridge",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
       },
-      "edition": "5.3",
+      "edition": "5.4",
       "learning_page": "physics-math-level2-v53.html",
       "companion": {
-        "chapters": 4,
-        "worked_examples": 4,
-        "practice_count": 8,
-        "version": "5.3",
-        "retains_prior_volume": true
+        "chapters": 5,
+        "worked_examples": 5,
+        "practice_count": 10,
+        "version": "5.4",
+        "retains_prior_volume": true,
+        "chapter_diagrams": 5
       },
       "review_status": "expanded_original_draft_not_independently_reviewed"
     },
@@ -771,14 +773,15 @@
         "revision_target": "linear algebra, probability, numerical convergence",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
       },
-      "edition": "5.3",
+      "edition": "5.4",
       "learning_page": "physics-math-level2-v53.html",
       "companion": {
-        "chapters": 6,
-        "worked_examples": 6,
-        "practice_count": 12,
-        "version": "5.3",
-        "retains_prior_volume": true
+        "chapters": 8,
+        "worked_examples": 8,
+        "practice_count": 16,
+        "version": "5.4",
+        "retains_prior_volume": true,
+        "chapter_diagrams": 8
       },
       "review_status": "expanded_original_draft_not_independently_reviewed"
     },
@@ -797,7 +800,7 @@
         "en": "Robot dynamics",
         "vi": "Động lực học robot"
       },
-      "status": "draft_exists",
+      "status": "online_draft",
       "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
       "master_volume": "V02",
       "source_review": {
@@ -807,7 +810,18 @@
         "advanced_practice": "DM14 ch4,12; FMA19",
         "revision_target": "non-inertial frames, constraint transitions, drag",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.4",
+      "learning_page": "physics-mechanics-level2-v54.html",
+      "companion": {
+        "chapters": 4,
+        "worked_examples": 4,
+        "practice_count": 8,
+        "version": "5.4",
+        "retains_prior_volume": true,
+        "chapter_diagrams": 4
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -837,7 +851,18 @@
         "advanced_practice": "DM14 ch6; FMA19",
         "revision_target": "impulse, collisions, centre of mass",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.4",
+      "learning_page": "physics-mechanics-level2-v54.html",
+      "companion": {
+        "chapters": 2,
+        "worked_examples": 2,
+        "practice_count": 4,
+        "version": "5.4",
+        "retains_prior_volume": true,
+        "chapter_diagrams": 2
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -867,7 +892,18 @@
         "advanced_practice": "DM14 ch5",
         "revision_target": "potential landscapes, equilibrium, energy budgets",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.4",
+      "learning_page": "physics-mechanics-level2-v54.html",
+      "companion": {
+        "chapters": 2,
+        "worked_examples": 2,
+        "practice_count": 4,
+        "version": "5.4",
+        "retains_prior_volume": true,
+        "chapter_diagrams": 2
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -897,7 +933,18 @@
         "advanced_practice": "FMA19; prior ZPUMC archive",
         "revision_target": "rolling, angular momentum, contact and inertia",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.4",
+      "learning_page": "physics-mechanics-level2-v54.html",
+      "companion": {
+        "chapters": 2,
+        "worked_examples": 2,
+        "practice_count": 4,
+        "version": "5.4",
+        "retains_prior_volume": true,
+        "chapter_diagrams": 2
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -927,7 +974,18 @@
         "advanced_practice": "FMA19 gravitation via topic tables",
         "revision_target": "orbital energy, angular momentum, limiting cases",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.4",
+      "learning_page": "physics-mechanics-level2-v54.html",
+      "companion": {
+        "chapters": 2,
+        "worked_examples": 2,
+        "practice_count": 4,
+        "version": "5.4",
+        "retains_prior_volume": true,
+        "chapter_diagrams": 2
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -9388,10 +9446,10 @@
           "PHY201-C"
         ],
         "candidate_page": "physics-volume01-v61.html",
-        "status": "integrated_companion_candidate",
-        "candidate_chapters": 22,
-        "candidate_practice_count": 88,
-        "candidate_new_companion_practice_count": 52
+        "status": "illustrated_integrated_candidate",
+        "candidate_chapters": 26,
+        "candidate_practice_count": 96,
+        "candidate_figures": 26
       },
       {
         "id": "V02",
@@ -9403,7 +9461,12 @@
           "PHY102-A",
           "PHY102-B",
           "PHY202-A"
-        ]
+        ],
+        "candidate_page": "physics-volume02-v62.html",
+        "status": "illustrated_integrated_candidate",
+        "candidate_chapters": 10,
+        "candidate_practice_count": 26,
+        "candidate_figures": 10
       },
       {
         "id": "V03",
@@ -9417,7 +9480,12 @@
           "PHY202-C",
           "PHY202-D",
           "PHY202-E"
-        ]
+        ],
+        "candidate_page": "physics-volume03-v62.html",
+        "status": "illustrated_integrated_candidate",
+        "candidate_chapters": 23,
+        "candidate_practice_count": 49,
+        "candidate_figures": 26
       },
       {
         "id": "V04",
@@ -9527,6 +9595,13 @@
     "language_editions": [
       "vi",
       "en"
-    ]
+    ],
+    "illustration_policy": {
+      "version": "6.2",
+      "chapter_schematic_required": true,
+      "problem_diagram_when_geometry_requires": true,
+      "source": "original inline SVG; PDF vector conversion",
+      "scope": "V01–V03 candidate chapters; other volumes pending"
+    }
   }
 }
