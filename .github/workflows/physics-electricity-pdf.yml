@@ -1,0 +1,129 @@
+name: Electricity and semiconductor PDF candidates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/physics-electricity-pdf.yml'
+      - 'truongchuyen/physics-electricity-series.html'
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-pictures texlive-fonts-recommended fonts-noto-core fonts-dejavu-core poppler-utils latexmk
+      - name: Generate temporary LaTeX sources from bilingual learning page
+        run: |
+          mkdir -p /tmp/electricity
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          import re
+          class Reader(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.books={}
+                  self.book=None
+                  self.tag=None
+                  self.buf=[]
+              def handle_starttag(self,tag,attrs):
+                  attrs=dict(attrs)
+                  if tag=='article' and 'data-book' in attrs:
+                      self.book=(attrs['data-book'],attrs['lang'])
+                      self.books[self.book]=[]
+                  if self.book and tag in ('h2','h3','h4','p'):
+                      self.tag=tag
+                      self.buf=[]
+              def handle_data(self,data):
+                  if self.book and self.tag:
+                      self.buf.append(data)
+              def handle_endtag(self,tag):
+                  if self.book and tag==self.tag:
+                      self.books[self.book].append((tag,''.join(self.buf)))
+                      self.tag=None
+                  if tag=='article':
+                      self.book=None
+          r=Reader()
+          r.feed(Path('truongchuyen/physics-electricity-series.html').read_text())
+          assert len(r.books)==12
+          esc={'&':r'\&','%':r'\%','$':r'\$','#':r'\#','_':r'\_','{':r'\{','}':r'\}','\\':r'\textbackslash{}','~':r'\textasciitilde{}','^':r'\textasciicircum{}','≈':r'\ensuremath{\approx}','≤':r'\ensuremath{\le}','≥':r'\ensuremath{\ge}','−':r'\ensuremath{-}','×':r'\ensuremath{\times}','β':r'\ensuremath{\beta}','θ':r'\ensuremath{\theta}','ν':r'\ensuremath{\nu}','ρ':r'\ensuremath{\rho}','µ':r'\ensuremath{\mu}','²':r'\textsuperscript{2}','³':r'\textsuperscript{3}','⁴':r'\textsuperscript{4}'}
+          esc.update({'≪':r'\ensuremath{\ll}','≫':r'\ensuremath{\gg}','⁻':r'\textsuperscript{-}','₀':r'\textsubscript{0}'})
+          esc.update({'μ':r'\ensuremath{\mu}','Ω':r'\ensuremath{\Omega}','σ':r'\ensuremath{\sigma}','λ':r'\ensuremath{\lambda}','₁':r'\textsubscript{1}','₂':r'\textsubscript{2}','₃':r'\textsubscript{3}','₄':r'\textsubscript{4}','ₛ':r'\textsubscript{s}','¹':r'\textsuperscript{1}','⁰':r'\textsuperscript{0}','⁵':r'\textsuperscript{5}','⁶':r'\textsuperscript{6}','⁷':r'\textsuperscript{7}','⁸':r'\textsuperscript{8}','⁹':r'\textsuperscript{9}'})
+          def fmt(s):
+              out=[]
+              for i,part in enumerate(re.split(r'(\\\(.*?\\\))',s)):
+                  out.append(part if i%2 else ''.join(esc.get(c,c) for c in part))
+              return ''.join(out)
+          def diagram(code,ch):
+              key=(code,ch)
+              figs={
+              ('PHY103-B',1):r'\draw[thick] (0,0)--(0,1.1) (0,1.5)--(0,3)--(1,3) (3,3)--(4,3)--(4,0)--(0,0);\draw[thick] (-.35,1.1)--(.35,1.1) (-.2,1.5)--(.2,1.5);\draw[thick] (1,3) rectangle (3,3.45);\node at (2,3.23) {$R$};\node[left] at (-.35,1.3) {$V$};\draw[->] (3.1,2.8)--(3.8,2.8) node[midway,below] {$I$};',
+              ('PHY103-B',2):r'\draw[thick] (0,0)--(0,2)--(1,2) (3,2)--(4,2)--(4,0)--(3,0) (1,0)--(0,0);\draw (1,1.75) rectangle (3,2.25) (1,-.25) rectangle (3,.25);\node at (2,2) {$R_1$};\node at (2,0) {$R_2$};\fill (0,1) circle (.06) node[left] {$A$};\fill (4,1) circle (.06) node[right] {$B$};',
+              ('PHY204-A',1):r'\fill[gray!40] (-1.8,0) circle (.22);\fill[gray!65] (1.8,0) circle (.22);\node[above] at (-1.8,.3) {$+Q$};\node[above] at (1.8,.3) {$-Q$};\fill (0,0) circle (.04) node[below] {$O$};\draw[->,thick] (0,.12)--(.85,.12) node[above] {$\mathbf E$};',
+              ('PHY204-A',2):r'\draw[very thick] (-1,-1.1)--(-1,1.1) (1,-1.1)--(1,1.1);\fill[gray!20] (-.9,-1.1) rectangle (.9,1.1);\foreach \y in {-.8,-.4,0,.4,.8}{\draw[->] (-.8,\y)--(.8,\y);}\node[above] at (-1,1.1) {$+Q$};\node[above] at (1,1.1) {$-Q$};\draw[<->] (-1,-1.4)--(1,-1.4) node[midway,below] {$d$};',
+              ('PHY204-B',1):r'\draw (0,3)--(-1.4,2) (-1.4,1)--(0,0) (0,3)--(1.4,2) (1.4,1)--(0,0);\draw (-1.65,1) rectangle (-1.15,2) (1.15,1) rectangle (1.65,2);\draw[dashed] (-1.4,1.5)--(1.4,1.5) node[midway,above] {$I_g$};\node[above] at (0,3) {$V_s$};\node[below] at (0,0) {$0$};',
+              ('PHY204-B',2):r'\draw[->] (0,0)--(5,0) node[right] {$t/\tau$};\draw[->] (0,0)--(0,2.5) node[above] {$V_C/V_s$};\draw[dashed] (0,2)--(5,2);\draw[thick,domain=0:4.7,samples=80] plot (\x,{2*(1-exp(-\x))});\draw[dotted] (1,0)--(1,1.264)--(0,1.264);\node[below] at (1,0) {$1$};\node[left] at (0,1.264) {$0.632$};',
+              ('PHY204-C',1):r'\draw[dashed] (0,0) circle (1.3);\fill (1.3,0) circle (.08) node[right] {$q$};\draw[->,thick] (1.3,0)--(1.3,1) node[right] {$\mathbf v$};\draw[->,thick] (1.25,0)--(.25,0) node[above] {$\mathbf F$};\node at (0,0) {$\otimes B$};',
+              ('PHY204-C',2):r'\draw[fill=gray!15] (0,0)--(4,0)--(4,1.5)--(0,1.5)--cycle;\draw[->,thick] (-.6,.75)--(.6,.75) node[above] {$I$};\node at (2,.75) {$\otimes B$};\draw[<->] (2.8,-.3)--(2.8,1.8) node[above] {$V_H$};',
+              ('PHY204-D',1):r'\draw[thick] (0,0)--(4,0) (0,1.8)--(4,1.8) (0,0)--(0,1.8);\draw[very thick] (2.3,-.1)--(2.3,1.9);\draw[->,thick] (2.4,.9)--(3.6,.9) node[above] {$v$};\foreach \x in {.5,1,1.5}{\node at (\x,.9) {$\otimes$};}\node[below] at (2.3,-.1) {$l$};',
+              ('PHY204-D',2):r'\draw[->] (0,0)--(5,0) node[right] {$t/\tau$};\draw[->] (0,0)--(0,2.5) node[above] {$I/I_\infty$};\draw[dashed] (0,2)--(5,2);\draw[thick,domain=0:4.7,samples=80] plot (\x,{2*(1-exp(-\x))});\node[below] at (1,0) {$1$};',
+              ('PHY207-B',1):r'\draw[fill=gray!20] (0,0) rectangle (4,.65);\draw[fill=gray!40] (0,1.65) rectangle (4,2.3);\node at (2,.32) {VB};\node at (2,1.98) {CB};\draw[<->] (4.2,.65)--(4.2,1.65) node[midway,right] {$E_g$};\draw[->,thick] (1.4,.5)--(1.4,1.9);',
+              ('PHY207-B',2):r'\draw[fill=gray!20] (-2,0) rectangle (0,1.6);\draw[fill=gray!35] (0,0) rectangle (2,1.6);\draw[dashed] (-.4,0)--(-.4,1.6) (.4,0)--(.4,1.6);\node at (-1,1.25) {$p$};\node at (1,1.25) {$n$};\node at (-.2,.75) {$-$};\node at (.2,.75) {$+$};\draw[->,thick] (.65,.3)--(-.65,.3) node[midway,below] {$E$};'}
+              return r'\begin{center}\begin{tikzpicture}[scale=1.15]'+figs[key]+r'\end{tikzpicture}\end{center}'
+          for (code,lang),parts in r.books.items():
+              title=parts[0][1]
+              author='TS. Đặng Minh Tuấn' if lang=='vi' else 'Dr. Dang Minh Tuan'
+              pre=r'\documentclass[11pt,a4paper,openany]{book}'+'\n'+r'\usepackage[margin=24mm]{geometry}\usepackage{fontspec}\setmainfont{DejaVu Serif}\usepackage{amsmath,amssymb,tikz,microtype}\usepackage[hidelinks]{hyperref}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\emergencystretch}{2em}'
+              if lang=='vi':
+                  pre+=r'\renewcommand{\chaptername}{Chương}\renewcommand{\contentsname}{Mục lục}'
+              pre+=r'\begin{document}\title{V-TALENT 2045\\'+fmt(title)+r'}\author{'+author+r'}\date{2026 -- '+('Bản thảo V3.7' if lang=='vi' else 'Draft V3.7')+r'}\hypersetup{pdfauthor={'+author+r'}}\maketitle\tableofcontents'
+              body=[]
+              ch=0
+              for tag,value in parts[2:]:
+                  if tag=='h3':
+                      if value.startswith(('Full solutions','Lời giải chi tiết')):
+                          body.append(r'\appendix\chapter{'+fmt(value)+'}')
+                      else:
+                          ch+=1
+                          body.append(r'\chapter{'+fmt(re.sub(r'^\d+\.\s*','',value))+'}'+diagram(code,ch))
+                  elif tag=='h4':
+                      body.append(r'\section{'+fmt(value)+'}')
+                  else:
+                      body.append(fmt(value))
+              assert ch==2
+              (Path('/tmp/electricity')/(code+'-'+lang+'.tex')).write_text(pre+'\n\n'+'\n\n'.join(body)+'\n'+r'\end{document}',encoding='utf-8')
+          PY
+      - name: Compile and verify all twelve PDF candidates
+        run: |
+          set -euo pipefail
+          cd /tmp/electricity
+          failed=0
+          for f in *.tex; do
+            stem=$(basename "$f" .tex)
+            if ! latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error "$f"; then failed=1; continue; fi
+            pdfinfo "$stem.pdf"
+            pdftotext "$stem.pdf" "$stem.txt"
+            if grep -q 'Missing character:' "$stem.log"; then echo "::error file=$f::Missing glyph"; failed=1; fi
+          done
+          test "$failed" -eq 0
+          python3 - <<'PY'
+          from pathlib import Path
+          import unicodedata
+          pdfs=list(Path('.').glob('*.pdf'))
+          assert len(pdfs)==12
+          for p in pdfs:
+              s=' '.join(unicodedata.normalize('NFC',p.with_suffix('.txt').read_text()).split())
+              author='TS. Đặng Minh Tuấn' if p.stem.endswith('-vi') else 'Dr. Dang Minh Tuan'
+              assert author in s,p
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: electricity-pdf-candidates
+          path: /tmp/electricity/*.pdf
+          if-no-files-found: error
