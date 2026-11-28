@@ -1,5 +1,5 @@
 {
-  "version": "6.0",
+  "version": "6.1",
   "date": "2026-11-28",
   "sources": [
     {
@@ -677,7 +677,7 @@
         "en": "Trajectory and field models",
         "vi": "Mô hình quỹ đạo và trường"
       },
-      "status": "draft_exists",
+      "status": "online_draft",
       "prerequisite": "PHY101-A; secondary algebra and trigonometry",
       "chapters": 4,
       "worked_examples": 12,
@@ -690,7 +690,17 @@
         "advanced_practice": "PM3 ch2 contents; field calculus after prerequisites",
         "revision_target": "derivatives, integrals, Taylor, gradient and vectors",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.3",
+      "learning_page": "physics-math-level2-v53.html",
+      "companion": {
+        "chapters": 4,
+        "worked_examples": 4,
+        "practice_count": 8,
+        "version": "5.3",
+        "retains_prior_volume": true
+      },
+      "review_status": "expanded_original_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -707,7 +717,7 @@
         "en": "Control and signal processing",
         "vi": "Điều khiển và xử lý tín hiệu"
       },
-      "status": "draft_exists",
+      "status": "online_draft",
       "prerequisite": "PHY201-A and secondary trigonometry",
       "chapters": 4,
       "worked_examples": 8,
@@ -720,7 +730,17 @@
         "advanced_practice": "PM3 §8.3 (TOC only); DM14 ch10",
         "revision_target": "ODE, complex impedance and normal-mode bridge",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.3",
+      "learning_page": "physics-math-level2-v53.html",
+      "companion": {
+        "chapters": 4,
+        "worked_examples": 4,
+        "practice_count": 8,
+        "version": "5.3",
+        "retains_prior_volume": true
+      },
+      "review_status": "expanded_original_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -750,7 +770,17 @@
         "advanced_practice": "independent mathematics source needed; not covered systematically by new books",
         "revision_target": "linear algebra, probability, numerical convergence",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.3",
+      "learning_page": "physics-math-level2-v53.html",
+      "companion": {
+        "chapters": 4,
+        "worked_examples": 4,
+        "practice_count": 8,
+        "version": "5.3",
+        "retains_prior_volume": true
+      },
+      "review_status": "expanded_original_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -9356,7 +9386,11 @@
           "PHY201-A",
           "PHY201-B",
           "PHY201-C"
-        ]
+        ],
+        "candidate_page": "physics-volume01-v61.html",
+        "status": "integrated_companion_candidate",
+        "candidate_chapters": 20,
+        "candidate_practice_count": 48
       },
       {
         "id": "V02",
