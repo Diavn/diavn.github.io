@@ -23,7 +23,9 @@ SPECS=[
 ("physics-volume08-v64.html","V64",2),
 ("physics-modern-experimental-v58.html","V58",20),
 ("physics-volume09-v65.html","V65",2),
-("physics-volume10-v65.html","V65",2)]
+("physics-volume10-v65.html","V65",2),
+("physics-olympiad-compendium-v59.html","V59",6),
+("physics-volume11-v66.html","V66",2)]
 class Reader(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -95,7 +97,7 @@ def fmt(s):
         return "".join(result)
     return "".join(x if i%2 else prose(x) for i,x in enumerate(re.split(r'(\\\(.*?\\\))',s,flags=re.S)))
 
-ID=re.compile(r"\bPHY(?:105|(?:101|102|103|201|202|203|204|205|206|207|208|210)-[A-F])-(?:V\d+-)?\d+\.\d+\b")
+ID=re.compile(r"\bPHY(?:104|105|(?:101|102|103|201|202|203|204|205|206|207|208|209|210)-[A-F])-(?:V\d+-)?\d+\.\d+\b")
 expected={}
 for filename,version,num in SPECS:
     p=Reader()
@@ -128,7 +130,7 @@ for filename,version,num in SPECS:
                 b.append(r"\subsection{"+fmt(value)+"}")
             else:b.append(fmt(value))
         (OUT/(stem+".tex")).write_text(pre+"\n\n"+"\n\n".join(b)+r"\end{document}",encoding="utf-8")
-assert len(expected)==104
+assert len(expected)==112
 report=["V-TALENT Physics PDF review: candidate builds, not independently validated textbooks.","Existing published PDFs (page counts and extracted IDs; not proof of correctness):"]
 for code in ["PHY101-A","PHY101-B","PHY102-A","PHY102-B","PHY102-C","PHY102-D"]:
     for lang in ["vi","en"]:
