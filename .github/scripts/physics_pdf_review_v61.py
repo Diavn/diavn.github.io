@@ -9,7 +9,10 @@ SPECS=[
 ("physics-math-level1-v51.html","V51",4),
 ("physics-mechanics-level1-v52.html","V52",8),
 ("physics-math-level2-v53.html","V53",6),
-("physics-volume01-v61.html","V61",2)]
+("physics-volume01-v61.html","V62",2),
+("physics-mechanics-level2-v54.html","V54",10),
+("physics-volume02-v62.html","V62",2),
+("physics-volume03-v62.html","V62",2)]
 class Reader(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -51,15 +54,38 @@ SYMBOLS={"−":"-","×":r"\ensuremath{\times}","≤":r"\ensuremath{\le}","≥":r
 for x,y in zip("⁰¹²³⁴⁵⁶⁷⁸⁹⁻","0123456789-"):SYMBOLS[x]=r"\textsuperscript{"+y+"}"
 for x,y in zip("₀₁₂₃₄₅₆₇₈₉","0123456789"):SYMBOLS[x]=r"\textsubscript{"+y+"}"
 SPECIAL.update(SYMBOLS)
+SPECIAL.update({"ℓ":r"\ensuremath{\ell}","√":r"\ensuremath{\sqrt{\phantom{x}}}","ₜ":r"\textsubscript{t}","†":r"\ensuremath{\dagger}","·":r"\ensuremath{\cdot}"})
+def prepare_figures(text, filename):
+    counter=0
+    def replace(m):
+        nonlocal counter
+        counter+=1
+        svg=re.search(r"<svg\b[\s\S]*?</svg>",m[0])
+        cap=re.search(r"<figcaption>([\s\S]*?)</figcaption>",m[0])
+        assert svg and cap,filename
+        stem=Path(filename).stem+"-figure-"+str(counter)
+        src=OUT/(stem+".svg")
+        dest=OUT/(stem+".pdf")
+        src.write_text(svg[0],encoding="utf-8")
+        subprocess.run(["rsvg-convert","-f","pdf","-o",str(dest),str(src)],check=True)
+        return "<p>FIGTOKEN"+stem+"</p><p>"+cap[1]+"</p>"
+    converted=re.sub(r"<figure\b[^>]*>[\s\S]*?</figure>",replace,text)
+    assert counter==text.count("<figure "),filename
+    return converted
 def fmt(s):
     # Retain authored LaTeX expressions; escape only surrounding prose.
-    return "".join(x if i%2 else "".join(SPECIAL.get(c,c) for c in x) for i,x in enumerate(re.split(r'(\\\(.*?\\\))',s,flags=re.S)))
+    def prose(x):
+        result=[]
+        for j,piece in enumerate(re.split(r"(https?://[^\s<>]+)",x)):
+            result.append(r"\url{"+piece+"}" if j%2 else "".join(SPECIAL.get(c,c) for c in piece))
+        return "".join(result)
+    return "".join(x if i%2 else prose(x) for i,x in enumerate(re.split(r'(\\\(.*?\\\))',s,flags=re.S)))
 
-ID=re.compile(r"\bPHY(?:101|102|201)-[A-D]-(?:V\d+-)?\d+\.\d+\b")
+ID=re.compile(r"\bPHY(?:101|102|201|202)-[A-E]-(?:V\d+-)?\d+\.\d+\b")
 expected={}
 for filename,version,num in SPECS:
     p=Reader()
-    p.feed((ROOT/filename).read_text(encoding="utf-8"))
+    p.feed(prepare_figures((ROOT/filename).read_text(encoding="utf-8"),filename))
     assert len(p.books)==num,(filename,len(p.books))
     for (code,lang),parts in p.books.items():
         author="TS. Đặng Minh Tuấn" if lang=="vi" else "Dr. Dang Minh Tuan"
@@ -68,15 +94,19 @@ for filename,version,num in SPECS:
         solution_ids=set(ID.findall(" ".join(v for t,v,s in parts if s)))
         assert question_ids==solution_ids,(code,lang,question_ids-solution_ids,solution_ids-question_ids)
         stem=code+"-"+version+"-"+lang
-        expected[stem]=(author,question_ids)
-        pre=r"\documentclass[11pt,a4paper,openany]{book}"+"\n"+r"\usepackage[margin=23mm]{geometry}\usepackage{fontspec}\setmainfont{DejaVu Serif}\usepackage{amsmath,amssymb,mathtools,microtype}\usepackage[hidelinks]{hyperref}\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}\setlength{\emergencystretch}{3em}"
+        figure_count=sum(v.startswith("FIGTOKEN") for t,v,z in parts)
+        expected[stem]=(author,question_ids,figure_count)
+        pre=r"\documentclass[11pt,a4paper,openany]{book}"+"\n"+r"\usepackage[margin=23mm]{geometry}\usepackage{fontspec}\setmainfont{DejaVu Serif}\usepackage{amsmath,amssymb,mathtools,microtype,graphicx,xurl}\usepackage[hidelinks]{hyperref}\urlstyle{same}\raggedright\sloppy\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}\setlength{\emergencystretch}{3em}"
         if lang=="vi":pre+=r"\renewcommand{\chaptername}{Chương}\renewcommand{\contentsname}{Mục lục}"
         pre+=r"\hypersetup{pdfauthor={"+author+r"},pdftitle={V-TALENT Physics "+code+r" "+version+r"}}"
         pre+=r"\begin{document}\title{V-TALENT Physics\\"+fmt(title)+r"}\author{"+author+r"}\date{2026 -- "+version+(" -- Bản thảo kiểm tra" if lang=="vi" else " -- Review candidate")+r"}\maketitle\tableofcontents"
         b=[]
         for tag,value,sol in parts[1:]:
             if not value or value==author:continue
-            if tag=="h3":
+            if value.startswith("FIGTOKEN"):
+                name=value[len("FIGTOKEN"):]
+                b.append(r"\begin{center}\includegraphics[width=.80\linewidth]{"+name+r".pdf}\end{center}")
+            elif tag=="h3":
                 b.append(r"\chapter{"+fmt(value)+"}")
             elif tag=="h4":
                 b.append(r"\section{"+fmt(value)+"}")
@@ -84,7 +114,7 @@ for filename,version,num in SPECS:
                 b.append(r"\subsection{"+fmt(value)+"}")
             else:b.append(fmt(value))
         (OUT/(stem+".tex")).write_text(pre+"\n\n"+"\n\n".join(b)+r"\end{document}",encoding="utf-8")
-assert len(expected)==20
+assert len(expected)==34
 report=["V-TALENT Physics PDF review: candidate builds, not independently validated textbooks.","Existing published PDFs (page counts and extracted IDs; not proof of correctness):"]
 for code in ["PHY101-A","PHY101-B","PHY102-A","PHY102-B","PHY102-C","PHY102-D"]:
     for lang in ["vi","en"]:
@@ -95,7 +125,7 @@ for code in ["PHY101-A","PHY101-B","PHY102-A","PHY102-B","PHY102-C","PHY102-D"]:
         report.append(f"{pdf.name}: {pages} pages, {len(set(ID.findall(txt)))} recognizable question IDs")
 report.append("New candidate checks:")
 errors=[]
-for stem,(author,ids) in expected.items():
+for stem,(author,ids,figure_count) in expected.items():
     tex=OUT/(stem+".tex")
     with (OUT/(stem+".build.txt")).open("w") as log:
         run=subprocess.run(["latexmk","-xelatex","-interaction=nonstopmode","-halt-on-error","-file-line-error",tex.name],cwd=OUT,stdout=log,stderr=subprocess.STDOUT)
@@ -117,7 +147,7 @@ for stem,(author,ids) in expected.items():
     if missing:errors.append(stem+" missing IDs "+str(missing))
     if glyphs:errors.append(stem+" missing glyphs "+str(glyphs[:5]))
     if severe:errors.append(stem+" overfull >5pt "+str(severe[:5]))
-    report.append(f"{stem}: {pages} pages; {len(ids)} IDs expected, {len(missing)} missing; {len(glyphs)} glyph warnings; {len(severe)} severe overfull boxes")
+    report.append(f"{stem}: {pages} pages; {len(ids)} IDs expected, {len(missing)} missing; {figure_count} vector diagrams included by generator; {len(glyphs)} glyph warnings; {len(severe)} severe overfull boxes")
     # Rasterize title and first content page for human review.
     subprocess.run(["pdftoppm","-f","1","-l","1","-r","95","-png",str(pdf),str(OUT/(stem+"-cover"))],check=True)
     if int(pages)>=4:
