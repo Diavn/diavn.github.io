@@ -1,0 +1,131 @@
+name: Level 1 mathematics V5.1 PDF candidates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/physics-math-level1-v51-pdf.yml'
+      - 'truongchuyen/physics-math-level1-v51.html'
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-pictures texlive-fonts-recommended fonts-noto-core fonts-dejavu-core poppler-utils latexmk
+      - name: Generate temporary LaTeX sources from bilingual learning page
+        run: |
+          mkdir -p /tmp/math-level1-v51
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          import re
+          class Reader(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.books={}
+                  self.book=None
+                  self.tag=None
+                  self.buf=[]
+              def handle_starttag(self,tag,attrs):
+                  attrs=dict(attrs)
+                  if tag=='article' and 'data-book' in attrs:
+                      self.book=(attrs['data-book'],attrs['lang'])
+                      self.books[self.book]=[]
+                  if self.book and tag in ('h2','h3','h4','p'):
+                      self.tag=tag
+                      self.buf=[]
+              def handle_data(self,data):
+                  if self.book and self.tag:
+                      self.buf.append(data)
+              def handle_endtag(self,tag):
+                  if self.book and tag==self.tag:
+                      self.books[self.book].append((tag,''.join(self.buf)))
+                      self.tag=None
+                  if tag=='article':
+                      self.book=None
+          r=Reader()
+          r.feed(Path('truongchuyen/physics-math-level1-v51.html').read_text())
+          assert len(r.books)==4
+          esc={'&':r'\&','%':r'\%','$':r'\$','#':r'\#','_':r'\_','{':r'\{','}':r'\}','\\':r'\textbackslash{}','~':r'\textasciitilde{}','^':r'\textasciicircum{}','≈':r'\ensuremath{\approx}','≤':r'\ensuremath{\le}','≥':r'\ensuremath{\ge}','−':r'\ensuremath{-}','×':r'\ensuremath{\times}','β':r'\ensuremath{\beta}','θ':r'\ensuremath{\theta}','ν':r'\ensuremath{\nu}','ρ':r'\ensuremath{\rho}','µ':r'\ensuremath{\mu}','²':r'\textsuperscript{2}','³':r'\textsuperscript{3}','⁴':r'\textsuperscript{4}'}
+          esc.update({'≪':r'\ensuremath{\ll}','≫':r'\ensuremath{\gg}','⁻':r'\textsuperscript{-}','₀':r'\textsubscript{0}'})
+          esc.update({'μ':r'\ensuremath{\mu}','Ω':r'\ensuremath{\Omega}','σ':r'\ensuremath{\sigma}','λ':r'\ensuremath{\lambda}','₁':r'\textsubscript{1}','₂':r'\textsubscript{2}','₃':r'\textsubscript{3}','₄':r'\textsubscript{4}','ₛ':r'\textsubscript{s}','¹':r'\textsuperscript{1}','⁰':r'\textsuperscript{0}','⁵':r'\textsuperscript{5}','⁶':r'\textsuperscript{6}','⁷':r'\textsuperscript{7}','⁸':r'\textsuperscript{8}','⁹':r'\textsuperscript{9}'})
+          esc.update({'Δ':r'\ensuremath{\Delta}','Φ':r'\ensuremath{\Phi}','γ':r'\ensuremath{\gamma}','π':r'\ensuremath{\pi}','√':r'\ensuremath{\sqrt{\phantom{x}}}','→':r'\ensuremath{\to}','⁻':r'\textsuperscript{-}','⁴':r'\textsuperscript{4}'})
+          esc.update({'δ':r'\ensuremath{\delta}','α':r'\ensuremath{\alpha}','ω':r'\ensuremath{\omega}','τ':r'\ensuremath{\tau}','ℏ':r'\ensuremath{\hbar}','′':r'\ensuremath{\prime}','≠':r'\ensuremath{\ne}','±':r'\ensuremath{\pm}','ₓ':r'\textsubscript{x}','ₛ':r'\textsubscript{s}','⁺':r'\textsuperscript{+}'})
+          esc.update({'∞':r'\ensuremath{\infty}','ε':r'\ensuremath{\varepsilon}','η':r'\ensuremath{\eta}','ζ':r'\ensuremath{\zeta}','σ':r'\ensuremath{\sigma}','⁻':r'\textsuperscript{-}'})
+          esc.update({'∝':r'\ensuremath{\propto}','∈':r'\ensuremath{\in}','∑':r'\ensuremath{\sum}','→':r'\ensuremath{\to}','–':'--'})
+          def fmt(s):
+              out=[]
+              for i,part in enumerate(re.split(r'(\\\(.*?\\\))',s)):
+                  out.append(part if i%2 else ''.join(esc.get(c,c) for c in part))
+              return ''.join(out)
+          def diagram(code,ch):
+              key=(code,ch)
+              figs={
+              ('PHY101-A',1):r'\draw[fill=gray!15] (0,0) rectangle (2,2);\draw[<->] (0,-.3)--(2,-.3) node[midway,below] {$1\,{\rm cm}$};\draw[<->] (-.3,0)--(-.3,2) node[midway,left] {$1\,{\rm cm}$};\node at (1,1) {$10^{-4}\,{\rm m^2}$};',
+              ('PHY101-A',2):r'\draw[thick] (0,0) rectangle (1,1);\draw (0,1)--(.45,1.45)--(1.45,1.45)--(1.45,.45)--(1,0) (1,1)--(1.45,1.45);\draw[thick] (3,0) rectangle (5,2);\draw (3,2)--(3.9,2.9)--(5.9,2.9)--(5.9,.9)--(5,0) (5,2)--(5.9,2.9);\node[below] at (.5,0) {$l$};\node[below] at (4,0) {$2l$};',
+              ('PHY101-A',3):r'\draw[->] (0,0)--(5,0) node[right] {$F$};\draw[->] (0,0)--(0,3) node[above] {$U$};\draw[thick] (0,.5)--(4,2.5);\fill (1,1) circle (.055) (3,2) circle (.055);\draw[dashed] (1,1)--(3,1)--(3,2);\node[left] at (0,.5) {$b$};\node at (2,.8) {$\Delta F$};\node[right] at (3,1.5) {$\Delta U$};',
+              ('PHY101-A',4):r'\draw[->] (0,0)--(6,0) node[right] {$F$};\draw[thick] (1,1)--(3,1) (3.5,2)--(5.5,2);\draw (1,.85)--(1,1.15) (3,.85)--(3,1.15) (3.5,1.85)--(3.5,2.15) (5.5,1.85)--(5.5,2.15);\fill (2,1) circle (.06) (4.5,2) circle (.06);\node[left] at (1,1) {A};\node[left] at (3.5,2) {B};',
+              ('PHY101-B',1):r'\draw[thick] (0,0)--(6,0);\draw[very thick] (0,0)--(0,3) (3,0)--(3,1.5);\draw[thick] (0,3)--(6,0);\fill (0,3) circle (.08);\draw[<->] (0,-.35)--(3,-.35) node[midway,below] {$d$};\draw[<->] (3,-.35)--(6,-.35) node[midway,below] {$s$};\node[left] at (0,1.5) {$H$};\node[right] at (3,.7) {$h$};',
+              ('PHY101-B',2):r'\draw[->] (0,0)--(5,0) node[right] {$x$};\draw[->] (0,0)--(0,3.8) node[above] {$y$};\draw[->,thick] (0,0)--(3,0) node[midway,below] {$A$};\draw[->,thick] (3,0)--(4,2.6) node[midway,right] {$B$};\draw[->,very thick] (0,0)--(4,2.6) node[midway,above] {$R$};',
+              ('PHY101-B',3):r'\draw[->] (0,0)--(6,0) node[right] {$t$};\draw[->] (0,-1.5)--(0,3) node[above] {$v$};\fill[gray!15] (0,0)--(1.2,2)--(3,2)--(4.2,0)--cycle;\fill[gray!40] (4.2,0)--(4.8,-1)--(4.8,0)--cycle;\draw[thick] (0,0)--(1.2,2)--(3,2)--(4.8,-1);\node[below] at (1.2,0) {$2$};\node[below] at (3,0) {$5$};\node[above] at (4.8,0) {$8$};',
+              ('PHY101-B',4):r'\draw[very thick] (-.5,0)--(5.5,0);\fill (0,2) circle (.06) node[above] {$A$};\fill (4.5,1) circle (.06) node[above] {$B$};\fill (4.5,-1) circle (.06) node[below] {$B^\prime$};\draw[thick] (0,2)--(3,0)--(4.5,1);\draw[dashed] (3,0)--(4.5,-1);\fill (3,0) circle (.06) node[below left] {$P$};'}
+              return r'\begin{center}\begin{tikzpicture}[scale=1.15]'+figs[key]+r'\end{tikzpicture}\end{center}'
+          for (code,lang),parts in r.books.items():
+              title=parts[0][1]
+              author='TS. Đặng Minh Tuấn' if lang=='vi' else 'Dr. Dang Minh Tuan'
+              pre=r'\documentclass[11pt,a4paper,openany]{book}'+'\n'+r'\usepackage[margin=24mm]{geometry}\usepackage{fontspec}\setmainfont{DejaVu Serif}\usepackage{amsmath,amssymb,tikz,microtype}\usetikzlibrary{decorations.pathmorphing}\usepackage[hidelinks]{hyperref}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\emergencystretch}{2em}'
+              if lang=='vi':
+                  pre+=r'\renewcommand{\chaptername}{Chương}\renewcommand{\contentsname}{Mục lục}'
+              pre+=r'\begin{document}\title{V-TALENT 2045\\'+fmt(title)+r'}\author{'+author+r'}\date{2026 -- '+('Bản thảo V5.1' if lang=='vi' else 'Draft V5.1')+r'}\hypersetup{pdfauthor={'+author+r'}}\maketitle\tableofcontents'
+              body=[]
+              in_appendix=False
+              ch=0
+              for tag,value in parts[2:]:
+                  if tag=='h3':
+                      if value.startswith(('Full solutions','Lời giải chi tiết')):
+                          in_appendix=True
+                          body.append(r'\appendix\chapter{'+fmt(value)+'}')
+                      else:
+                          ch+=1
+                          body.append(r'\chapter{'+fmt(re.sub(r'^\d+\.\s*','',value))+'}'+diagram(code,ch))
+                  elif tag=='h4':
+                      body.append(r'\section{'+fmt(value)+'}')
+                  else:
+                      body.append(fmt(value))
+              assert ch==4
+              (Path('/tmp/math-level1-v51')/(code+'-'+lang+'.tex')).write_text(pre+'\n\n'+'\n\n'.join(body)+'\n'+r'\end{document}',encoding='utf-8')
+          PY
+      - name: Compile and verify four V5.1 PDF candidates
+        run: |
+          set -euo pipefail
+          cd /tmp/math-level1-v51
+          failed=0
+          for f in *.tex; do
+            stem=$(basename "$f" .tex)
+            if ! latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error "$f"; then failed=1; continue; fi
+            pdfinfo "$stem.pdf"
+            pdftotext "$stem.pdf" "$stem.txt"
+            if grep -q 'Missing character:' "$stem.log"; then echo "::error file=$f::Missing glyph"; failed=1; fi
+          done
+          test "$failed" -eq 0
+          python3 - <<'PY'
+          from pathlib import Path
+          import unicodedata
+          pdfs=list(Path('.').glob('*.pdf'))
+          assert len(pdfs)==4
+          for p in pdfs:
+              s=' '.join(unicodedata.normalize('NFC',p.with_suffix('.txt').read_text()).split())
+              author='TS. Đặng Minh Tuấn' if p.stem.endswith('-vi') else 'Dr. Dang Minh Tuan'
+              assert author in s,p
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: math-level1-v51-pdf-candidates
+          path: /tmp/math-level1-v51/*.pdf
+          if-no-files-found: error
