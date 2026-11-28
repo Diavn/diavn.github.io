@@ -1,5 +1,5 @@
 {
-  "version": "6.3",
+  "version": "6.3.1",
   "date": "2026-11-28",
   "sources": [
     {
@@ -562,7 +562,16 @@
         "advanced_practice": "YF13 ch25–26; HRW10 ch26–27",
         "revision_target": "node equivalence, ideal vs real meters, inverse resistance",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.6",
+      "learning_page": "physics-electromagnetism-v56.html",
+      "topic_page": "topic-phy103-b.html",
+      "extension_v56": {
+        "chapters": 2,
+        "practice_count": 4,
+        "chapter_diagrams": 2
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 1,
@@ -1205,7 +1214,16 @@
         "advanced_practice": "PM3 ch1–3; §3.4 image charges",
         "revision_target": "superposition, flux, potential, conductors",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.6",
+      "learning_page": "physics-electromagnetism-v56.html",
+      "topic_page": "topic-phy204-a.html",
+      "extension_v56": {
+        "chapters": 3,
+        "practice_count": 6,
+        "chapter_diagrams": 3
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1235,7 +1253,16 @@
         "advanced_practice": "PM3 §3.5–3.7, ch4 (ch4 mostly outside supplied excerpt)",
         "revision_target": "capacitors, network topology, transient circuits",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.6",
+      "learning_page": "physics-electromagnetism-v56.html",
+      "topic_page": "topic-phy204-b.html",
+      "extension_v56": {
+        "chapters": 4,
+        "practice_count": 8,
+        "chapter_diagrams": 4
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1265,7 +1292,16 @@
         "advanced_practice": "PM3 ch5–6 (TOC only)",
         "revision_target": "Lorentz force, fields, Hall effect",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.6",
+      "learning_page": "physics-electromagnetism-v56.html",
+      "topic_page": "topic-phy204-c.html",
+      "extension_v56": {
+        "chapters": 3,
+        "practice_count": 6,
+        "chapter_diagrams": 3
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1295,7 +1331,16 @@
         "advanced_practice": "PM3 ch7 (TOC only)",
         "revision_target": "flux, motional emf, inductance",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.6",
+      "learning_page": "physics-electromagnetism-v56.html",
+      "topic_page": "topic-phy204-d.html",
+      "extension_v56": {
+        "chapters": 3,
+        "practice_count": 6,
+        "chapter_diagrams": 3
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1325,7 +1370,16 @@
         "advanced_practice": "PM3 ch8–9 (TOC only)",
         "revision_target": "RMS, phase, resonance, waves and energy",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.6",
+      "learning_page": "physics-electromagnetism-v56.html",
+      "topic_page": "topic-phy204-e.html",
+      "extension_v56": {
+        "chapters": 3,
+        "practice_count": 6,
+        "chapter_diagrams": 3
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -9587,7 +9641,12 @@
           "PHY103-B",
           "PHY204-A",
           "PHY204-B"
-        ]
+        ],
+        "candidate_page": "physics-volume05-v63.html",
+        "status": "illustrated_integrated_candidate",
+        "candidate_chapters": 16,
+        "candidate_practice_count": 32,
+        "candidate_figures": 16
       },
       {
         "id": "V06",
@@ -9599,7 +9658,12 @@
           "PHY204-C",
           "PHY204-D",
           "PHY204-E"
-        ]
+        ],
+        "candidate_page": "physics-volume06-v63.html",
+        "status": "illustrated_integrated_candidate",
+        "candidate_chapters": 16,
+        "candidate_practice_count": 32,
+        "candidate_figures": 16
       },
       {
         "id": "V07",
@@ -9676,7 +9740,7 @@
       "chapter_schematic_required": true,
       "problem_diagram_when_geometry_requires": true,
       "source": "original inline SVG; PDF vector conversion",
-      "scope": "V01–V04 integrated candidates; related diagrams in older V04 chapters not exact exercise diagrams"
+      "scope": "V01–V06; related schematic diagrams in earlier chapters not exact problem configurations"
     },
     "canonical_catalog": "truongchuyen/physics/"
   }
