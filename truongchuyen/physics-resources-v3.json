@@ -1,5 +1,5 @@
 {
-  "version": "3.1",
+  "version": "3.2",
   "date": "2026-11-28",
   "sources": [
     {
@@ -106,8 +106,11 @@
         "en": "Sensor calibration",
         "vi": "Hiệu chuẩn cảm biến"
       },
-      "status": "planned",
-      "prerequisite": "PHY101-A / PHY101-B as needed"
+      "status": "draft_exists",
+      "prerequisite": "Basic fractions, powers of ten and equations",
+      "chapters": 4,
+      "worked_examples": 12,
+      "practice_count": 20
     },
     {
       "level": 1,
@@ -322,8 +325,11 @@
         "en": "Trajectory and field models",
         "vi": "Mô hình quỹ đạo và trường"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "draft_exists",
+      "prerequisite": "PHY101-A; secondary algebra and trigonometry",
+      "chapters": 4,
+      "worked_examples": 12,
+      "practice_count": 20
     },
     {
       "level": 2,
@@ -4716,7 +4722,884 @@
       "locator": "§50.0.2, p 132 (occurrence; repeated exam question possible)",
       "url": "https://tchlabs.net/physics/SJPO.pdf#page=132",
       "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.1.1",
+      "source": "SW",
+      "title": "Scalar product",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.1.1, printed p. 13; PDF p. 15",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=15",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.1.2",
+      "source": "SW",
+      "title": "Vector product",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.1.2, printed p. 16; PDF p. 18",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=18",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.2.1",
+      "source": "SW",
+      "title": "Derivative and tangent",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.2.1, printed p. 19; PDF p. 21",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=21",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.2.2",
+      "source": "SW",
+      "title": "Differentiation rules",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.2.2, printed p. 22; PDF p. 24",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=24",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.2.3",
+      "source": "SW",
+      "title": "Additional derivatives",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.2.3, printed p. 25; PDF p. 27",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=27",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.2.4",
+      "source": "SW",
+      "title": "Derivative overview",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.2.4, printed p. 30; PDF p. 32",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=32",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.2.5",
+      "source": "SW",
+      "title": "Higher derivatives",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.2.5, printed p. 30; PDF p. 32",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=32",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.2.6",
+      "source": "SW",
+      "title": "Taylor approximation",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.2.6, printed p. 31; PDF p. 33",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=33",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.2.7",
+      "source": "SW",
+      "title": "Differential equations introduction",
+      "book": [
+        "PHY201-B"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.2.7, printed p. 33; PDF p. 35",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=35",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.3.1",
+      "source": "SW",
+      "title": "Antiderivatives",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.3.1, printed p. 35; PDF p. 37",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=37",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.3.2",
+      "source": "SW",
+      "title": "Integral as area",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.3.2, printed p. 36; PDF p. 38",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=38",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.3.3",
+      "source": "SW",
+      "title": "Fundamental theorem of calculus",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.3.3, printed p. 39; PDF p. 41",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=41",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.3.4",
+      "source": "SW",
+      "title": "Integration rules",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.3.4, printed p. 42; PDF p. 44",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=44",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.3.5",
+      "source": "SW",
+      "title": "Multidimensional integrals",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.3.5, printed p. 49; PDF p. 51",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=51",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.4.1",
+      "source": "SW",
+      "title": "Complex numbers introduction",
+      "book": [
+        "PHY201-B"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.4.1, printed p. 50; PDF p. 52",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=52",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.4.2",
+      "source": "SW",
+      "title": "Complex representations and Euler formula",
+      "book": [
+        "PHY201-B"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.4.2, printed p. 51; PDF p. 53",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=53",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.4.3",
+      "source": "SW",
+      "title": "Complex number application",
+      "book": [
+        "PHY201-B"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.4.3, printed p. 52; PDF p. 54",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=54",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-1.4.4",
+      "source": "SW",
+      "title": "Physical examples with complex numbers",
+      "book": [
+        "PHY201-B"
+      ],
+      "kind": "subsection locator",
+      "locator": "§1.4.4, printed p. 53; PDF p. 55",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=55",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-14.1",
+      "source": "SW",
+      "title": "Location and spread",
+      "book": [
+        "PHY201-C",
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§14.1, printed p. 301; PDF p. 303",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=303",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-14.1.1",
+      "source": "SW",
+      "title": "Bivariate analysis",
+      "book": [
+        "PHY201-C",
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§14.1.1, printed p. 302; PDF p. 304",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=304",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-14.2",
+      "source": "SW",
+      "title": "Uncertainty propagation",
+      "book": [
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§14.2, printed p. 302; PDF p. 304",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=304",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-14.2.1",
+      "source": "SW",
+      "title": "Quantifying uncertainty",
+      "book": [
+        "PHY101-A",
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§14.2.1, printed p. 303; PDF p. 305",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=305",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-14.2.2",
+      "source": "SW",
+      "title": "Propagation of uncertainty",
+      "book": [
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§14.2.2, printed p. 303; PDF p. 305",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=305",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-14.3.1",
+      "source": "SW",
+      "title": "SI units",
+      "book": [
+        "PHY101-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§14.3.1, printed p. 304; PDF p. 306",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=306",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-14.3.2",
+      "source": "SW",
+      "title": "Prefixes",
+      "book": [
+        "PHY101-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§14.3.2, printed p. 305; PDF p. 307",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=307",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-14.3.3",
+      "source": "SW",
+      "title": "Dimensional analysis",
+      "book": [
+        "PHY101-A",
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§14.3.3, printed p. 305; PDF p. 307",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=307",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-14.4.1",
+      "source": "SW",
+      "title": "Graph design",
+      "book": [
+        "PHY101-B",
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§14.4.1, printed p. 305; PDF p. 307",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=307",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SW-SEC-14.4.2",
+      "source": "SW",
+      "title": "Logarithmic plots",
+      "book": [
+        "PHY101-B",
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§14.4.2, printed p. 306; PDF p. 308",
+      "url": "https://physics.olympiad.ch/fileadmin/user_upload/Archiv/Intranet/Olympiads/Physics/Old_Scripts/Script-Swiss-Physics-Olympiad-3-Edition.pdf#page=308",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.1",
+      "source": "JP",
+      "title": "Inverse trigonometric functions",
+      "book": [
+        "PHY101-B",
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.1, printed p. 321; PDF p. 338",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=338",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.2.1",
+      "source": "JP",
+      "title": "Planar polar coordinates",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.2.1, printed p. 323; PDF p. 340",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=340",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.2.2",
+      "source": "JP",
+      "title": "Cylindrical coordinates",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.2.2, printed p. 327; PDF p. 344",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=344",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.2.3",
+      "source": "JP",
+      "title": "Spherical coordinates",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.2.3, printed p. 329; PDF p. 346",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=346",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.3",
+      "source": "JP",
+      "title": "Taylor expansion",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.3, printed p. 333; PDF p. 350",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=350",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.4",
+      "source": "JP",
+      "title": "Taylor approximation",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.4, printed p. 335; PDF p. 352",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=352",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.5",
+      "source": "JP",
+      "title": "Complex plane",
+      "book": [
+        "PHY201-B"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.5, printed p. 338; PDF p. 355",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=355",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.6",
+      "source": "JP",
+      "title": "Euler formula",
+      "book": [
+        "PHY201-B"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.6, printed p. 339; PDF p. 356",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=356",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.7",
+      "source": "JP",
+      "title": "Separation of variables",
+      "book": [
+        "PHY201-B"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.7, printed p. 343; PDF p. 360",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=360",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.8",
+      "source": "JP",
+      "title": "Linear differential equations",
+      "book": [
+        "PHY201-B"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.8, printed p. 344; PDF p. 361",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=361",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.9",
+      "source": "JP",
+      "title": "Partial differential equations",
+      "book": [
+        "PHY201-B",
+        "PHY210-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.9, printed p. 349; PDF p. 366",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=366",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-A.10",
+      "source": "JP",
+      "title": "Differential equations in physics",
+      "book": [
+        "PHY201-B"
+      ],
+      "kind": "subsection locator",
+      "locator": "§A.10, printed p. 352; PDF p. 369",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=369",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-7.1",
+      "source": "JP",
+      "title": "Experimental planning and measurement",
+      "book": [
+        "PHY105",
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§7.1, printed p. 273; PDF p. 290",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=290",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-7.2",
+      "source": "JP",
+      "title": "Errors and significant figures",
+      "book": [
+        "PHY101-A",
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§7.2, printed p. 280; PDF p. 297",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=297",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-7.3",
+      "source": "JP",
+      "title": "Statistical errors",
+      "book": [
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§7.3, printed p. 281; PDF p. 298",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=298",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-7.4",
+      "source": "JP",
+      "title": "Indirect measurement uncertainty",
+      "book": [
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§7.4, printed p. 285; PDF p. 302",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=302",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-7.5",
+      "source": "JP",
+      "title": "Linear fit",
+      "book": [
+        "PHY201-C",
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§7.5, printed p. 288; PDF p. 305",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=305",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "JP-SEC-7.6",
+      "source": "JP",
+      "title": "Logarithmic fit",
+      "book": [
+        "PHY201-C",
+        "PHY208-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§7.6, printed p. 292; PDF p. 309",
+      "url": "https://fizmat.space/international/files/Physics-Olympiad-Basic-To-Advanced-Exercises.pdf#page=309",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-2.1",
+      "source": "SJ",
+      "title": "Geometric intuition of differentiation",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§2.1, printed p. 10; PDF p. 10",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=10",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-2.2",
+      "source": "SJ",
+      "title": "Derivative calculations",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§2.2, printed p. 10; PDF p. 10",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=10",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-2.2.1",
+      "source": "SJ",
+      "title": "Extrema",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§2.2.1, printed p. 12; PDF p. 12",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=12",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-2.3",
+      "source": "SJ",
+      "title": "Derivative exercises",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§2.3, printed p. 12; PDF p. 12",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=12",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-3.1",
+      "source": "SJ",
+      "title": "Antiderivative",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§3.1, printed p. 13; PDF p. 13",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=13",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-3.2",
+      "source": "SJ",
+      "title": "Integration exercises",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§3.2, printed p. 13; PDF p. 13",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=13",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-3.3",
+      "source": "SJ",
+      "title": "Definite integral",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§3.3, printed p. 13; PDF p. 13",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=13",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-3.4",
+      "source": "SJ",
+      "title": "Physical integration exercises",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§3.4, printed p. 14; PDF p. 14",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=14",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-5.1.1",
+      "source": "SJ",
+      "title": "Vector addition",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§5.1.1, printed p. 20; PDF p. 20",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=20",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-5.1.2",
+      "source": "SJ",
+      "title": "Vector scaling",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§5.1.2, printed p. 21; PDF p. 21",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=21",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-5.1.3",
+      "source": "SJ",
+      "title": "Magnitude",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§5.1.3, printed p. 21; PDF p. 21",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=21",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-5.1.4",
+      "source": "SJ",
+      "title": "Dot product",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§5.1.4, printed p. 22; PDF p. 22",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=22",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-5.1.5",
+      "source": "SJ",
+      "title": "Cross product",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§5.1.5, printed p. 22; PDF p. 22",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=22",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-5.1.6",
+      "source": "SJ",
+      "title": "Vector derivatives",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§5.1.6, printed p. 23; PDF p. 23",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=23",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-5.2",
+      "source": "SJ",
+      "title": "Basis vectors",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§5.2, printed p. 23; PDF p. 23",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=23",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-15.1",
+      "source": "SJ",
+      "title": "Polar basis",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§15.1, printed p. 57; PDF p. 57",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=57",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-15.2",
+      "source": "SJ",
+      "title": "Polar velocity",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§15.2, printed p. 58; PDF p. 58",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=58",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-15.3",
+      "source": "SJ",
+      "title": "Polar acceleration",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§15.3, printed p. 59; PDF p. 59",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=59",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-20.2",
+      "source": "SJ",
+      "title": "Integration by parts",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§20.2, printed p. 86; PDF p. 86",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=86",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-20.3",
+      "source": "SJ",
+      "title": "Substitution",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§20.3, printed p. 87; PDF p. 87",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=87",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-21.1",
+      "source": "SJ",
+      "title": "Parametrization",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§21.1, printed p. 90; PDF p. 90",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=90",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-21.2",
+      "source": "SJ",
+      "title": "Charge line integral",
+      "book": [
+        "PHY201-A",
+        "PHY204-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§21.2, printed p. 91; PDF p. 91",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=91",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-21.3",
+      "source": "SJ",
+      "title": "Vector function integral",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§21.3, printed p. 92; PDF p. 92",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=92",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-22.4.1",
+      "source": "SJ",
+      "title": "Cylindrical line integral",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§22.4.1, printed p. 93; PDF p. 93",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=93",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-22.4.2",
+      "source": "SJ",
+      "title": "Cylindrical surface integral",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§22.4.2, printed p. 94; PDF p. 94",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=94",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-22.4.3",
+      "source": "SJ",
+      "title": "Cylindrical volume integral",
+      "book": [
+        "PHY201-A"
+      ],
+      "kind": "subsection locator",
+      "locator": "§22.4.3, printed p. 94; PDF p. 94",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=94",
+      "status": "toc_mapped_not_full_review"
     }
   ],
-  "scope": "Bibliographic and TOC mapping only. No third-party PDF mirrors. URLs may point to collection pages rather than individual files; review status is explicit. English and Vietnamese curriculum titles are editorial; external resource titles retain original language. SJPO entries are source occurrences, not unique exam questions. Direct PDF endpoints checked where indicated, no full-text review."
+  "scope": "Bibliographic and TOC mapping only. No third-party PDF mirrors. URLs may point to collection pages rather than individual files; review status is explicit. English and Vietnamese curriculum titles are editorial; external resource titles retain original language. SJPO entries are source occurrences, not unique exam questions. Direct PDF endpoints checked where indicated, no full-text review. Mathematics subsection locators are TOC-derived; no claim of full review."
 }
