@@ -88,6 +88,34 @@
       "url": "https://kevinshuang.com/teaching/resources/",
       "status": "landing_index_read",
       "rights": "link_only; redistribution not established"
+    },
+    {
+      "id": "OLV",
+      "title": "Olimpicos VPhO archive",
+      "url": "https://olimpicos.net/vpho/",
+      "status": "search_index_visible_full_page_fetch_failed",
+      "rights": "link_only; redistribution not established"
+    },
+    {
+      "id": "OLT",
+      "title": "Olimpicos Vietnam TST archive",
+      "url": "https://olimpicos.net/vntst/",
+      "status": "search_index_visible_full_page_fetch_failed",
+      "rights": "link_only; redistribution not established"
+    },
+    {
+      "id": "IPhO",
+      "title": "International Physics Olympiad official website",
+      "url": "https://www.ipho-new.org/statutes-syllabus/",
+      "status": "official_syllabus_text_opened",
+      "rights": "link_only"
+    },
+    {
+      "id": "GUM",
+      "title": "BIPM/JCGM measurement uncertainty publications",
+      "url": "https://www.bipm.org/en/committees/jc/jcgm/publications/",
+      "status": "official_index_search_verified",
+      "rights": "link_only"
     }
   ],
   "modules": [
@@ -6070,6 +6098,84 @@
       "url": "https://physoly.tech/static/files/KaldaWaves-121.pdf",
       "status": "version_and_selected_text_verified_screenshots_unavailable",
       "pdf_pages": 8
+    },
+    {
+      "id": "OLV-ARCH",
+      "source": "OLV",
+      "title": "Vietnam national Physics Olympiad problem and solution archive",
+      "book": [
+        "PHY209-A"
+      ],
+      "kind": "reference",
+      "locator": "Archive landing indexed by search; individual files not inspected",
+      "url": "https://olimpicos.net/vpho/",
+      "status": "search_metadata_only"
+    },
+    {
+      "id": "OLT-ARCH",
+      "source": "OLT",
+      "title": "Vietnam Physics Team Selection Test archive",
+      "book": [
+        "PHY209-B"
+      ],
+      "kind": "reference",
+      "locator": "Archive landing indexed by search; individual files not inspected",
+      "url": "https://olimpicos.net/vntst/",
+      "status": "search_metadata_only"
+    },
+    {
+      "id": "IPHO-SY",
+      "source": "IPhO",
+      "title": "IPhO official syllabus and character of tasks",
+      "book": [
+        "PHY209-B",
+        "PHY208-B"
+      ],
+      "kind": "reference",
+      "locator": "Syllabus §1.2, §3; marking Appendix II",
+      "url": "https://www.ipho-new.org/statutes-syllabus/",
+      "status": "official_page_text_verified"
+    },
+    {
+      "id": "IPHO-ARCH",
+      "source": "IPhO",
+      "title": "IPhO documentation and past papers",
+      "book": [
+        "PHY209-B"
+      ],
+      "kind": "reference",
+      "locator": "Official documentation index",
+      "url": "https://www.ipho-new.org/documentations/",
+      "status": "official_index_search_verified"
+    },
+    {
+      "id": "GUM-100",
+      "source": "GUM",
+      "title": "JCGM 100:2008 uncertainty evaluation",
+      "book": [
+        "PHY208-A",
+        "PHY208-B",
+        "PHY210-B"
+      ],
+      "kind": "reference",
+      "locator": "Official publication record, DOI 10.59161/JCGM100-2008E",
+      "url": "https://www.bipm.org/en/doi/10.59161/jcgm100-2008e",
+      "status": "official_publication_metadata_verified"
+    },
+    {
+      "id": "GUM-1",
+      "source": "GUM",
+      "title": "JCGM GUM-1:2023 introduction",
+      "book": [
+        "PHY105",
+        "PHY208-A",
+        "PHY208-B",
+        "PHY210-B"
+      ],
+      "kind": "reference",
+      "locator": "Official publication record, DOI 10.59161/JCGMGUM-1-2023",
+      "url": "https://www.bipm.org/en/doi/10.59161/jcmgum-1-2023",
+      "status": "official_publication_metadata_verified"
     }
   ],
   "scope": "Bibliographic and TOC mapping only. No third-party PDF mirrors. URLs may point to collection pages rather than individual files; review status is explicit. English and Vietnamese curriculum titles are editorial; external resource titles retain original language. SJPO entries are source occurrences, not unique exam questions. Direct PDF endpoints checked where indicated, no full-text review. Mathematics subsection locators are TOC-derived; no claim of full review."
