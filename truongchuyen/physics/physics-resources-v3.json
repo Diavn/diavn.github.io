@@ -1,5 +1,5 @@
 {
-  "version": "6.4.1",
+  "version": "6.5.0",
   "date": "2026-11-28",
   "sources": [
     {
@@ -707,7 +707,16 @@
         "advanced_practice": "KZ pp.1–7 (learning advice, not lab source)",
         "revision_target": "data tables, repeat measurement, graphical calibration",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy105.html",
+      "learning_page": "physics-modern-experimental-v58.html",
+      "edition": "5.8",
+      "extension_v58": {
+        "chapters": 1,
+        "practice_count": 2,
+        "chapter_diagrams": 1
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1577,7 +1586,16 @@
         "advanced_practice": "PM3 ch5, §6.7 (TOC only)",
         "revision_target": "events, invariants, field transformations extension",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy206-a.html",
+      "learning_page": "physics-modern-experimental-v58.html",
+      "edition": "5.8",
+      "extension_v58": {
+        "chapters": 1,
+        "practice_count": 2,
+        "chapter_diagrams": 1
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1607,7 +1625,16 @@
         "advanced_practice": "YF13 ch40–41 end problems",
         "revision_target": "photons, de Broglie, quantum states and atoms",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy206-b.html",
+      "learning_page": "physics-modern-experimental-v58.html",
+      "edition": "5.8",
+      "extension_v58": {
+        "chapters": 2,
+        "practice_count": 4,
+        "chapter_diagrams": 2
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1637,7 +1664,16 @@
         "advanced_practice": "PM3 ch10–11 (TOC only)",
         "revision_target": "crystal, energy bands, material response",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy207-a.html",
+      "learning_page": "physics-modern-experimental-v58.html",
+      "edition": "5.8",
+      "extension_v58": {
+        "chapters": 1,
+        "practice_count": 2,
+        "chapter_diagrams": 1
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1667,7 +1703,16 @@
         "advanced_practice": "PM3 §4.6, §6.9 (TOC only)",
         "revision_target": "carrier density, Hall effect, devices",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy207-b.html",
+      "learning_page": "physics-modern-experimental-v58.html",
+      "edition": "5.8",
+      "extension_v58": {
+        "chapters": 2,
+        "practice_count": 4,
+        "chapter_diagrams": 2
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1697,7 +1742,16 @@
         "advanced_practice": "YF13 ch43–44 end problems",
         "revision_target": "decay, binding energy, particle and cosmology limits",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy207-c.html",
+      "learning_page": "physics-modern-experimental-v58.html",
+      "edition": "5.8",
+      "extension_v58": {
+        "chapters": 1,
+        "practice_count": 2,
+        "chapter_diagrams": 1
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1727,7 +1781,16 @@
         "advanced_practice": "prior GUM source; uncertainty propagation requires separate review",
         "revision_target": "resolution, repeatability, calibration",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy208-a.html",
+      "learning_page": "physics-modern-experimental-v58.html",
+      "edition": "5.8",
+      "extension_v58": {
+        "chapters": 1,
+        "practice_count": 2,
+        "chapter_diagrams": 1
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1757,7 +1820,16 @@
         "advanced_practice": "prior IPhO experimental archive; not inferred from new texts",
         "revision_target": "experimental design, blind data, residual analysis",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy208-b.html",
+      "learning_page": "physics-modern-experimental-v58.html",
+      "edition": "5.8",
+      "extension_v58": {
+        "chapters": 1,
+        "practice_count": 2,
+        "chapter_diagrams": 1
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1847,7 +1919,16 @@
         "advanced_practice": "numerical methods source still needed",
         "revision_target": "Euler vs exact, convergence, conservation",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy210-a.html",
+      "learning_page": "physics-modern-experimental-v58.html",
+      "edition": "5.8",
+      "extension_v58": {
+        "chapters": 1,
+        "practice_count": 2,
+        "chapter_diagrams": 1
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1877,7 +1958,16 @@
         "advanced_practice": "prior research-project modules; separate research evidence needed",
         "revision_target": "authentic measurement, reproducibility and modelling",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy210-b.html",
+      "learning_page": "physics-modern-experimental-v58.html",
+      "edition": "5.8",
+      "extension_v58": {
+        "chapters": 1,
+        "practice_count": 2,
+        "chapter_diagrams": 1
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     }
   ],
   "records": [
@@ -9759,7 +9849,12 @@
           "PHY207-A",
           "PHY207-B",
           "PHY207-C"
-        ]
+        ],
+        "candidate_page": "physics-volume09-v65.html",
+        "status": "illustrated_integrated_candidate",
+        "candidate_chapters": 20,
+        "candidate_practice_count": 40,
+        "candidate_figures": 20
       },
       {
         "id": "V10",
@@ -9773,7 +9868,12 @@
           "PHY208-B",
           "PHY210-A",
           "PHY210-B"
-        ]
+        ],
+        "candidate_page": "physics-volume10-v65.html",
+        "status": "illustrated_integrated_candidate",
+        "candidate_chapters": 15,
+        "candidate_practice_count": 30,
+        "candidate_figures": 15
       },
       {
         "id": "V11",
