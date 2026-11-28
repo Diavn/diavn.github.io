@@ -170,8 +170,8 @@
         "vi": "Lượng giác, vector và dẫn đường"
       },
       "stem": {
-        "en": "A boat moves at 5 m/s relative to water; current is 3 m/s. Find across speed when heading to land opposite.",
-        "vi": "Thuyền đi 5 m/s so với nước; dòng 3 m/s. Tìm tốc độ ngang khi hướng tới điểm đối diện."
+        "en": "A boat travels at 5 m/s relative to water in a river flowing at 3 m/s parallel to straight banks. It selects a heading so its ground velocity is perpendicular to the banks. Find its across-river speed.",
+        "vi": "Thuyền có tốc độ 5 m/s so với nước, dòng chảy 3 m/s song song hai bờ thẳng. Thuyền chọn hướng sao cho vận tốc so với bờ vuông góc với bờ. Tìm tốc độ ngang sông."
       },
       "solution": {
         "en": "Upstream component 3 m/s; across $\\sqrt{25-9}=4$ m/s.",
@@ -1118,8 +1118,8 @@
       "module": "PHY101-A",
       "chapter": 3,
       "stem": {
-        "en": "How much 80\\textdegree{}C water must be mixed with 150 g of 20\\textdegree{}C water to reach 40\\textdegree{}C, neglecting losses?",
-        "vi": "Cần bao nhiêu nước 80\\textdegree{}C trộn với 150 g nước 20\\textdegree{}C để đạt 40\\textdegree{}C, bỏ qua hao phí?"
+        "en": "How much liquid water at 80°C must be mixed with 150 g of liquid water at 20°C to reach thermal equilibrium at 40°C in an insulated container of negligible heat capacity? Assume constant water specific heat and no phase change.",
+        "vi": "Cần bao nhiêu nước lỏng ở 80°C trộn với 150 g nước lỏng ở 20°C để cân bằng nhiệt tại 40°C trong bình cách nhiệt có nhiệt dung không đáng kể? Coi nhiệt dung riêng của nước không đổi và không chuyển pha."
       },
       "solution": {
         "en": "$m(80-40)=150(40-20)$, so $40m=3000$ and $m=75$ g.",
