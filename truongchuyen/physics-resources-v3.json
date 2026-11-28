@@ -774,9 +774,9 @@
       "edition": "5.3",
       "learning_page": "physics-math-level2-v53.html",
       "companion": {
-        "chapters": 4,
-        "worked_examples": 4,
-        "practice_count": 8,
+        "chapters": 6,
+        "worked_examples": 6,
+        "practice_count": 12,
         "version": "5.3",
         "retains_prior_volume": true
       },
@@ -9389,9 +9389,9 @@
         ],
         "candidate_page": "physics-volume01-v61.html",
         "status": "integrated_companion_candidate",
-        "candidate_chapters": 20,
-        "candidate_practice_count": 84,
-        "candidate_new_companion_practice_count": 48
+        "candidate_chapters": 22,
+        "candidate_practice_count": 88,
+        "candidate_new_companion_practice_count": 52
       },
       {
         "id": "V02",
