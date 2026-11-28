@@ -1,4 +1,4 @@
-name: Physics V5.1–V5.4 and V6.2 illustrated PDF review
+name: Physics V5.1–V5.5 and V6.3 illustrated PDF review
 on:
   workflow_dispatch:
   push:
@@ -6,13 +6,15 @@ on:
     paths:
       - '.github/workflows/physics-pdf-review-v61.yml'
       - '.github/scripts/physics_pdf_review_v61.py'
-      - 'truongchuyen/physics-math-level1-v51.html'
-      - 'truongchuyen/physics-mechanics-level1-v52.html'
-      - 'truongchuyen/physics-math-level2-v53.html'
-      - 'truongchuyen/physics-volume01-v61.html'
-      - 'truongchuyen/physics-mechanics-level2-v54.html'
-      - 'truongchuyen/physics-volume02-v62.html'
-      - 'truongchuyen/physics-volume03-v62.html'
+      - 'truongchuyen/physics/physics-math-level1-v51.html'
+      - 'truongchuyen/physics/physics-mechanics-level1-v52.html'
+      - 'truongchuyen/physics/physics-math-level2-v53.html'
+      - 'truongchuyen/physics/physics-volume01-v61.html'
+      - 'truongchuyen/physics/physics-mechanics-level2-v54.html'
+      - 'truongchuyen/physics/physics-volume02-v62.html'
+      - 'truongchuyen/physics/physics-volume03-v62.html'
+      - 'truongchuyen/physics/physics-thermal-level2-v55.html'
+      - 'truongchuyen/physics/physics-volume04-v63.html'
 permissions:
   contents: read
 jobs:
@@ -25,7 +27,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-fonts-recommended fonts-dejavu-core latexmk poppler-utils librsvg2-bin
-      - name: Build and inspect 34 illustrated PDF candidates
+      - name: Build and inspect 48 illustrated PDF candidates
         run: python3 .github/scripts/physics_pdf_review_v61.py
       - name: Upload diagnostics
         if: always()
@@ -35,16 +37,19 @@ jobs:
           path: |
             /tmp/vtalent-pdf-review/quality-report.txt
             /tmp/vtalent-pdf-review/*.build.txt
+            /tmp/vtalent-pdf-review/*.log
             /tmp/vtalent-pdf-review/*-cover*.png
             /tmp/vtalent-pdf-review/*-sample*.png
           if-no-files-found: warn
       - name: Upload PDF candidates only if checks passed
         uses: actions/upload-artifact@v4
         with:
-          name: physics-v62-illustrated-pdf-candidates
+          name: physics-v63-illustrated-pdf-candidates
           path: |
             /tmp/vtalent-pdf-review/PHY*-V*-vi.pdf
             /tmp/vtalent-pdf-review/PHY*-V*-en.pdf
             /tmp/vtalent-pdf-review/V0*-V62-vi.pdf
             /tmp/vtalent-pdf-review/V0*-V62-en.pdf
+            /tmp/vtalent-pdf-review/V04-V63-vi.pdf
+            /tmp/vtalent-pdf-review/V04-V63-en.pdf
           if-no-files-found: error
