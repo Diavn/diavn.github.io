@@ -1,5 +1,5 @@
 {
-  "version": "3.2",
+  "version": "3.3",
   "date": "2026-11-28",
   "sources": [
     {
@@ -127,8 +127,11 @@
         "en": "Navigation and mapping",
         "vi": "Dẫn đường và bản đồ"
       },
-      "status": "planned",
-      "prerequisite": "PHY101-A / PHY101-B as needed"
+      "status": "draft_exists",
+      "prerequisite": "PHY101-A and basic geometry",
+      "chapters": 4,
+      "worked_examples": 8,
+      "practice_count": 16
     },
     {
       "level": 1,
@@ -346,8 +349,11 @@
         "en": "Control and signal processing",
         "vi": "Điều khiển và xử lý tín hiệu"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "draft_exists",
+      "prerequisite": "PHY201-A and secondary trigonometry",
+      "chapters": 4,
+      "worked_examples": 8,
+      "practice_count": 16
     },
     {
       "level": 2,
@@ -3802,9 +3808,10 @@
         "PHY209-B"
       ],
       "kind": "index",
-      "locator": "",
-      "url": "https://kevinshuang.com/teaching/resources/",
-      "status": "landing_or_search_metadata"
+      "locator": "23 PDF pages; full review pending",
+      "url": "https://kevinshuang.com/wp-content/uploads/2024/03/2024-Fma-Topics.pdf",
+      "status": "pdf_endpoint_opened_not_reviewed",
+      "pdf_pages": 23
     },
     {
       "id": "KH-04",
@@ -3984,9 +3991,10 @@
         "PHY201-B"
       ],
       "kind": "bibliography",
-      "locator": "",
-      "url": "https://kevinshuang.com/teaching/resources/",
-      "status": "landing_or_search_metadata"
+      "locator": "149 PDF pages; full review pending",
+      "url": "https://www.math.ust.hk/~machas/differential-equations.pdf",
+      "status": "pdf_endpoint_opened_not_reviewed",
+      "pdf_pages": 149
     },
     {
       "id": "KH-19",
@@ -5598,6 +5606,83 @@
       "kind": "subsection locator",
       "locator": "§22.4.3, printed p. 94; PDF p. 94",
       "url": "https://tchlabs.net/physics/SJPO.pdf#page=94",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-13.1",
+      "source": "SJ",
+      "title": "Differential equation introduction",
+      "book": [
+        "PHY201-B"
+      ],
+      "locator": "§13.1, p. 51",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=51",
+      "kind": "subsection locator",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-13.1.1",
+      "source": "SJ",
+      "title": "RC circuit",
+      "book": [
+        "PHY201-B",
+        "PHY204-B"
+      ],
+      "locator": "§13.1.1, p. 52",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=52",
+      "kind": "subsection locator",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-13.2",
+      "source": "SJ",
+      "title": "Simple harmonic motion ODE",
+      "book": [
+        "PHY201-B",
+        "PHY205-A"
+      ],
+      "locator": "§13.2, p. 52",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=52",
+      "kind": "subsection locator",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-13.2.1",
+      "source": "SJ",
+      "title": "Elementary SHM derivation",
+      "book": [
+        "PHY201-B",
+        "PHY205-A"
+      ],
+      "locator": "§13.2.1, p. 52",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=52",
+      "kind": "subsection locator",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-13.2.2",
+      "source": "SJ",
+      "title": "Complex exponential SHM derivation",
+      "book": [
+        "PHY201-B",
+        "PHY205-A"
+      ],
+      "locator": "§13.2.2, p. 52",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=52",
+      "kind": "subsection locator",
+      "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "SJ-SEC-4.3",
+      "source": "SJ",
+      "title": "Geometric intuition of kinematics",
+      "book": [
+        "PHY101-B",
+        "PHY102-A"
+      ],
+      "locator": "§4.3, p. 15",
+      "url": "https://tchlabs.net/physics/SJPO.pdf#page=15",
+      "kind": "subsection locator",
       "status": "toc_mapped_not_full_review"
     }
   ],
