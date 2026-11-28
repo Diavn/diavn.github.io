@@ -406,8 +406,11 @@
         "en": "Crash safety",
         "vi": "An toàn va chạm"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 3,
+      "worked_examples": 3,
+      "practice_count": 6
     },
     {
       "level": 2,
@@ -442,8 +445,11 @@
         "en": "Attitude control",
         "vi": "Điều khiển tư thế"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 3,
+      "worked_examples": 3,
+      "practice_count": 6
     },
     {
       "level": 2,
