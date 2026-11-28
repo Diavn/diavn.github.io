@@ -15,7 +15,7 @@
 \begin{document}
 \title{V-TALENT 2045\\ PHY102-A --- Motion, graphs and relative velocity\\\large Level 1 · Foundation mechanics · Grades 8–9}
 \author{Dr. Dang Minh Tuan -- TS. Đặng Minh Tuấn}
-\date{2026 · v1.0}
+\date{2026 · v1.1}
 \maketitle
 \tableofcontents
 \chapter*{Learning objectives}\addcontentsline{toc}{chapter}{Learning objectives}
@@ -39,6 +39,11 @@ A student walks 120 m east in 60 s, waits 30 s, then walks 80 m west in 40 s. Fi
 A cyclist travels equal distances at 12 km/h and 18 km/h. Derive the average speed and compare with the arithmetic mean.
 
 \textbf{Solution.} Let each distance be $d$ km. Then $t=d/12+d/18=5d/36$ h and $\bar u=2d/(5d/36)=14.4$ km/h. The arithmetic mean is 15 km/h. The slower leg lasts longer and receives greater time weight; the result lies between 12 and 18.
+\section{Application and transfer}
+A transport engineer estimates a vehicle's stopping distance from a velocity--time graph. Suppose a driver travels at 18 m/s, reacts for 0.75 s, then brakes uniformly to rest in 3 s. The reaction distance is $18(0.75)=13.5$ m and the braking distance is $\frac12(18)(3)=27$ m, giving 40.5 m overall. The braking acceleration is $-6\,\mathrm{m\,s^{-2}}$. A safe design also needs margins for wet roads, delays and variability. Use the graph to predict which component changes if the reaction time doubles. A constant deceleration is a model, not a guarantee of road performance.
+
+\textbf{Source-guided further reading:} SW ch 2 pp. 55–62; JP ch 2, problems 2.1–2.4; SJ ch 4 pp. 14–19.
+
 \section{End-of-topic practice}
 \begin{enumerate}
 \item \textbf{PHY102-A-1.1}. Walk 90 m north in 45 s and 30 m south in 15 s. Determine the four motion quantities above.
@@ -74,6 +79,11 @@ A river is 120 m wide. A swimmer moves at 1.5 m/s relative to water, perpendicul
 \textbf{Solution.} The across-river component is 1.5 m/s, so $t=120/1.5=80$ s and drift $=0.9(80)=72$ m. To cancel drift, the swimmer needs upstream component 0.9 m/s; by Pythagoras the across component is $\sqrt{1.5^2-0.9^2}=1.2$ m/s. Thus $t=100$ s. The direct route is slower because some swimming speed is allocated to cancelling the current.
 \section{Experimental investigation}
 Record a toy car against a ruler at known frame intervals. Extract at least six (t,x) pairs, graph x against t, estimate slope from two widely separated points, and compare slopes from different intervals. Report pixel-to-length calibration and timing uncertainty. If slopes differ beyond uncertainty, reject uniform motion rather than averaging away the disagreement.
+\section{Application and transfer}
+An underwater robot moves at 0.8 m/s relative to the water and must survey a line perpendicular to a current of 0.6 m/s. A direct ground track requires an upstream component 0.6 m/s. Its across-current speed is $\sqrt{0.8^2-0.6^2}=0.529$ m/s, so a 100 m transect takes about 189 s. The optimal heading differs from the desired track. If the current varies with depth, the uniform-flow model fails; an engineer must update the heading using measurements. Try a vector diagram for a current faster than the robot and explain why cancellation is impossible.
+
+\textbf{Source-guided further reading:} SW ch 2; KZ M1 (kinematics); Kalda Kinematics v2.0 (advanced reading).
+
 \section{End-of-topic practice}
 \begin{enumerate}
 \item \textbf{PHY102-A-2.1}. A and B are 42 km apart, travelling towards each other at 12 and 9 km/h. Find meeting time and distance from A's start.
@@ -105,4 +115,6 @@ OpenStax Physics; PhET; Tracker; SJPO archive. VPhO book items are Level 2 exten
 \item \textbf{PHY102-A-2.3}. $a=(8-(-4))/6=2$ m/s\textsuperscript{2}. Zero velocity occurs at $t=2$ s. The negative triangle has area $-4(2)/2=-4$ m; positive triangle $8(4)/2=16$ m. Displacement $12$ m; distance $20$ m.
 \item \textbf{PHY102-A-2.4}. Minimum time $240/5=48$ s, drift $3(48)=144$ m. To cancel current use upstream component 3 m/s and across component $\sqrt{25-9}=4$ m/s. Direct crossing takes $240/4=60$ s. Check feasibility: $5>3$.
 \end{enumerate}
+\chapter*{International resource crosswalk}
+\url{https://diavn.github.io/truongchuyen/physics-curriculum.html}
 \end{document}
