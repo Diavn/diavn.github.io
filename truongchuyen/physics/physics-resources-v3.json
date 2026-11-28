@@ -1,5 +1,5 @@
 {
-  "version": "6.3.1",
+  "version": "6.4.1",
   "date": "2026-11-28",
   "sources": [
     {
@@ -601,7 +601,15 @@
         "advanced_practice": "YF13 ch33–34",
         "revision_target": "ray diagrams, signs, shadows and imaging",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy103-c.html",
+      "learning_page": "physics-waves-optics-v57.html",
+      "extension_v57": {
+        "chapters": 2,
+        "practice_count": 4,
+        "chapter_diagrams": 2
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 1,
@@ -631,7 +639,15 @@
         "advanced_practice": "YF13 ch14–16,27–28",
         "revision_target": "cross-reference magnetism to V06; waves to V07",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy103-d.html",
+      "learning_page": "physics-waves-optics-v57.html",
+      "extension_v57": {
+        "chapters": 2,
+        "practice_count": 4,
+        "chapter_diagrams": 2
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 1,
@@ -1409,7 +1425,15 @@
         "advanced_practice": "DM14 ch10 (no driven/damped coverage)",
         "revision_target": "equilibrium coordinate, SHM, coupling as extension",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy205-a.html",
+      "learning_page": "physics-waves-optics-v57.html",
+      "extension_v57": {
+        "chapters": 3,
+        "practice_count": 6,
+        "chapter_diagrams": 3
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1439,7 +1463,15 @@
         "advanced_practice": "YF13 ch15–16 end problems",
         "revision_target": "superposition, boundaries, standing waves and Doppler",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy205-b.html",
+      "learning_page": "physics-waves-optics-v57.html",
+      "extension_v57": {
+        "chapters": 2,
+        "practice_count": 4,
+        "chapter_diagrams": 2
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1469,7 +1501,15 @@
         "advanced_practice": "YF13 ch34 end problems",
         "revision_target": "compound optics, paraxial limits, image tracing",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy205-c.html",
+      "learning_page": "physics-waves-optics-v57.html",
+      "extension_v57": {
+        "chapters": 2,
+        "practice_count": 4,
+        "chapter_diagrams": 2
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1499,7 +1539,15 @@
         "advanced_practice": "YF13 ch35–36 end problems",
         "revision_target": "phase shifts, thin films, diffraction",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy205-d.html",
+      "learning_page": "physics-waves-optics-v57.html",
+      "extension_v57": {
+        "chapters": 3,
+        "practice_count": 6,
+        "chapter_diagrams": 3
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -9675,7 +9723,12 @@
           "PHY103-D",
           "PHY205-A",
           "PHY205-B"
-        ]
+        ],
+        "candidate_page": "physics-volume07-v64.html",
+        "candidate_chapters": 14,
+        "candidate_practice_count": 28,
+        "candidate_figures": 13,
+        "status": "illustrated_integrated_candidate"
       },
       {
         "id": "V08",
@@ -9687,7 +9740,12 @@
           "PHY103-C",
           "PHY205-C",
           "PHY205-D"
-        ]
+        ],
+        "candidate_page": "physics-volume08-v64.html",
+        "candidate_chapters": 14,
+        "candidate_practice_count": 28,
+        "candidate_figures": 13,
+        "status": "illustrated_integrated_candidate"
       },
       {
         "id": "V09",
