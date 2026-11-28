@@ -1,5 +1,5 @@
 {
-  "version": "3.6",
+  "version": "3.7",
   "date": "2026-11-28",
   "sources": [
     {
@@ -238,8 +238,11 @@
         "en": "Battery-powered sensors",
         "vi": "Cảm biến dùng pin"
       },
-      "status": "planned",
-      "prerequisite": "PHY101-A / PHY101-B as needed"
+      "status": "online_draft",
+      "prerequisite": "PHY101-A / PHY101-B as needed",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 1,
@@ -565,8 +568,11 @@
         "en": "MEMS and electrostatic sensors",
         "vi": "MEMS và cảm biến tĩnh điện"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -583,8 +589,11 @@
         "en": "Analog sensor circuits",
         "vi": "Mạch cảm biến tương tự"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -601,8 +610,11 @@
         "en": "Mass spectrometry",
         "vi": "Khối phổ"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -619,8 +631,11 @@
         "en": "Wireless charging",
         "vi": "Sạc không dây"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -781,8 +796,11 @@
         "en": "Solar cells and chips",
         "vi": "Pin mặt trời và chip"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "Introductory bridge; PHY204-A/B/C; deeper study after PHY206-B and PHY207-A",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
