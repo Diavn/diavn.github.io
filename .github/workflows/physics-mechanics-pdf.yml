@@ -1,0 +1,124 @@
+name: Mechanics study PDF candidates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/physics-mechanics-pdf.yml'
+      - 'truongchuyen/physics-mechanics-series.html'
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-pictures texlive-fonts-recommended fonts-noto-core fonts-dejavu-core poppler-utils latexmk
+      - name: Generate temporary LaTeX sources from bilingual learning page
+        run: |
+          mkdir -p /tmp/mechanics
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          import re
+          class Reader(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.books={}
+                  self.book=None
+                  self.tag=None
+                  self.buf=[]
+              def handle_starttag(self,tag,attrs):
+                  attrs=dict(attrs)
+                  if tag=='article' and 'data-book' in attrs:
+                      self.book=(attrs['data-book'],attrs['lang'])
+                      self.books[self.book]=[]
+                  if self.book and tag in ('h2','h3','h4','p'):
+                      self.tag=tag
+                      self.buf=[]
+              def handle_data(self,data):
+                  if self.book and self.tag:
+                      self.buf.append(data)
+              def handle_endtag(self,tag):
+                  if self.book and tag==self.tag:
+                      self.books[self.book].append((tag,''.join(self.buf)))
+                      self.tag=None
+                  if tag=='article':
+                      self.book=None
+          r=Reader()
+          r.feed(Path('truongchuyen/physics-mechanics-series.html').read_text())
+          assert len(r.books)==6
+          esc={'&':r'\&','%':r'\%','$':r'\$','#':r'\#','_':r'\_','{':r'\{','}':r'\}','\\':r'\textbackslash{}','~':r'\textasciitilde{}','^':r'\textasciicircum{}','≈':r'\ensuremath{\approx}','≤':r'\ensuremath{\le}','≥':r'\ensuremath{\ge}','−':r'\ensuremath{-}','×':r'\ensuremath{\times}','β':r'\ensuremath{\beta}','θ':r'\ensuremath{\theta}','ν':r'\ensuremath{\nu}','ρ':r'\ensuremath{\rho}','µ':r'\ensuremath{\mu}','²':r'\textsuperscript{2}','³':r'\textsuperscript{3}','⁴':r'\textsuperscript{4}'}
+          def fmt(s):
+              out=[]
+              for i,part in enumerate(re.split(r'(\\\(.*?\\\))',s)):
+                  out.append(part if i%2 else ''.join(esc.get(c,c) for c in part))
+              return ''.join(out)
+          def diagram(code,ch):
+              key=(code,ch)
+              figs={
+              ('PHY202-B',1):r'\draw[thick,fill=gray!20] (0,0) circle (.35);\draw[thick,fill=gray!30] (3,0) circle (.5);\draw[->,thick] (.4,0)--(1.6,0) node[above] {$\mathbf v_1$};\draw[->,thick] (2.4,0)--(1.8,0) node[below] {$\mathbf v_2$};\fill (1.8,0) circle (.04) node[above=8pt] {$C$};',
+              ('PHY202-B',2):r'\draw[thick] (0,0)--(5,0);\draw[fill=gray!25] (1,.4) circle (.4);\draw[fill=gray!10] (3,.5) circle (.5);\draw[->] (1,.95)--(2.2,.95) node[midway,above] {$u_1$};\draw[->] (3,1.2)--(2.4,1.2) node[midway,above] {$u_2$};',
+              ('PHY202-B',3):r'\draw[very thick] (0,-1.4)--(0,1.4);\fill (0,0) circle (.05) node[right] {$C$};\draw[->,thick] (-2,.75)--(0,.75) node[midway,above] {$J$};\draw[<->] (.2,0)--(.2,.75) node[midway,right] {$d$};',
+              ('PHY202-D',1):r'\draw[very thick] (0,0)--(4,0);\fill (0,0) circle (.07) node[above] {$O$};\draw[->,thick] (2,0)--(2,-1.5) node[right] {$Mg$};\draw[<->] (0,.35)--(4,.35) node[midway,above] {$L$};',
+              ('PHY202-D',2):r'\draw[thick] (0,0)--(5,2.5)--(5,0)--cycle;\begin{scope}[rotate=26.565]\draw[fill=gray!15] (2.6,.65) circle (.65);\draw[->] (2.6,.65)--(2.6,1.5) node[above] {$N$};\draw[->] (2.6,0)--(3.5,0) node[above] {$f$};\end{scope}',
+              ('PHY202-D',3):r'\begin{scope}[rotate=22.5]\foreach \a in {0,45,...,315}{\draw[very thick] (0,0)--(\a:1.6);}\end{scope}\fill (0,0) circle (.05) node[above] {$C$};\draw[thick] (-2,-1.478)--(2,-1.478);\node[below] at (-.612,-1.478) {$A$};\node[below] at (.612,-1.478) {$B$};',
+              ('ENG-MAT01',1):r'\draw[fill=gray!15] (0,0) rectangle (4,.5);\draw[->,thick] (0,.25)--(-1,.25) node[left] {$F$};\draw[->,thick] (4,.25)--(5,.25) node[right] {$F$};\draw[<->] (0,-.2)--(4,-.2) node[midway,below] {$L$};',
+              ('ENG-MAT01',2):r'\draw[fill=gray!20] (0,0) rectangle (3,.8);\draw[fill=gray!45] (0,.8) rectangle (3,1.6);\draw[dashed,thick] (0,1)--(3,1) node[right] {$z_N$};\node at (1.5,.4) {$E_1$};\node at (1.5,1.35) {$E_2$};',
+              ('ENG-MAT01',3):r'\draw[dashed] (0,0)--(0,3);\draw[thick,domain=0:3,samples=50] plot ({.65*sin(60*\x)},\x);\draw[->,thick] (0,3.8)--(0,3) node[right] {$P$};\fill (0,0) circle (.05);\fill (0,3) circle (.05);'}
+              return r'\begin{center}\begin{tikzpicture}[scale=1.15]'+figs[key]+r'\end{tikzpicture}\end{center}'
+          for (code,lang),parts in r.books.items():
+              title=parts[0][1]
+              author='TS. Đặng Minh Tuấn' if lang=='vi' else 'Dr. Dang Minh Tuan'
+              pre=r'\documentclass[11pt,a4paper,openany]{book}'+'\n'+r'\usepackage[margin=24mm]{geometry}\usepackage{fontspec}\setmainfont{DejaVu Serif}\usepackage{amsmath,amssymb,tikz,microtype}\usepackage[hidelinks]{hyperref}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\emergencystretch}{2em}'
+              if lang=='vi':
+                  pre+=r'\renewcommand{\chaptername}{Chương}\renewcommand{\contentsname}{Mục lục}'
+              pre+=r'\begin{document}\title{V-TALENT 2045\\'+fmt(title)+r'}\author{'+author+r'}\date{2026 -- '+('Bản thảo V3.5' if lang=='vi' else 'Draft V3.5')+r'}\hypersetup{pdfauthor={'+author+r'}}\maketitle\tableofcontents'
+              body=[]
+              ch=0
+              for tag,value in parts[2:]:
+                  if tag=='h3':
+                      if value.startswith(('Full solutions','Lời giải chi tiết')):
+                          body.append(r'\appendix\chapter{'+fmt(value)+'}')
+                      else:
+                          ch+=1
+                          body.append(r'\chapter{'+fmt(re.sub(r'^\d+\.\s*','',value))+'}'+diagram(code,ch))
+                  elif tag=='h4':
+                      body.append(r'\section{'+fmt(value)+'}')
+                  else:
+                      body.append(fmt(value))
+              assert ch==3
+              (Path('/tmp/mechanics')/(code+'-'+lang+'.tex')).write_text(pre+'\n\n'+'\n\n'.join(body)+'\n'+r'\end{document}',encoding='utf-8')
+          PY
+      - name: Compile and verify all six PDF candidates
+        run: |
+          set -euo pipefail
+          cd /tmp/mechanics
+          failed=0
+          for f in *.tex; do
+            stem=$(basename "$f" .tex)
+            if ! latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error "$f"; then failed=1; continue; fi
+            pdfinfo "$stem.pdf"
+            pdftotext "$stem.pdf" "$stem.txt"
+            if grep -q 'Missing character:' "$stem.log"; then echo "::error file=$f::Missing glyph"; failed=1; fi
+          done
+          test "$failed" -eq 0
+          python3 - <<'PY'
+          from pathlib import Path
+          import unicodedata
+          pdfs=list(Path('.').glob('*.pdf'))
+          assert len(pdfs)==6
+          for p in pdfs:
+              s=' '.join(unicodedata.normalize('NFC',p.with_suffix('.txt').read_text()).split())
+              author='TS. Đặng Minh Tuấn' if p.stem.endswith('-vi') else 'Dr. Dang Minh Tuan'
+              assert author in s,p
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mechanics-pdf-candidates
+          path: /tmp/mechanics/*.pdf
+          if-no-files-found: error
