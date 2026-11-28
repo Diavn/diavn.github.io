@@ -1,5 +1,5 @@
 {
-  "version": "3.3",
+  "version": "3.6",
   "date": "2026-11-28",
   "sources": [
     {
@@ -427,8 +427,11 @@
         "en": "Energy storage",
         "vi": "Lưu trữ năng lượng"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 3,
+      "worked_examples": 3,
+      "practice_count": 6
     },
     {
       "level": 2,
@@ -466,8 +469,11 @@
         "en": "Satellites and astronomy",
         "vi": "Vệ tinh và thiên văn"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 3,
+      "worked_examples": 3,
+      "practice_count": 6
     },
     {
       "level": 2,
@@ -484,8 +490,11 @@
         "en": "Microfluidics and climate",
         "vi": "Vi lưu và khí hậu"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 3,
+      "worked_examples": 3,
+      "practice_count": 6
     },
     {
       "level": 2,
