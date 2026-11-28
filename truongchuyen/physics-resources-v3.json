@@ -2724,9 +2724,9 @@
         "PHY204-D"
       ],
       "kind": "translation",
-      "locator": "48 PDF pages; full review pending",
+      "locator": "48 PDF pages; 175 numbered problems; translation caveats and incomplete answers; PDF pp. 45–48 answer section",
       "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf",
-      "status": "pdf_endpoint_opened_not_reviewed",
+      "status": "section_ranges_verified_translation_unreviewed",
       "pdf_pages": 48
     },
     {
@@ -5717,6 +5717,135 @@
       "url": "https://tchlabs.net/physics/SJPO.pdf#page=15",
       "kind": "subsection locator",
       "status": "toc_mapped_not_full_review"
+    },
+    {
+      "id": "KS-EM-01",
+      "source": "KS",
+      "title": "DC Circuits",
+      "book": [
+        "PHY103-B",
+        "PHY204-B",
+        "PHY207-B"
+      ],
+      "kind": "problem locator",
+      "locator": "Q1–44; PDF pp. 3–16",
+      "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf#page=3",
+      "status": "section_or_question_locator_verified_translation_unreviewed"
+    },
+    {
+      "id": "KS-EM-02",
+      "source": "KS",
+      "title": "DC Circuits With Capacitors",
+      "book": [
+        "PHY204-A",
+        "PHY204-B"
+      ],
+      "kind": "problem locator",
+      "locator": "Q45–60; PDF pp. 17–21",
+      "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf#page=17",
+      "status": "section_or_question_locator_verified_translation_unreviewed"
+    },
+    {
+      "id": "KS-EM-03",
+      "source": "KS",
+      "title": "Electrostatics",
+      "book": [
+        "PHY204-A"
+      ],
+      "kind": "problem locator",
+      "locator": "Q61–115; PDF pp. 22–28",
+      "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf#page=22",
+      "status": "section_or_question_locator_verified_translation_unreviewed"
+    },
+    {
+      "id": "KS-EM-04",
+      "source": "KS",
+      "title": "Magnetostatics",
+      "book": [
+        "PHY204-C"
+      ],
+      "kind": "problem locator",
+      "locator": "Q116–134; PDF pp. 29–32",
+      "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf#page=29",
+      "status": "section_or_question_locator_verified_translation_unreviewed"
+    },
+    {
+      "id": "KS-EM-05",
+      "source": "KS",
+      "title": "Electromagnetic Induction",
+      "book": [
+        "PHY204-D"
+      ],
+      "kind": "problem locator",
+      "locator": "Q135–151; PDF pp. 33–36",
+      "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf#page=33",
+      "status": "section_or_question_locator_verified_translation_unreviewed"
+    },
+    {
+      "id": "KS-EM-06",
+      "source": "KS",
+      "title": "AC Circuits",
+      "book": [
+        "PHY204-E",
+        "PHY204-D"
+      ],
+      "kind": "problem locator",
+      "locator": "Q152–161; PDF pp. 37–40",
+      "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf#page=37",
+      "status": "section_or_question_locator_verified_translation_unreviewed"
+    },
+    {
+      "id": "KS-EM-07",
+      "source": "KS",
+      "title": "Movement of Charged Particles in Electric and Magnetic Fields",
+      "book": [
+        "PHY204-C",
+        "PHY207-B",
+        "PHY204-D"
+      ],
+      "kind": "problem locator",
+      "locator": "Q162–175; PDF pp. 41–44",
+      "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf#page=41",
+      "status": "section_or_question_locator_verified_translation_unreviewed"
+    },
+    {
+      "id": "KS-EM-169",
+      "source": "KS",
+      "title": "Four-contact semiconductor resistivity measurement",
+      "book": [
+        "PHY207-B",
+        "PHY204-B"
+      ],
+      "kind": "problem locator",
+      "locator": "Q169; PDF p. 42; translator notes geometry ambiguity",
+      "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf#page=42",
+      "status": "section_or_question_locator_verified_translation_unreviewed"
+    },
+    {
+      "id": "KS-EM-172",
+      "source": "KS",
+      "title": "Single-carrier Hall effect",
+      "book": [
+        "PHY204-C",
+        "PHY207-B"
+      ],
+      "kind": "problem locator",
+      "locator": "Q172; PDF p. 43",
+      "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf#page=43",
+      "status": "section_or_question_locator_verified_translation_unreviewed"
+    },
+    {
+      "id": "KS-EM-173",
+      "source": "KS",
+      "title": "Hall sensor measurement application",
+      "book": [
+        "PHY204-C",
+        "PHY207-B"
+      ],
+      "kind": "problem locator",
+      "locator": "Q173; PDF p. 43",
+      "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf#page=43",
+      "status": "section_or_question_locator_verified_translation_unreviewed"
     }
   ],
   "scope": "Bibliographic and TOC mapping only. No third-party PDF mirrors. URLs may point to collection pages rather than individual files; review status is explicit. English and Vietnamese curriculum titles are editorial; external resource titles retain original language. SJPO entries are source occurrences, not unique exam questions. Direct PDF endpoints checked where indicated, no full-text review. Mathematics subsection locators are TOC-derived; no claim of full review."
