@@ -17,7 +17,10 @@ SPECS=[
 ("physics-volume04-v63.html","V63",2),
 ("physics-electromagnetism-v56.html","V56",12),
 ("physics-volume05-v63.html","V63",2),
-("physics-volume06-v63.html","V63",2)]
+("physics-volume06-v63.html","V63",2),
+("physics-waves-optics-v57.html","V57",12),
+("physics-volume07-v64.html","V64",2),
+("physics-volume08-v64.html","V64",2)]
 class Reader(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -59,6 +62,7 @@ SYMBOLS={"−":"-","×":r"\ensuremath{\times}","≤":r"\ensuremath{\le}","≥":r
 for x,y in zip("⁰¹²³⁴⁵⁶⁷⁸⁹⁻","0123456789-"):SYMBOLS[x]=r"\textsuperscript{"+y+"}"
 for x,y in zip("₀₁₂₃₄₅₆₇₈₉","0123456789"):SYMBOLS[x]=r"\textsubscript{"+y+"}"
 SPECIAL.update(SYMBOLS)
+SPECIAL.update({"ₓ":r"\ensuremath{_x}","ₙ":r"\ensuremath{_n}","ₖ":r"\ensuremath{_k}","ₘ":r"\ensuremath{_m}","ₛ":r"\ensuremath{_s}","ᵗ":r"\textsuperscript{t}","′":r"\ensuremath{^\prime}"})
 SPECIAL.update({"≫":r"\ensuremath{\gg}","√":r"\ensuremath{\surd}","∥":r"\ensuremath{\parallel}"})
 SPECIAL.update({"ℓ":r"\ensuremath{\ell}","ₜ":r"\textsubscript{t}","†":r"\ensuremath{\dagger}"})
 def prepare_figures(text, filename):
@@ -87,7 +91,7 @@ def fmt(s):
         return "".join(result)
     return "".join(x if i%2 else prose(x) for i,x in enumerate(re.split(r'(\\\(.*?\\\))',s,flags=re.S)))
 
-ID=re.compile(r"\bPHY(?:101|102|103|201|202|203|204)-[A-F]-(?:V\d+-)?\d+\.\d+\b")
+ID=re.compile(r"\bPHY(?:101|102|103|201|202|203|204|205)-[A-F]-(?:V\d+-)?\d+\.\d+\b")
 expected={}
 for filename,version,num in SPECS:
     p=Reader()
@@ -120,7 +124,7 @@ for filename,version,num in SPECS:
                 b.append(r"\subsection{"+fmt(value)+"}")
             else:b.append(fmt(value))
         (OUT/(stem+".tex")).write_text(pre+"\n\n"+"\n\n".join(b)+r"\end{document}",encoding="utf-8")
-assert len(expected)==64
+assert len(expected)==80
 report=["V-TALENT Physics PDF review: candidate builds, not independently validated textbooks.","Existing published PDFs (page counts and extracted IDs; not proof of correctness):"]
 for code in ["PHY101-A","PHY101-B","PHY102-A","PHY102-B","PHY102-C","PHY102-D"]:
     for lang in ["vi","en"]:
