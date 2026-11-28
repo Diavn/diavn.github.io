@@ -53,6 +53,12 @@ jobs:
           run-id: 46134422219
           github-token: ${{ github.token }}
           path: /tmp/physics-verified/waves-optics
+      - uses: actions/download-artifact@v4
+        with:
+          name: foundations-olympiad-pdf-candidates
+          run-id: 46135201437
+          github-token: ${{ github.token }}
+          path: /tmp/physics-verified/foundations-olympiad
       - name: Validate compiled files and generate PDF-only catalogue
         run: |
           set -euo pipefail
@@ -99,10 +105,20 @@ jobs:
             'PHY205-D':('Quang sóng','Wave Optics'),
             'PHY206-A':('Tương đối hẹp','Special Relativity'),
             'PHY207-C':('Vật lý hạt nhân và hạt cơ bản','Nuclear and Particle Physics'),
-            'PHY208-A':('Đo lường và bất định','Measurement and Uncertainty')}
+            'PHY208-A':('Đo lường và bất định','Measurement and Uncertainty'),
+            'PHY102-B':('Lực và cân bằng','Forces and Equilibrium'),
+            'PHY102-C':('Áp suất và lực nổi','Pressure and Buoyancy'),
+            'PHY102-D':('Công và năng lượng','Work and Energy'),
+            'PHY104':('Luyện thi vào chuyên Lý','Specialized Entrance Preparation'),
+            'PHY201-C':('Đại số tuyến tính, xác suất và tính toán','Linear Algebra, Probability and Numerics'),
+            'PHY208-B':('Thực nghiệm Olympic','Olympiad Experiments'),
+            'PHY209-A':('Giải toán VPhO','VPhO Problem Solving'),
+            'PHY209-B':('Olympic quốc tế','International Olympiads'),
+            'PHY210-A':('Vật lý tính toán','Computational Physics'),
+            'PHY210-B':('Dự án nghiên cứu','Research Projects')}
           pdfs=list(root.rglob('*.pdf'))
           expected={code+'-'+lang+'.pdf' for code in titles for lang in ('vi','en')}
-          assert len(pdfs)==72 and {p.name for p in pdfs}==expected
+          assert len(pdfs)==92 and {p.name for p in pdfs}==expected
           pages={}
           for p in pdfs:
               info=subprocess.check_output(['pdfinfo',str(p)],text=True)
@@ -123,14 +139,14 @@ jobs:
                   name=code+'-'+lang+'.pdf'
                   rows+=f'<td><a href="./physics-pdfs/{name}">PDF {lang.upper()} · {pages[name]} p.</a><br><small>{author}</small></td>'
               rows+='</tr>'
-          page='''<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Physics PDF Library | V-TALENT 2045</title><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./physics-style.css"><style>[hidden]{display:none!important}.toolbar{display:flex;gap:12px;flex-wrap:wrap}.tablewrap{overflow:auto}td{vertical-align:top}span[lang="en"]{display:block;color:inherit;opacity:.8}</style></head><body class="physics-page"><main><section class="hero"><div class="wrap"><div class="eyebrow">V-TALENT 2045 · PDF LIBRARY</div><h1>Giáo trình Vật lý / Physics Textbooks</h1><p>36 chuyên đề · 72 bản PDF EN/VIE đã biên dịch. Bản đọc thử, chưa thẩm định độc lập và chưa rà soát trực quan toàn bộ trang.</p><p>36 study units · 72 compiled PDF editions. Review drafts; independent academic and complete visual review pending.</p><div class="toolbar"><a class="btn btn-primary" href="./physics-textbooks.html">Textbook catalogue</a><a class="btn btn-ghost" href="./physics-curriculum.html">Curriculum</a></div></div></section><section class="section"><div class="wrap"><div class="tablewrap"><table><thead><tr><th>Code</th><th>Chuyên đề / Topic</th><th>Tiếng Việt</th><th>English</th></tr></thead><tbody>'''+rows+'''</tbody></table></div><p>Chỉ công bố PDF, không có nút tải TEX/JSON. PDF-only downloads.</p></div></section></main></body></html>'''
+          page='''<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Physics PDF Library | V-TALENT 2045</title><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./physics-style.css"><style>[hidden]{display:none!important}.toolbar{display:flex;gap:12px;flex-wrap:wrap}.tablewrap{overflow:auto}td{vertical-align:top}span[lang="en"]{display:block;color:inherit;opacity:.8}</style></head><body class="physics-page"><main><section class="hero"><div class="wrap"><div class="eyebrow">V-TALENT 2045 · PDF LIBRARY</div><h1>Giáo trình Vật lý / Physics Textbooks</h1><p>46 chuyên đề · 92 bản PDF EN/VIE đã biên dịch. Bản đọc thử, chưa thẩm định độc lập và chưa rà soát trực quan toàn bộ trang.</p><p>46 study units · 92 compiled PDF editions. Review drafts; independent academic and complete visual review pending.</p><div class="toolbar"><a class="btn btn-primary" href="./physics-textbooks.html">Textbook catalogue</a><a class="btn btn-ghost" href="./physics-curriculum.html">Curriculum</a></div></div></section><section class="section"><div class="wrap"><div class="tablewrap"><table><thead><tr><th>Code</th><th>Chuyên đề / Topic</th><th>Tiếng Việt</th><th>English</th></tr></thead><tbody>'''+rows+'''</tbody></table></div><p>Chỉ công bố PDF, không có nút tải TEX/JSON. PDF-only downloads.</p></div></section></main></body></html>'''
           pathlib.Path('truongchuyen/physics-pdf-library.html').write_text(page,encoding='utf-8')
           PY
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add truongchuyen/physics-pdfs/*.pdf truongchuyen/physics-pdf-library.html
           if ! git diff --cached --quiet; then
-            git commit -m "Publish 72 compiled physics review-draft PDFs and PDF-only library"
+            git commit -m "Publish 92 compiled physics review-draft PDFs and PDF-only library"
             for attempt in 1 2 3 4 5; do
               git pull --rebase origin main
               if git push origin HEAD:main; then exit 0; fi
