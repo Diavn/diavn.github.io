@@ -1003,8 +1003,8 @@
       "module": "PHY101-A",
       "chapter": 2,
       "stem": {
-        "en": "Similar solid spheres have radii 2 cm and 5 cm. Find mass and surface area ratios (large/small).",
-        "vi": "Hai cầu đặc đồng dạng bán kính 2 cm và 5 cm, cùng vật liệu. Tìm tỉ số khối lượng và diện tích (lớn/nhỏ)."
+        "en": "Similar solid spheres of the same density have radii 2 cm and 5 cm. Find mass and surface area ratios (large/small).",
+        "vi": "Hai cầu đặc đồng dạng bán kính 2 cm và 5 cm, cùng khối lượng riêng. Tìm tỉ số khối lượng và diện tích (lớn/nhỏ)."
       },
       "solution": {
         "en": "$\\lambda=5/2$; mass ratio $(5/2)^3=125/8$; area ratio $(5/2)^2=25/4$.",
@@ -1210,8 +1210,8 @@
       "module": "PHY101-A",
       "chapter": 4,
       "stem": {
-        "en": "Distance is 20.0\\ensuremath{\\pm}0.2 m and time is 4.0\\ensuremath{\\pm}0.1 s. Find speed and extreme bounds.",
-        "vi": "Quãng đường 20,0\\ensuremath{\\pm}0,2 m và thời gian 4,0\\ensuremath{\\pm}0,1 s. Tìm tốc độ và cận cực trị."
+        "en": "Distance is 20.0±0.2 m and time is 4.0±0.1 s; both ± values denote hard bounds, not standard uncertainties. Find central speed and conservative extreme bounds.",
+        "vi": "Quãng đường 20,0±0,2 m và thời gian 4,0±0,1 s; cả hai giá trị ± là cận, không phải độ bất định chuẩn. Tìm tốc độ trung tâm và cận cực trị bảo thủ."
       },
       "solution": {
         "en": "Central 5.0 m/s; lower $19.8/4.1\\approx4.83$; upper $20.2/3.9\\approx5.18$ m/s.",
@@ -1279,8 +1279,8 @@
       "module": "PHY101-A",
       "chapter": 4,
       "stem": {
-        "en": "For the solar logger above, determine minimum panel average power during four effective sunlight hours at 75 percent efficiency.",
-        "vi": "Với thiết bị ghi dữ liệu mặt trời ở trên, tìm công suất pin trung bình tối thiểu trong bốn giờ nắng hiệu dụng, hiệu suất 75 phần trăm."
+        "en": "A solar logger requires 7.2 Wh of useful electrical energy per day. Determine the minimum mean panel output during four effective sunlight hours if downstream delivery efficiency is 75%.",
+        "vi": "Thiết bị ghi dữ liệu cần 7,2 Wh điện hữu ích mỗi ngày. Tìm công suất đầu ra trung bình tối thiểu của tấm pin trong bốn giờ nắng hiệu dụng nếu hiệu suất truyền năng lượng từ tấm pin đến tải là 75%."
       },
       "solution": {
         "en": "$0.75P(4)=7.2$ Wh, so $P=2.4$ W. This just balances the model's daily energy; it provides no reserve.",
