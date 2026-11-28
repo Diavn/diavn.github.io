@@ -2756,15 +2756,15 @@
     {
       "id": "KS-W",
       "source": "KS",
-      "title": "Waves solutions (19 problems in source)",
+      "title": "Waves and Optics solutions, ed. 1.3.1 (2022)",
       "book": [
         "PHY205-C",
         "PHY205-D"
       ],
       "kind": "solution",
-      "locator": "Edition 1.2.1, 14 May 2020; 8 PDF pages; solutions to selected Q2,3,9,15–19 only; extracted equations need checking",
-      "url": "https://physoly.tech/static/files/KaldaWaves-121.pdf",
-      "status": "text_locators_verified_screenshots_unavailable",
+      "locator": "8 PDF pages; selected Q2,3,9,15–19; edition 1.3.1 (21 Apr 2022), linked by Physoly; text reviewed, equations/figures not independently validated",
+      "url": "https://physoly.tech/static/files/KaldaWaves-131.pdf",
+      "status": "version_and_selected_text_verified_screenshots_unavailable",
       "pdf_pages": 8
     },
     {
@@ -6026,6 +6026,20 @@
       "locator": "Q19; PDF pp. 7–8; extracted equations require checking",
       "url": "https://physoly.tech/static/files/KaldaWaves-121.pdf#page=7",
       "status": "text_locator_verified_solution_not_validated"
+    },
+    {
+      "id": "KS-W-121",
+      "source": "KS",
+      "title": "Waves and Optics solutions, ed. 1.2.1 (2020)",
+      "book": [
+        "PHY205-C",
+        "PHY205-D"
+      ],
+      "kind": "solution",
+      "locator": "8 PDF pages; 14 May 2020; selected Q2,3,9,15–19; older edition used for section locators",
+      "url": "https://physoly.tech/static/files/KaldaWaves-121.pdf",
+      "status": "version_and_selected_text_verified_screenshots_unavailable",
+      "pdf_pages": 8
     }
   ],
   "scope": "Bibliographic and TOC mapping only. No third-party PDF mirrors. URLs may point to collection pages rather than individual files; review status is explicit. English and Vietnamese curriculum titles are editorial; external resource titles retain original language. SJPO entries are source occurrences, not unique exam questions. Direct PDF endpoints checked where indicated, no full-text review. Mathematics subsection locators are TOC-derived; no claim of full review."
