@@ -15,7 +15,7 @@
 \begin{document}
 \title{V-TALENT 2045\\ PHY202-A --- Động lực học Newton, ma sát và liên kết\\\large Level 2 · Cơ học nâng cao · Lớp 10–12}
 \author{Dr. Dang Minh Tuan -- TS. Đặng Minh Tuấn}
-\date{2026 · v1.0}
+\date{2026 · v1.1}
 \maketitle
 \tableofcontents
 \chapter*{Mục tiêu năng lực}\addcontentsline{toc}{chapter}{Mục tiêu năng lực}
@@ -50,6 +50,11 @@ Hai vật: trên 2 kg, dưới 3 kg, sàn nhẵn. Lực ngang kéo vật dưới
 Vật 4 kg đang trượt trên sàn ngang. Lực 20 N kéo hợp góc θ phía trên ngang, hệ số ma sát trượt 0,25, g=10. Tìm góc cho gia tốc về trước lớn nhất và kiểm tra tiếp xúc.
 
 \textbf{Lời giải.} Khi trượt về trước, $N=40-20\sin\theta>0$ với mọi góc cho phép. Gia tốc $a=[20(\cos\theta+0{,}25\sin\theta)-10]/4$. Viết $\cos\theta+0{,}25\sin\theta=\sqrt{1+0{,}25^2}\cos(\theta-\arctan0{,}25)$. Vậy $\theta=\arctan0{,}25\approx14{,}04^\circ$ và $a_{\max}=[20\sqrt{1{,}0625}-10]/4\approx2{,}654$ m/s\textsuperscript{2}. Tại cực đại $N\approx35{,}15$ N. Kết quả đúng khi vật còn trượt về trước.
+\section{Ứng dụng và chuyển giao}
+Robot di động khối lượng 20 kg chở kiện hàng 4 kg không buộc chặt. Trên mặt ngang với $\mu_s=0{,}35$, hàng đi cùng sàn khi $|a|\leq\mu_sg=3{,}43$ m/s$^2$ (lấy $g=9{,}81$). Với gia tốc điều khiển 4 m/s$^2$, kiện hàng không thể đứng yên so với sàn. Nếu $\mu_k=0{,}25$ và sàn giữ gia tốc, hàng có gia tốc 2,45 m/s$^2$ so với đất; gia tốc tương đối $-1{,}55$ m/s$^2$. Từ vận tốc tương đối bằng 0, hàng trượt lùi 0,775 m trong 1 s nếu còn nằm trên sàn. Trong hệ điều khiển thực, cố định tải, giới hạn tốc độ biến thiên gia tốc và bất định ma sát rất quan trọng. Thiết kế kiểm tra bằng xe mô hình tốc độ thấp thay vì thiết bị lớn.
+
+\textbf{Đọc mở rộng theo nguồn:} SW section section 2.3, 3.2; SJ ch 8; JP problem 2.9; VPhO index group 1.
+
 \section{Luyện tập cuối chuyên đề}
 \begin{enumerate}
 \item \textbf{PHY202-A-1.1}. Vật trên 1 kg, dưới 4 kg; sàn nhẵn, hệ số nghỉ 0,5, trượt 0,3, g=10. Lực lên vật dưới lần lượt 20 N, 40 N. Tính gia tốc từng vật.
@@ -76,6 +81,11 @@ Trụ đặc đồng chất lăn từ nghỉ trên dốc 30\textdegree{} có đ�
 \textbf{Lời giải.} $\kappa=1/2$ cho $a=5/1{,}5=10/3$ m/s\textsuperscript{2}. Chiều dài dốc $1{,}2/\sin30^\circ=2{,}4$ m. Dùng $v^2=2as=16$, $v=4$ m/s. Năng lượng xác nhận $2gh/(1+\kappa)=16$. Cần $\mu_s=(1/3)\tan30^\circ=1/(3\sqrt3)\approx0{,}192$. Dưới giá trị này mô hình chỉ lăn không đúng.
 \section{Nhiệm vụ thực nghiệm}
 Dùng hai trụ bán kính gần nhau nhưng phân bố khối lượng khác nhau trên dốc thấp. Quay video từ nghỉ; đo quãng đường theo thời gian, fit s theo t\textsuperscript{2}, so sánh độ dốc với g sinθ/[2(1+κ)]. Đánh dấu vành, kiểm tra v≈Rω bằng video; nếu trượt, không diễn giải dữ liệu như lăn thuần. Báo cáo bất định góc, cản lăn, thời gian và độ lặp.
+\section{Ứng dụng và chuyển giao}
+Động cơ điện nhỏ cần nâng tải 12 kg bằng ròng rọc động lý tưởng lên 0,5 m trong 2 s ở tốc độ không đổi. Công suất phía tải $mgh/t=29{,}43$ W. Hai nhánh dây đỡ tải nên đầu dây đi 1 m, lực căng 58,86 N; công suất đầu vào không đổi trong trường hợp lý tưởng. Nếu công suất điện đo được là 45 W, hiệu suất toàn hệ $29{,}43/45=0{,}654$. Ròng rọc thực làm tăng quán tính quay khi khởi động và có tổn hao ổ trục khi chạy đều. Giải thích vì sao lợi về lực không làm tăng năng lượng. So sánh ròng rọc đặc và rỗng cùng khối lượng về moment khởi động ở cùng gia tốc góc.
+
+\textbf{Đọc mở rộng theo nguồn:} SW section 3.4; JP section section 2.8 and problem 2.9; SJ ch 17, 44; KZ M5 solutions.
+
 \section{Luyện tập cuối chuyên đề}
 \begin{enumerate}
 \item \textbf{PHY202-A-2.1}. Máy Atwood có hai vật 3 kg và 7 kg, ròng rọc đĩa 2 kg. Tìm a và các lực căng, g=10.
@@ -107,4 +117,6 @@ VPhO 2001 nhóm 1 bài 1.1 (trang in 5); VPhO 2003 nhóm 5 bài 5.1 (tr. 14–15
 \item \textbf{PHY202-A-2.3}. Lăn thuần cần $\mu_s\ge\tan\theta/3=0{,}2$, nên không khả thi. Trọng lực gây trượt điểm tiếp xúc xuống dốc, ma sát hướng lên. $\cos\theta=1/\sqrt{1{,}36}$, $\sin\theta=0{,}6/\sqrt{1{,}36}$. Do đó $a=g(\sin\theta-0{,}1\cos\theta)=0{,}5g/\sqrt{1{,}36}$; $\alpha=fR/I=0{,}2g/(R\sqrt{1{,}36})$. Vì $a-R\alpha=0{,}3g/\sqrt{1{,}36}>0$, chiều trượt giả định đúng.
 \item \textbf{PHY202-A-2.4}. Liên kết độ dài dây $2y+x=\text{hằng số}$ với tọa độ tải $y$ và đầu dây $x$ cùng chiều dương xuống. Vậy $\Delta y=-0{,}4$ m: tải nâng 0,4 m. Tốc độ không đổi cho $2T=mg=60$ N, nên $T=30$ N. Công đầu vào $T(0{,}8)=24$ J, bằng $mgh=6(10)(0{,}4)=24$ J.
 \end{enumerate}
+\chapter*{Danh mục nguồn quốc tế}
+\url{https://diavn.github.io/truongchuyen/physics-curriculum.html}
 \end{document}
