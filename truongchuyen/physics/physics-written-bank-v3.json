@@ -1214,8 +1214,8 @@
         "vi": "Quãng đường 20,0±0,2 m và thời gian 4,0±0,1 s; cả hai giá trị ± là cận, không phải độ bất định chuẩn. Tìm tốc độ trung tâm và cận cực trị bảo thủ."
       },
       "solution": {
-        "en": "Central 5.0 m/s; lower $19.8/4.1\\approx4.83$; upper $20.2/3.9\\approx5.18$ m/s.",
-        "vi": "Trung tâm 5,0 m/s; dưới $19{,}8/4{,}1\\approx4{,}83$; trên $20{,}2/3{,}9\\approx5{,}18$ m/s."
+        "en": "Central speed 5.0 m/s. Exact lower and upper bounds are $19.8/4.1$ and $20.2/3.9$ m/s; a conservative interval rounded outward to two decimal places is [4.82, 5.18] m/s.",
+        "vi": "Tốc độ trung tâm 5,0 m/s. Hai cận chính xác là $19{,}8/4{,}1$ và $20{,}2/3{,}9$ m/s; khoảng bảo thủ làm tròn ra ngoài đến hai chữ số thập phân là [4,82; 5,18] m/s."
       },
       "text_format": "latex_source",
       "difficulty": "not_calibrated",
