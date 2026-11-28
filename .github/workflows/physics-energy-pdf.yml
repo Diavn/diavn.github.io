@@ -53,6 +53,7 @@ jobs:
           r.feed(Path('truongchuyen/physics-energy-fluids.html').read_text())
           assert len(r.books)==8
           esc={'&':r'\&','%':r'\%','$':r'\$','#':r'\#','_':r'\_','{':r'\{','}':r'\}','\\':r'\textbackslash{}','~':r'\textasciitilde{}','^':r'\textasciicircum{}','≈':r'\ensuremath{\approx}','≤':r'\ensuremath{\le}','≥':r'\ensuremath{\ge}','−':r'\ensuremath{-}','×':r'\ensuremath{\times}','β':r'\ensuremath{\beta}','θ':r'\ensuremath{\theta}','ν':r'\ensuremath{\nu}','ρ':r'\ensuremath{\rho}','µ':r'\ensuremath{\mu}','²':r'\textsuperscript{2}','³':r'\textsuperscript{3}','⁴':r'\textsuperscript{4}'}
+          esc.update({'≪':r'\ensuremath{\ll}','≫':r'\ensuremath{\gg}','⁻':r'\textsuperscript{-}','₀':r'\textsubscript{0}'})
           def fmt(s):
               out=[]
               for i,part in enumerate(re.split(r'(\\\(.*?\\\))',s)):
