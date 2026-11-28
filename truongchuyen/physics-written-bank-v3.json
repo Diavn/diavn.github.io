@@ -832,6 +832,926 @@
       "rights": "original_draft",
       "source": "V-TALENT textbook series",
       "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-1.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 1,
+      "stem": {
+        "en": "Convert 7.2 km/h to m/s and 0.35 m\\textsuperscript{2} to cm\\textsuperscript{2}.",
+        "vi": "Đổi 7,2 km/h sang m/s và 0,35 m\\textsuperscript{2} sang cm\\textsuperscript{2}."
+      },
+      "solution": {
+        "en": "$7.2/3.6=2$ m/s; $0.35\\times10^4=3500$ cm$^2$.",
+        "vi": "$7{,}2/3{,}6=2$ m/s; $0{,}35\\times10^4=3500$ cm$^2$."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-1.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 1,
+      "stem": {
+        "en": "A cube has side 4 cm and mass 172.8 g. Find density in kg/m\\textsuperscript{3}.",
+        "vi": "Khối lập phương cạnh 4 cm, khối lượng 172,8 g. Tính khối lượng riêng theo kg/m\\textsuperscript{3}."
+      },
+      "solution": {
+        "en": "$V=64$ cm$^3$; $\\rho=172.8/64=2.7$ g/cm$^3=2700$ kg/m$^3$.",
+        "vi": "$V=64$ cm$^3$; $\\rho=172{,}8/64=2{,}7$ g/cm$^3=2700$ kg/m$^3$."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-1.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 1,
+      "stem": {
+        "en": "A 48 N load rests on four equal pads, each 2 cm\\textsuperscript{2}. Find mean contact pressure.",
+        "vi": "Tải 48 N đặt trên bốn đệm bằng nhau, mỗi đệm 2 cm\\textsuperscript{2}. Tính áp suất tiếp xúc trung bình."
+      },
+      "solution": {
+        "en": "Total area $8\\times10^{-4}$ m$^2$; $p=48/(8\\times10^{-4})=60000$ Pa. Equal loading gives the same pressure on each pad.",
+        "vi": "Tổng diện tích $8\\times10^{-4}$ m$^2$; $p=48/(8\\times10^{-4})=60000$ Pa. Nếu tải phân bố đều, mỗi đệm chịu cùng áp suất."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-1.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 1,
+      "stem": {
+        "en": "Given F=ma and P=Fv, derive the SI base unit of power.",
+        "vi": "Cho F=ma và P=Fv, suy ra đơn vị cơ bản SI của công suất."
+      },
+      "solution": {
+        "en": "$[F]=MLT^{-2}$; multiply by $LT^{-1}$ to obtain $ML^2T^{-3}$, so W = kg m$^2$ s$^{-3}$.",
+        "vi": "$[F]=MLT^{-2}$; nhân $LT^{-1}$ được $ML^2T^{-3}$, nên W = kg m$^2$ s$^{-3}$."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-1.5",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 1,
+      "stem": {
+        "en": "A proposed spring energy is kx where k has unit N/m. Test it and suggest a dimensionally consistent form using k and x.",
+        "vi": "Một biểu thức thế năng lò xo là kx, k có đơn vị N/m. Kiểm tra và đề xuất dạng đúng thứ nguyên chỉ dùng k và x."
+      },
+      "solution": {
+        "en": "$kx$ has force units. $kx^2$ has energy units; the actual ideal spring law is $U=kx^2/2$ relative to the unstretched state, established from work rather than units alone.",
+        "vi": "$kx$ có đơn vị lực. $kx^2$ có đơn vị năng lượng; định luật lò xo lý tưởng là $U=kx^2/2$ tính từ trạng thái không biến dạng, suy từ công chứ không chỉ đơn vị."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-2.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 2,
+      "stem": {
+        "en": "An ideal spring stretches 8 mm under 2 N. Predict extension at 5 N within its linear range.",
+        "vi": "Lò xo lý tưởng dãn 8 mm khi chịu 2 N. Dự đoán độ dãn ở 5 N trong miền tuyến tính."
+      },
+      "solution": {
+        "en": "$x_2=8(5/2)=20$ mm.",
+        "vi": "$x_2=8(5/2)=20$ mm."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-2.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 2,
+      "stem": {
+        "en": "A 60 N force acts over 0.020 m\\textsuperscript{2}. Halve the area without changing force. Find both pressures.",
+        "vi": "Lực 60 N tác dụng trên 0,020 m\\textsuperscript{2}. Giảm diện tích một nửa, lực không đổi. Tìm hai áp suất."
+      },
+      "solution": {
+        "en": "$p_1=60/0.020=3000$ Pa; $p_2=60/0.010=6000$ Pa.",
+        "vi": "$p_1=60/0{,}020=3000$ Pa; $p_2=60/0{,}010=6000$ Pa."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-2.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 2,
+      "stem": {
+        "en": "Similar solid spheres have radii 2 cm and 5 cm. Find mass and surface area ratios (large/small).",
+        "vi": "Hai cầu đặc đồng dạng bán kính 2 cm và 5 cm, cùng vật liệu. Tìm tỉ số khối lượng và diện tích (lớn/nhỏ)."
+      },
+      "solution": {
+        "en": "$\\lambda=5/2$; mass ratio $(5/2)^3=125/8$; area ratio $(5/2)^2=25/4$.",
+        "vi": "$\\lambda=5/2$; tỉ số khối lượng $(5/2)^3=125/8$; diện tích $(5/2)^2=25/4$."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-2.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 2,
+      "stem": {
+        "en": "At fixed speed the kinetic energy of an object doubles when mass doubles. At fixed mass what happens when speed triples?",
+        "vi": "Ở tốc độ cố định, động năng tăng gấp đôi khi khối lượng gấp đôi. Giữ khối lượng, tốc độ tăng gấp ba thì sao?"
+      },
+      "solution": {
+        "en": "$K=mv^2/2$, so $K_2/K_1=3^2=9$.",
+        "vi": "$K=mv^2/2$, nên $K_2/K_1=3^2=9$."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-2.5",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 2,
+      "stem": {
+        "en": "A sealed cubic package is scaled up by 2. If heat loss per unit surface area is identical and internal heat capacity is proportional to volume, compare the initial cooling rates.",
+        "vi": "Hộp lập phương kín phóng to gấp 2. Nếu tốc độ tỏa nhiệt trên đơn vị diện tích như nhau và nhiệt dung tỉ lệ thể tích, so sánh tốc độ nguội ban đầu."
+      },
+      "solution": {
+        "en": "Heat loss power scales by 4; heat capacity by 8. Since $|dT/dt|$ is power divided by heat capacity, the initial cooling rate is half. At Level 1 interpret this as temperature decrease per short time interval.",
+        "vi": "Công suất mất nhiệt tăng 4 lần; nhiệt dung tăng 8 lần. Tốc độ nguội ban đầu bằng công suất chia nhiệt dung nên giảm còn một nửa. Ở Level 1 hiểu là độ giảm nhiệt độ trong khoảng thời gian ngắn."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-3.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 3,
+      "stem": {
+        "en": "A 12 V source supplies an ideal 6 \\ensuremath{\\Omega} resistor. Find current and power; then double resistance at fixed voltage.",
+        "vi": "Nguồn 12 V cấp điện trở lý tưởng 6 \\ensuremath{\\Omega}. Tìm dòng, công suất; sau đó tăng điện trở gấp đôi với điện áp cố định."
+      },
+      "solution": {
+        "en": "$I=12/6=2$ A, $P=24$ W. With $R=12\\,\\Omega$, $I=1$ A, $P=12$ W.",
+        "vi": "$I=12/6=2$ A, $P=24$ W. Khi $R=12\\,\\Omega$, $I=1$ A, $P=12$ W."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-3.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 3,
+      "stem": {
+        "en": "A force sensor reads 0.6 V at 2 N and 1.8 V at 8 N. Find its linear equation and estimate force at 1.2 V.",
+        "vi": "Cảm biến lực đọc 0,6 V tại 2 N và 1,8 V tại 8 N. Tìm phương trình tuyến tính và lực tại 1,2 V."
+      },
+      "solution": {
+        "en": "$a=(1.8-0.6)/6=0.2$ V/N; $b=0.6-0.2(2)=0.2$ V. $F=(1.2-0.2)/0.2=5$ N.",
+        "vi": "$a=(1{,}8-0{,}6)/6=0{,}2$ V/N; $b=0{,}6-0{,}2(2)=0{,}2$ V. $F=(1{,}2-0{,}2)/0{,}2=5$ N."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-3.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 3,
+      "stem": {
+        "en": "How much 80\\textdegree{}C water must be mixed with 150 g of 20\\textdegree{}C water to reach 40\\textdegree{}C, neglecting losses?",
+        "vi": "Cần bao nhiêu nước 80\\textdegree{}C trộn với 150 g nước 20\\textdegree{}C để đạt 40\\textdegree{}C, bỏ qua hao phí?"
+      },
+      "solution": {
+        "en": "$m(80-40)=150(40-20)$, so $40m=3000$ and $m=75$ g.",
+        "vi": "$m(80-40)=150(40-20)$, nên $40m=3000$, $m=75$ g."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-3.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 3,
+      "stem": {
+        "en": "Two objects have total mass 500 g and their masses differ by 80 g. Find both masses.",
+        "vi": "Hai vật có tổng khối lượng 500 g và chênh lệch 80 g. Tìm khối lượng từng vật."
+      },
+      "solution": {
+        "en": "$m_1+m_2=500$, $m_1-m_2=80$. Add: $2m_1=580$; $m_1=290$ g, $m_2=210$ g.",
+        "vi": "$m_1+m_2=500$, $m_1-m_2=80$. Cộng: $2m_1=580$; $m_1=290$ g, $m_2=210$ g."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-3.5",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 3,
+      "stem": {
+        "en": "An object moves according to x=2t\\textsuperscript{2}+2t for t\\ensuremath{\\ge}0. Find when x=12 m.",
+        "vi": "Vật chuyển động theo x=2t\\textsuperscript{2}+2t với t\\ensuremath{\\ge}0. Tìm thời điểm x=12 m."
+      },
+      "solution": {
+        "en": "$t^2+t-6=(t+3)(t-2)=0$. Accept 2 s, reject -3 s.",
+        "vi": "$t^2+t-6=(t+3)(t-2)=0$. Nhận 2 s, loại -3 s."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-4.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 4,
+      "stem": {
+        "en": "Estimate the mass of a 2 m \\ensuremath{\\times} 1 m \\ensuremath{\\times} 1 mm aluminium sheet using density 2700 kg/m\\textsuperscript{3}.",
+        "vi": "Ước lượng khối lượng tấm nhôm 2 m \\ensuremath{\\times} 1 m \\ensuremath{\\times} 1 mm, khối lượng riêng 2700 kg/m\\textsuperscript{3}."
+      },
+      "solution": {
+        "en": "$V=2(1)(0.001)=0.002$ m$^3$; $m=5.4$ kg.",
+        "vi": "$V=2(1)(0{,}001)=0{,}002$ m$^3$; $m=5{,}4$ kg."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-4.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 4,
+      "stem": {
+        "en": "Distance is 20.0\\ensuremath{\\pm}0.2 m and time is 4.0\\ensuremath{\\pm}0.1 s. Find speed and extreme bounds.",
+        "vi": "Quãng đường 20,0\\ensuremath{\\pm}0,2 m và thời gian 4,0\\ensuremath{\\pm}0,1 s. Tìm tốc độ và cận cực trị."
+      },
+      "solution": {
+        "en": "Central 5.0 m/s; lower $19.8/4.1\\approx4.83$; upper $20.2/3.9\\approx5.18$ m/s.",
+        "vi": "Trung tâm 5,0 m/s; dưới $19{,}8/4{,}1\\approx4{,}83$; trên $20{,}2/3{,}9\\approx5{,}18$ m/s."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-4.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 4,
+      "stem": {
+        "en": "A ruler always adds 0.3 cm to a direct length reading. Ten readings average 12.4 cm. If the offset is known exactly, correct the mean.",
+        "vi": "Thước luôn cộng 0,3 cm vào số đo trực tiếp. Mười lần đo trung bình 12,4 cm. Nếu biết chính xác độ lệch, hiệu chỉnh trung bình."
+      },
+      "solution": {
+        "en": "$12.4-0.3=12.1$ cm. Averaging did not remove the offset; other uncertainties remain.",
+        "vi": "$12{,}4-0{,}3=12{,}1$ cm. Lấy trung bình không loại lệch; vẫn còn các bất định khác."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-4.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 4,
+      "stem": {
+        "en": "A model predicts 8.0 N; measured force is 7.4\\ensuremath{\\pm}0.2 N. Is the prediction inside the stated bound? What should be investigated?",
+        "vi": "Mô hình dự đoán 8,0 N; lực đo 7,4\\ensuremath{\\pm}0,2 N. Dự đoán có nằm trong cận không? Cần kiểm tra gì?"
+      },
+      "solution": {
+        "en": "Bound 7.2–7.6 N excludes 8.0 N. Check calibration, omitted forces and whether the model prediction itself has uncertainty; do not immediately declare the law false.",
+        "vi": "Cận 7,2–7,6 N không chứa 8,0 N. Kiểm tra hiệu chuẩn, lực bỏ qua và bất định của dự đoán; không vội kết luận định luật sai."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-A-4.5",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-A",
+      "chapter": 4,
+      "stem": {
+        "en": "For the solar logger above, determine minimum panel average power during four effective sunlight hours at 75 percent efficiency.",
+        "vi": "Với thiết bị ghi dữ liệu mặt trời ở trên, tìm công suất pin trung bình tối thiểu trong bốn giờ nắng hiệu dụng, hiệu suất 75 phần trăm."
+      },
+      "solution": {
+        "en": "$0.75P(4)=7.2$ Wh, so $P=2.4$ W. This just balances the model's daily energy; it provides no reserve.",
+        "vi": "$0{,}75P(4)=7{,}2$ Wh, nên $P=2{,}4$ W. Chỉ vừa cân bằng năng lượng ngày theo mô hình, không có dự phòng."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-1.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 1,
+      "stem": {
+        "en": "Find the projection of a=(4,3,0) onto unit vector n=(3/5,4/5,0).",
+        "vi": "Tìm hình chiếu của a=(4,3,0) lên vector đơn vị n=(3/5,4/5,0)."
+      },
+      "solution": {
+        "en": "Scalar $a\\cdot n=24/5$; vector $(24/5)n=(72/25,96/25,0)$. The perpendicular remainder has zero dot product with n.",
+        "vi": "Vô hướng $a\\cdot n=24/5$; vector $(24/5)n=(72/25,96/25,0)$. Phần còn lại có tích vô hướng với n bằng 0."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-1.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 1,
+      "stem": {
+        "en": "Find a\\ensuremath{\\times}b for a=(1,2,3), b=(0,1,-1), then verify perpendicularity.",
+        "vi": "Tìm a\\ensuremath{\\times}b với a=(1,2,3), b=(0,1,-1), rồi kiểm tra vuông góc."
+      },
+      "solution": {
+        "en": "$\\vec a\\times\\vec b=(-5,1,1)$. Dot with a gives $-5+2+3=0$; dot with b gives $1-1=0$.",
+        "vi": "$\\vec a\\times\\vec b=(-5,1,1)$. Tích với a: $-5+2+3=0$; với b: $1-1=0$."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-1.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 1,
+      "stem": {
+        "en": "A force (5,-2,0) N acts while velocity is (-1,4,0) m/s. Determine instantaneous power and interpret its sign.",
+        "vi": "Lực (5,-2,0) N tác dụng khi vận tốc (-1,4,0) m/s. Tìm công suất tức thời và ý nghĩa dấu."
+      },
+      "solution": {
+        "en": "$P=-5-8=-13$ W. This force removes mechanical energy at that instant (other forces may supply energy).",
+        "vi": "$P=-5-8=-13$ W. Lực này lấy đi năng lượng cơ học tại thời điểm đó (lực khác có thể cấp năng lượng)."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-1.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 1,
+      "stem": {
+        "en": "A positive charge 2 \\ensuremath{\\mu}C moves at (3000,0,0) m/s in B=(0,0,0.2) T. Find magnetic force.",
+        "vi": "Điện tích dương 2 \\ensuremath{\\mu}C chuyển động với (3000,0,0) m/s trong B=(0,0,0,2) T. Tìm lực từ."
+      },
+      "solution": {
+        "en": "$\\vec v\\times\\vec B=(0,-600,0)$; multiply by $2\\times10^{-6}$ C: $\\vec F=(0,-1.2\\times10^{-3},0)$ N. Dot with v is zero.",
+        "vi": "$\\vec v\\times\\vec B=(0,-600,0)$; nhân $2\\times10^{-6}$ C: $\\vec F=(0,-1{,}2\\times10^{-3},0)$ N. Tích vô hướng với v bằng 0."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-1.5",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 1,
+      "stem": {
+        "en": "For r=(0.2,0.3,0) m and F=(10,0,0) N, find torque about the origin and about point O\\ensuremath{\\prime}=(0,0.3,0).",
+        "vi": "Với r=(0,2;0,3;0) m và F=(10,0,0) N, tìm moment quanh gốc và quanh điểm O\\ensuremath{\\prime}=(0;0,3;0)."
+      },
+      "solution": {
+        "en": "About origin $\\tau_z=0.2(0)-0.3(10)=-3$ N m. About O\\ensuremath{\\prime}, relative position $(0.2,0,0)$ is parallel to F, so torque is zero.",
+        "vi": "Quanh gốc $\\tau_z=0{,}2(0)-0{,}3(10)=-3$ N m. Quanh O\\ensuremath{\\prime}, vị trí tương đối $(0{,}2,0,0)$ song song F nên moment bằng 0."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-2.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 2,
+      "stem": {
+        "en": "Differentiate x=4t-t\\textsuperscript{2} and identify the turning time and acceleration.",
+        "vi": "Đạo hàm x=4t-t\\textsuperscript{2}, xác định thời điểm đổi chiều và gia tốc."
+      },
+      "solution": {
+        "en": "$v=4-2t=0$ at $t=2$ s; sign changes positive to negative. $a=-2$ m/s$^2$.",
+        "vi": "$v=4-2t=0$ tại $t=2$ s; dấu đổi dương sang âm. $a=-2$ m/s$^2$."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-2.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 2,
+      "stem": {
+        "en": "For v=6e^(-t/3) m/s, find a(0) and a(3 s).",
+        "vi": "Với v=6e^(-t/3) m/s, tìm a(0) và a(3 s)."
+      },
+      "solution": {
+        "en": "$a=-2e^{-t/3}$ m/s$^2$; $a(0)=-2$, $a(3)=-2/e\\approx-0.736$ m/s$^2$.",
+        "vi": "$a=-2e^{-t/3}$ m/s$^2$; $a(0)=-2$, $a(3)=-2/e\\approx-0{,}736$ m/s$^2$."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-2.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 2,
+      "stem": {
+        "en": "A constant mass 2 kg has v=3t\\textsuperscript{2}. Find kinetic energy and its rate at t=2 s.",
+        "vi": "Vật khối lượng không đổi 2 kg có v=3t\\textsuperscript{2}. Tìm động năng và tốc độ biến thiên ở t=2 s."
+      },
+      "solution": {
+        "en": "$K=v^2=9t^4$ J, $K(2)=144$ J; $dK/dt=36t^3=288$ W at 2 s. Check $Fv=2(12)(12)=288$ W.",
+        "vi": "$K=v^2=9t^4$ J, $K(2)=144$ J; $dK/dt=36t^3=288$ W tại 2 s. Kiểm tra $Fv=2(12)(12)=288$ W."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-2.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 2,
+      "stem": {
+        "en": "Maximize P=12I-2I\\textsuperscript{2} over 0\\ensuremath{\\le}I\\ensuremath{\\le}4 A. Compare endpoints.",
+        "vi": "Tìm cực đại P=12I-2I\\textsuperscript{2} trong 0\\ensuremath{\\le}I\\ensuremath{\\le}4 A. So sánh đầu mút."
+      },
+      "solution": {
+        "en": "$P'=12-4I=0$ at $I=3$ A, $P''=-4$. Values: $P(0)=0$, $P(3)=18$, $P(4)=16$ W. Maximum 18 W.",
+        "vi": "$P'=12-4I=0$ tại $I=3$ A, $P''=-4$. Các giá trị $P(0)=0$, $P(3)=18$, $P(4)=16$ W. Cực đại 18 W."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-2.5",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 2,
+      "stem": {
+        "en": "For x=t\\textsuperscript{3}, derive the central-difference estimate at t for step h and its error.",
+        "vi": "Với x=t\\textsuperscript{3}, suy ra sai phân trung tâm tại t với bước h và sai số."
+      },
+      "solution": {
+        "en": "$[(t+h)^3-(t-h)^3]/(2h)=3t^2+h^2$. Exact derivative $3t^2$; truncation error is $h^2$ in the chosen consistent units. Halving h reduces it by four.",
+        "vi": "$[(t+h)^3-(t-h)^3]/(2h)=3t^2+h^2$. Đạo hàm đúng $3t^2$; sai số cắt cụt $h^2$ trong hệ đơn vị đã chọn. Giảm h một nửa làm sai số giảm bốn lần."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-3.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 3,
+      "stem": {
+        "en": "Integrate v=4-2t over 0\\ensuremath{\\le}t\\ensuremath{\\le}4. Determine displacement and distance.",
+        "vi": "Tích phân v=4-2t trên 0\\ensuremath{\\le}t\\ensuremath{\\le}4. Tìm độ dời và quãng đường."
+      },
+      "solution": {
+        "en": "Zero at t=2. $\\int_0^4(4-2t)dt=0$; positive area 4 m, negative signed area -4 m, distance 8 m.",
+        "vi": "Vận tốc bằng 0 tại t=2. $\\int_0^4(4-2t)dt=0$; diện tích dương 4 m, âm -4 m, quãng đường 8 m."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-3.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 3,
+      "stem": {
+        "en": "For spring constant 80 N/m, compute work by the spring from x=0.1 to 0.3 m.",
+        "vi": "Lò xo k=80 N/m. Tính công của lực lò xo từ x=0,1 đến 0,3 m."
+      },
+      "solution": {
+        "en": "$W=\\int_{0.1}^{0.3}-80x\\,dx=-40(0.09-0.01)=-3.2$ J. Potential energy increases 3.2 J.",
+        "vi": "$W=\\int_{0.1}^{0.3}-80x\\,dx=-40(0{,}09-0{,}01)=-3{,}2$ J. Thế năng tăng 3,2 J."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-3.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 3,
+      "stem": {
+        "en": "A uniform thin rod of length L and mass m rotates about an axis perpendicular to the rod through one end. Derive I.",
+        "vi": "Thanh mảnh đều dài L, khối lượng m, quay quanh trục vuông góc qua một đầu. Suy ra I."
+      },
+      "solution": {
+        "en": "$dm=(m/L)dx$. $I=(m/L)\\int_0^L x^2dx=mL^2/3$.",
+        "vi": "$dm=(m/L)dx$. $I=(m/L)\\int_0^L x^2dx=mL^2/3$."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-3.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 3,
+      "stem": {
+        "en": "Evaluate \\ensuremath{\\int}\\textsubscript{0}¹ 2x/(1+x\\textsuperscript{2}) dx and state the substitution.",
+        "vi": "Tính \\ensuremath{\\int}\\textsubscript{0}¹ 2x/(1+x\\textsuperscript{2}) dx và nêu phép đổi biến."
+      },
+      "solution": {
+        "en": "$u=1+x^2$, $du=2x\\,dx$. Limits 1 and 2, integral $\\int_1^2du/u=\\ln2$.",
+        "vi": "$u=1+x^2$, $du=2x\\,dx$. Cận 1 và 2, tích phân $\\int_1^2du/u=\\ln2$."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-3.5",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 3,
+      "stem": {
+        "en": "For F(x)=kx\\textsuperscript{2} with k>0, derive work from 0 to L and the unit of k.",
+        "vi": "Với F(x)=kx\\textsuperscript{2}, k>0, suy công từ 0 đến L và đơn vị của k."
+      },
+      "solution": {
+        "en": "$W=kL^3/3$. Since $F$ is N and x\\textsuperscript{2} is m\\textsuperscript{2}, $[k]=$ N/m$^2$. Work units are N m.",
+        "vi": "$W=kL^3/3$. Vì F theo N và x\\textsuperscript{2} theo m\\textsuperscript{2}, đơn vị k là N/m$^2$. Công có đơn vị N m."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-4.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 4,
+      "stem": {
+        "en": "Estimate (1.04)^(1/2) to second order and compare with the first-order result.",
+        "vi": "Ước lượng (1,04)^(1/2) đến bậc hai và so sánh bậc nhất."
+      },
+      "solution": {
+        "en": "$\\sqrt{1+\\epsilon}\\approx1+\\epsilon/2-\\epsilon^2/8$. At 0.04: first order 1.02; second 1.0198. Exact about 1.0198039.",
+        "vi": "$\\sqrt{1+\\epsilon}\\approx1+\\epsilon/2-\\epsilon^2/8$. Tại 0,04: bậc nhất 1,02; bậc hai 1,0198. Giá trị đúng khoảng 1,0198039."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-4.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 4,
+      "stem": {
+        "en": "Use the bound \\ensuremath{\\theta}\\textsuperscript{3}/6 to find a sufficient positive angle limit for absolute sine approximation error \\ensuremath{\\le}0.001.",
+        "vi": "Dùng cận \\ensuremath{\\theta}\\textsuperscript{3}/6 tìm giới hạn góc dương đủ để sai số tuyệt đối xấp xỉ sin \\ensuremath{\\le}0,001."
+      },
+      "solution": {
+        "en": "$\\theta^3/6\\le0.001$ requires $\\theta\\le(0.006)^{1/3}\\approx0.1817$ rad, approximately $10.4^\\circ$. This is sufficient, not claimed necessary.",
+        "vi": "$\\theta^3/6\\le0{,}001$ cần $\\theta\\le(0{,}006)^{1/3}\\approx0{,}1817$ rad, khoảng $10{,}4^\\circ$. Đây là điều kiện đủ, không khẳng định cần."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-4.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 4,
+      "stem": {
+        "en": "Assume drag force depends only on density \\ensuremath{\\rho}, speed v and area A. Determine a monomial dimensionally.",
+        "vi": "Giả sử lực cản chỉ phụ thuộc khối lượng riêng \\ensuremath{\\rho}, tốc độ v và diện tích A. Xác định dạng đơn thức theo thứ nguyên."
+      },
+      "solution": {
+        "en": "$F=C\\rho^a v^b A^c$. Mass gives $a=1$, time gives $b=2$, length gives $-3+2+2c=1$ so $c=1$. Therefore $F=C\\rho v^2 A$; actual coefficient depends on shape, Reynolds number and regime.",
+        "vi": "$F=C\\rho^a v^b A^c$. Khối lượng cho $a=1$, thời gian $b=2$, độ dài $-3+2+2c=1$ nên $c=1$. Vậy $F=C\\rho v^2 A$; hệ số thực phụ thuộc hình dạng, số Reynolds và chế độ dòng."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-4.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 4,
+      "stem": {
+        "en": "For r=0.5 m and \\ensuremath{\\theta}=4t, find speed and acceleration magnitude.",
+        "vi": "Với r=0,5 m và \\ensuremath{\\theta}=4t, tìm tốc độ và độ lớn gia tốc."
+      },
+      "solution": {
+        "en": "$v=r\\omega=2$ m/s; $a=r\\omega^2=8$ m/s$^2$, inward.",
+        "vi": "$v=r\\omega=2$ m/s; $a=r\\omega^2=8$ m/s$^2$, hướng tâm."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-A-4.5",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-A",
+      "chapter": 4,
+      "stem": {
+        "en": "Derive the area of an annulus with inner radius a and outer radius b using a polar integral.",
+        "vi": "Suy diện tích vành khuyên bán kính trong a, ngoài b bằng tích phân cực."
+      },
+      "solution": {
+        "en": "$A=\\int_0^{2\\pi}\\int_a^b r\\,dr\\,d\\theta=2\\pi(b^2-a^2)/2=\\pi(b^2-a^2)$. Limits agree for a=0 and a=b.",
+        "vi": "$A=\\int_0^{2\\pi}\\int_a^b r\\,dr\\,d\\theta=2\\pi(b^2-a^2)/2=\\pi(b^2-a^2)$. Kiểm tra đúng khi a=0 và a=b."
+      },
+      "text_format": "latex_source",
+      "difficulty": "not_calibrated",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
     }
   ]
 }
