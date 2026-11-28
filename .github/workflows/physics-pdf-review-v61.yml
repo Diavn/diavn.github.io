@@ -1,4 +1,4 @@
-name: Physics V5.1 V5.2 V5.3 and Volume 1 PDF review
+name: Physics V5.1–V5.4 and V6.2 illustrated PDF review
 on:
   workflow_dispatch:
   push:
@@ -10,19 +10,22 @@ on:
       - 'truongchuyen/physics-mechanics-level1-v52.html'
       - 'truongchuyen/physics-math-level2-v53.html'
       - 'truongchuyen/physics-volume01-v61.html'
+      - 'truongchuyen/physics-mechanics-level2-v54.html'
+      - 'truongchuyen/physics-volume02-v62.html'
+      - 'truongchuyen/physics-volume03-v62.html'
 permissions:
   contents: read
 jobs:
   review:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - name: Install XeLaTeX and PDF inspection tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-fonts-recommended fonts-dejavu-core latexmk poppler-utils
-      - name: Build and inspect 20 PDF candidates
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-fonts-recommended fonts-dejavu-core latexmk poppler-utils librsvg2-bin
+      - name: Build and inspect 34 illustrated PDF candidates
         run: python3 .github/scripts/physics_pdf_review_v61.py
       - name: Upload diagnostics
         if: always()
@@ -38,6 +41,10 @@ jobs:
       - name: Upload PDF candidates only if checks passed
         uses: actions/upload-artifact@v4
         with:
-          name: physics-v51-v52-v53-volume01-pdf-candidates
-          path: /tmp/vtalent-pdf-review/*.pdf
+          name: physics-v62-illustrated-pdf-candidates
+          path: |
+            /tmp/vtalent-pdf-review/PHY*-V*-vi.pdf
+            /tmp/vtalent-pdf-review/PHY*-V*-en.pdf
+            /tmp/vtalent-pdf-review/V0*-V62-vi.pdf
+            /tmp/vtalent-pdf-review/V0*-V62-en.pdf
           if-no-files-found: error
