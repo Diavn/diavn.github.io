@@ -1,0 +1,126 @@
+name: Energy and fluids study PDF candidates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/physics-energy-pdf.yml'
+      - 'truongchuyen/physics-energy-fluids.html'
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-pictures texlive-fonts-recommended fonts-noto-core fonts-dejavu-core poppler-utils latexmk
+      - name: Generate temporary LaTeX sources from bilingual learning page
+        run: |
+          mkdir -p /tmp/energy-fluids
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          import re
+          class Reader(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.books={}
+                  self.book=None
+                  self.tag=None
+                  self.buf=[]
+              def handle_starttag(self,tag,attrs):
+                  attrs=dict(attrs)
+                  if tag=='article' and 'data-book' in attrs:
+                      self.book=(attrs['data-book'],attrs['lang'])
+                      self.books[self.book]=[]
+                  if self.book and tag in ('h2','h3','h4','p'):
+                      self.tag=tag
+                      self.buf=[]
+              def handle_data(self,data):
+                  if self.book and self.tag:
+                      self.buf.append(data)
+              def handle_endtag(self,tag):
+                  if self.book and tag==self.tag:
+                      self.books[self.book].append((tag,''.join(self.buf)))
+                      self.tag=None
+                  if tag=='article':
+                      self.book=None
+          r=Reader()
+          r.feed(Path('truongchuyen/physics-energy-fluids.html').read_text())
+          assert len(r.books)==8
+          esc={'&':r'\&','%':r'\%','$':r'\$','#':r'\#','_':r'\_','{':r'\{','}':r'\}','\\':r'\textbackslash{}','~':r'\textasciitilde{}','^':r'\textasciicircum{}','≈':r'\ensuremath{\approx}','≤':r'\ensuremath{\le}','≥':r'\ensuremath{\ge}','−':r'\ensuremath{-}','×':r'\ensuremath{\times}','β':r'\ensuremath{\beta}','θ':r'\ensuremath{\theta}','ν':r'\ensuremath{\nu}','ρ':r'\ensuremath{\rho}','µ':r'\ensuremath{\mu}','²':r'\textsuperscript{2}','³':r'\textsuperscript{3}','⁴':r'\textsuperscript{4}'}
+          def fmt(s):
+              out=[]
+              for i,part in enumerate(re.split(r'(\\\(.*?\\\))',s)):
+                  out.append(part if i%2 else ''.join(esc.get(c,c) for c in part))
+              return ''.join(out)
+          def diagram(code,ch):
+              key=(code,ch)
+              figs={
+              ('PHY202-C',1):r'\draw[->] (0,0)--(4,0) node[right] {$x$};\draw[->] (0,0)--(0,3) node[above] {$F$};\fill[gray!25] (0,0)--(0,2.4)--(3,1.2)--(3,0)--cycle;\draw[thick] (0,2.4)--(3,1.2);',
+              ('PHY202-C',2):r'\draw[->] (-2,0)--(2,0) node[right] {$x$};\draw[->] (0,-1.2)--(0,2) node[above] {$U$};\draw[thick,domain=-1.45:1.45,samples=80] plot(\x,{\x^4-2*\x^2});\fill (-1,-1) circle (.05);\fill (1,-1) circle (.05);',
+              ('PHY202-C',3):r'\draw[->] (-2,0)--(2,0) node[right] {$x$};\draw[->] (0,0)--(0,2.5) node[above] {$y$};\draw[thick,domain=-1.8:1.8,samples=80] plot(\x,{.6*\x^2});\draw[very thick] (-.5,.15)--(1.5,1.35);\fill (.5,.75) circle (.055) node[above left] {$C$};',
+              ('PHY202-E',1):r'\draw[thick,fill=gray!15] (0,0) circle (.6);\draw[dashed] (0,0) circle (1.6);\fill (1.6,0) circle (.08);\draw[->,thick] (1.6,0)--(1.6,1) node[right] {$v_c$};\draw[->,thick] (1.55,0)--(.8,0) node[below] {$F$};',
+              ('PHY202-E',2):r'\draw[thick] (0,0) ellipse (2 and 1.4);\fill (-1.428,0) circle (.07) node[below] {$F$};\draw[dashed] (-1.428,0)--(0,1.4);\draw[<->] (-2,-.25)--(-1.428,-.25) node[midway,below] {$r_p$};',
+              ('PHY202-E',3):r'\draw[thick,fill=gray!10] (0,0) circle (1.6);\draw[very thick] (-1.28,.96)--(1.28,.96);\draw[dashed] (0,0)--(0,.96) node[midway,right] {$d$};\draw[->,thick] (.65,.96)--(0,.96) node[midway,above] {$s$};\fill (0,0) circle (.05);',
+              ('PHY202-F',1):r'\fill[gray!15] (0,0) rectangle (3,2.5);\draw[thick] (2,0)--(2,2.5);\draw[thick] (0,2.5)--(3,2.5);\foreach \y in {.4,.8,1.2,1.6,2.0}{\draw[->] ({2-(2.5-\y)*.5},\y)--(2,\y);}\node at (1,2.8) {$p=p_0+\rho gh$};',
+              ('PHY202-F',2):r'\draw[thick] (0,1)--(2,1)--(3,.4)--(5,.4);\draw[thick] (0,-1)--(2,-1)--(3,-.4)--(5,-.4);\draw[->,thick] (.5,0)--(1.6,0) node[above] {$v_1$};\draw[->,thick] (3.3,0)--(4.8,0) node[above] {$v_2$};',
+              ('PHY202-F',3):r'\fill[gray!15] (-2,-1.3) rectangle (2,0);\draw[thick] (-2,0)--(2,0);\draw[fill=gray!35] (-1,-.6) rectangle (1,.4);\fill (0,-.3) circle (.045) node[left] {$B$};\fill (0,.2) circle (.045) node[left] {$G$};\fill (0,.7) circle (.045) node[left] {$M$};\draw[dashed] (0,-.6)--(0,.8);',
+              ('ENG-MAT02',1):r'\draw[very thick] (0,0)--(4,0);\draw (-.2,-.3)--(.2,-.3)--(0,0)--cycle;\draw (3.8,-.3)--(4.2,-.3)--(4,0)--cycle;\foreach \x in {0,.5,...,4}{\draw[->] (\x,.8)--(\x,.08);}\node at (2,1.1) {$q$};',
+              ('ENG-MAT02',2):r'\draw[very thick] (0,-.5)--(0,.5);\draw[dashed] (0,0)--(4,0);\draw[thick,domain=0:4,samples=50] plot(\x,{-.013*(12*\x^2-\x^3)});\draw[->,thick] (4,.7)--(4,-.9) node[right] {$P$};'}
+              return r'\begin{center}\begin{tikzpicture}[scale=1.15]'+figs[key]+r'\end{tikzpicture}\end{center}'
+          for (code,lang),parts in r.books.items():
+              title=parts[0][1]
+              author='TS. Đặng Minh Tuấn' if lang=='vi' else 'Dr. Dang Minh Tuan'
+              pre=r'\documentclass[11pt,a4paper,openany]{book}'+'\n'+r'\usepackage[margin=24mm]{geometry}\usepackage{fontspec}\setmainfont{DejaVu Serif}\usepackage{amsmath,amssymb,tikz,microtype}\usepackage[hidelinks]{hyperref}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\emergencystretch}{2em}'
+              if lang=='vi':
+                  pre+=r'\renewcommand{\chaptername}{Chương}\renewcommand{\contentsname}{Mục lục}'
+              pre+=r'\begin{document}\title{V-TALENT 2045\\'+fmt(title)+r'}\author{'+author+r'}\date{2026 -- '+('Bản thảo V3.6' if lang=='vi' else 'Draft V3.6')+r'}\hypersetup{pdfauthor={'+author+r'}}\maketitle\tableofcontents'
+              body=[]
+              ch=0
+              for tag,value in parts[2:]:
+                  if tag=='h3':
+                      if value.startswith(('Full solutions','Lời giải chi tiết')):
+                          body.append(r'\appendix\chapter{'+fmt(value)+'}')
+                      else:
+                          ch+=1
+                          body.append(r'\chapter{'+fmt(re.sub(r'^\d+\.\s*','',value))+'}'+diagram(code,ch))
+                  elif tag=='h4':
+                      body.append(r'\section{'+fmt(value)+'}')
+                  else:
+                      body.append(fmt(value))
+              assert ch==(2 if code=='ENG-MAT02' else 3)
+              (Path('/tmp/energy-fluids')/(code+'-'+lang+'.tex')).write_text(pre+'\n\n'+'\n\n'.join(body)+'\n'+r'\end{document}',encoding='utf-8')
+          PY
+      - name: Compile and verify all eight PDF candidates
+        run: |
+          set -euo pipefail
+          cd /tmp/energy-fluids
+          failed=0
+          for f in *.tex; do
+            stem=$(basename "$f" .tex)
+            if ! latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error "$f"; then failed=1; continue; fi
+            pdfinfo "$stem.pdf"
+            pdftotext "$stem.pdf" "$stem.txt"
+            if grep -q 'Missing character:' "$stem.log"; then echo "::error file=$f::Missing glyph"; failed=1; fi
+          done
+          test "$failed" -eq 0
+          python3 - <<'PY'
+          from pathlib import Path
+          import unicodedata
+          pdfs=list(Path('.').glob('*.pdf'))
+          assert len(pdfs)==8
+          for p in pdfs:
+              s=' '.join(unicodedata.normalize('NFC',p.with_suffix('.txt').read_text()).split())
+              author='TS. Đặng Minh Tuấn' if p.stem.endswith('-vi') else 'Dr. Dang Minh Tuan'
+              assert author in s,p
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: energy-fluids-pdf-candidates
+          path: /tmp/energy-fluids/*.pdf
+          if-no-files-found: error
