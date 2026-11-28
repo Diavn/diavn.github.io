@@ -1,0 +1,142 @@
+name: Foundations Olympiad and research PDF candidates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/physics-foundations-olympiad-pdf.yml'
+      - 'truongchuyen/physics-foundations-olympiad-research.html'
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-pictures texlive-fonts-recommended fonts-noto-core fonts-dejavu-core poppler-utils latexmk
+      - name: Generate temporary LaTeX sources from bilingual learning page
+        run: |
+          mkdir -p /tmp/foundations-olympiad
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          import re
+          class Reader(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.books={}
+                  self.book=None
+                  self.tag=None
+                  self.buf=[]
+              def handle_starttag(self,tag,attrs):
+                  attrs=dict(attrs)
+                  if tag=='article' and 'data-book' in attrs:
+                      self.book=(attrs['data-book'],attrs['lang'])
+                      self.books[self.book]=[]
+                  if self.book and tag in ('h2','h3','h4','p'):
+                      self.tag=tag
+                      self.buf=[]
+              def handle_data(self,data):
+                  if self.book and self.tag:
+                      self.buf.append(data)
+              def handle_endtag(self,tag):
+                  if self.book and tag==self.tag:
+                      self.books[self.book].append((tag,''.join(self.buf)))
+                      self.tag=None
+                  if tag=='article':
+                      self.book=None
+          r=Reader()
+          r.feed(Path('truongchuyen/physics-foundations-olympiad-research.html').read_text())
+          assert len(r.books)==20
+          esc={'&':r'\&','%':r'\%','$':r'\$','#':r'\#','_':r'\_','{':r'\{','}':r'\}','\\':r'\textbackslash{}','~':r'\textasciitilde{}','^':r'\textasciicircum{}','≈':r'\ensuremath{\approx}','≤':r'\ensuremath{\le}','≥':r'\ensuremath{\ge}','−':r'\ensuremath{-}','×':r'\ensuremath{\times}','β':r'\ensuremath{\beta}','θ':r'\ensuremath{\theta}','ν':r'\ensuremath{\nu}','ρ':r'\ensuremath{\rho}','µ':r'\ensuremath{\mu}','²':r'\textsuperscript{2}','³':r'\textsuperscript{3}','⁴':r'\textsuperscript{4}'}
+          esc.update({'≪':r'\ensuremath{\ll}','≫':r'\ensuremath{\gg}','⁻':r'\textsuperscript{-}','₀':r'\textsubscript{0}'})
+          esc.update({'μ':r'\ensuremath{\mu}','Ω':r'\ensuremath{\Omega}','σ':r'\ensuremath{\sigma}','λ':r'\ensuremath{\lambda}','₁':r'\textsubscript{1}','₂':r'\textsubscript{2}','₃':r'\textsubscript{3}','₄':r'\textsubscript{4}','ₛ':r'\textsubscript{s}','¹':r'\textsuperscript{1}','⁰':r'\textsuperscript{0}','⁵':r'\textsuperscript{5}','⁶':r'\textsuperscript{6}','⁷':r'\textsuperscript{7}','⁸':r'\textsuperscript{8}','⁹':r'\textsuperscript{9}'})
+          esc.update({'Δ':r'\ensuremath{\Delta}','Φ':r'\ensuremath{\Phi}','γ':r'\ensuremath{\gamma}','π':r'\ensuremath{\pi}','√':r'\ensuremath{\sqrt{\phantom{x}}}','→':r'\ensuremath{\to}','⁻':r'\textsuperscript{-}','⁴':r'\textsuperscript{4}'})
+          esc.update({'δ':r'\ensuremath{\delta}','α':r'\ensuremath{\alpha}','ω':r'\ensuremath{\omega}','τ':r'\ensuremath{\tau}','ℏ':r'\ensuremath{\hbar}','′':r'\ensuremath{\prime}','≠':r'\ensuremath{\ne}','±':r'\ensuremath{\pm}','ₓ':r'\textsubscript{x}','ₛ':r'\textsubscript{s}','⁺':r'\textsuperscript{+}'})
+          esc.update({'∞':r'\ensuremath{\infty}','ε':r'\ensuremath{\varepsilon}','η':r'\ensuremath{\eta}','ζ':r'\ensuremath{\zeta}','σ':r'\ensuremath{\sigma}','⁻':r'\textsuperscript{-}'})
+          def fmt(s):
+              out=[]
+              for i,part in enumerate(re.split(r'(\\\(.*?\\\))',s)):
+                  out.append(part if i%2 else ''.join(esc.get(c,c) for c in part))
+              return ''.join(out)
+          def diagram(code,ch):
+              key=(code,ch)
+              figs={
+              ('PHY102-B',1):r'\draw[thick] (-2,0)--(2,0);\draw[fill=gray!20] (-.6,0) rectangle (.6,.8);\draw[->,thick] (0,.4)--(0,1.6) node[above] {$N$};\draw[->,thick] (0,.4)--(0,-1) node[below] {$mg$};\draw[->,thick] (.6,.4)--(2,.4) node[right] {$F$};\draw[->,thick] (-.6,.4)--(-1.7,.4) node[left] {$f$};',
+              ('PHY102-B',2):r'\draw[very thick] (0,1)--(5,1);\draw (0,1)--(-.25,.6)--(.25,.6)--cycle (5,1)--(4.75,.6)--(5.25,.6)--cycle;\draw[->,thick] (1.25,2)--(1.25,1) node[above,pos=0] {$W$};\draw[->] (0,.1)--(0,.85) node[left] {$R_A$};\draw[->] (5,.1)--(5,.85) node[right] {$R_B$};',
+              ('PHY102-C',1):r'\fill[gray!15] (0,0) rectangle (3,2.5);\draw[thick] (0,2.5)--(0,0)--(3,0)--(3,2.5);\foreach \y in {.4,.8,1.2,1.6,2.0}{\draw[->] ({3-(2.5-\y)*.6},\y)--(3,\y);}\node at (1.2,2.8) {$p=p_0+\rho gh$};',
+              ('PHY102-C',2):r'\fill[gray!15] (-2,-1.6) rectangle (2,0);\draw[thick] (-2,0)--(2,0);\draw[fill=gray!35] (-.8,-.7) rectangle (.8,.6);\draw[->,thick] (0,-.25)--(0,1.15) node[above] {$F_B$};\draw[->,thick] (.3,.25)--(.3,-1.1) node[below] {$mg$};',
+              ('PHY102-D',1):r'\draw[thick] (0,0)--(5,0)--(0,2)--cycle;\draw[fill=gray!20,rotate around={-21.8:(1,1.6)}] (.75,1.6) rectangle (1.25,2);\draw[<->] (-.3,0)--(-.3,2) node[midway,left] {$h$};\draw[->,thick] (1.5,1.4)--(3, .8) node[above] {$s$};',
+              ('PHY102-D',2):r'\draw[fill=gray!15] (0,0) rectangle (1.6,1);\node at (.8,.5) {$E_{\rm in}$};\draw[->,thick] (1.6,.5)--(2.4,.5);\draw[fill=gray!25] (2.4,0) rectangle (4,1);\node at (3.2,.5) {$\eta$};\draw[->,thick] (4,.5)--(5,.5) node[right] {$E_{\rm useful}$};\draw[->] (3.2,0)--(3.2,-.9) node[below] {$E_{\rm loss}$};',
+              ('PHY104',1):r'\draw[fill=gray!15] (0,0) rectangle (2,1.5);\node at (1,.75) {$mc\Delta T$};\draw[->,thick] (-1,.75)--(0,.75) node[midway,above] {$Pt$};\draw[->] (2,.75)--(3,.75) node[right] {$Q_{\rm loss}$};',
+              ('PHY104',2):r'\draw[thick] (0,0)--(0,2)--(1,2) (2,2)--(3,2)--(3,1.5)--(4,1.5) (5,1.5)--(6,1.5)--(6,0)--(0,0);\draw[thick] (3,1.5)--(3,.5)--(4,.5) (5,.5)--(6,.5)--(6,1.5);\draw (1,1.8) rectangle (2,2.2) (4,1.3) rectangle (5,1.7) (4,.3) rectangle (5,.7);\node at (1.5,2) {$R_1$};\node at (4.5,1.5) {$R_2$};\node at (4.5,.5) {$R_3$};\draw[fill=white] (1.2,-.1) rectangle (2,.1);\draw (1.5,-.3)--(1.5,.3) (1.7,-.2)--(1.7,.2);\node[below] at (1.6,-.3) {$V$};',
+              ('PHY201-C',1):r'\draw[->] (0,0)--(3,0) node[right] {$x_1$};\draw[->] (0,0)--(0,2.5) node[above] {$x_2$};\draw[->,thick] (0,0)--(1.8,1.8) node[above] {$(1,1)$};\draw[->,thick] (0,0)--(1.8,-1.8) node[right] {$(1,-1)$};',
+              ('PHY201-C',2):r'\draw[->] (0,0)--(6,0) node[right] {$N$};\draw[->] (0,-1.3)--(0,2.5) node[above] {$x$};\draw[thick] (0,0)--(1,1)--(2,0)--(3,-1)--(4,0)--(5,1)--(6,2);',
+              ('PHY208-B',1):r'\draw[->] (0,0)--(4,0) node[right] {$F$};\draw[->] (0,0)--(0,3) node[above] {$V$};\draw[thick] (0,.3)--(3.8,2.8);\foreach \x in {0,1,2,3}{\fill (\x,{.3+.658*\x}) circle (.06);}\node[left] at (0,.3) {$a$};',
+              ('PHY208-B',2):r'\draw[->] (0,0)--(5,0) node[right] {$t$};\draw[->] (0,0)--(0,3) node[above] {$v$};\draw[thick] (0,2.5)--(3,0)--(4.7,0);\draw[dashed,thick,domain=0:4.7,samples=80] plot(\x,{2.5*exp(-.8*\x)});',
+              ('PHY209-A',1):r'\draw[fill=gray!15] (0,0) rectangle (1,.7);\draw[->,thick] (1,.35)--(1.9,.35) node[above] {$v$};\draw[fill=gray!35] (2,0) rectangle (3.3,.7);\draw[decorate,decoration={zigzag,segment length=5pt,amplitude=3pt}] (3.3,.35)--(5,.35);\draw[very thick] (5,-.2)--(5,1);\draw (0,0)--(5,0);',
+              ('PHY209-A',2):r'\draw[->] (0,0)--(5,0) node[right] {$t$};\draw[->] (0,0)--(0,3) node[above] {$\Delta T$};\draw[dashed] (0,2.6)--(5,2.6) node[right] {$P/G$};\draw[thick,domain=0:4.8,samples=80] plot(\x,{2.6*(1-exp(-\x))});',
+              ('PHY209-B',1):r'\draw[->] (0,0)--(5,0) node[right] {$t/t_*$};\draw[->] (0,0)--(0,2.7) node[above] {$v/v_*$};\draw[dashed] (0,2)--(5,2);\node[left] at (0,2) {$1$};\draw[thick,domain=0:4.8,samples=80] plot(\x,{2*(1-exp(-\x))});',
+              ('PHY209-B',2):r'\draw[very thick] (-1,2.8)--(1,2.8);\draw[decorate,decoration={zigzag,segment length=5pt,amplitude=3pt}] (0,2.8)--(0,1.8) (0,1.8)--(0,.8);\node[right] at (.2,2.3) {$k$};\node[right] at (.2,1.3) {$2k$};\draw[fill=gray!25] (-.4,.1) rectangle (.4,.8);\node at (0,.45) {$m$};',
+              ('PHY210-A',1):r'\draw[->] (0,0)--(5,0) node[right] {$t$};\draw[->] (0,0)--(0,3) node[above] {$x$};\draw[thick,domain=0:4.5,samples=80] plot(\x,{2.5*exp(-.7*\x)});\draw[dashed,thick] (0,2.5)--(1,0.75)--(2,.225)--(3,.0675)--(4,.02025);',
+              ('PHY210-A',2):r'\draw[->] (0,0)--(5,0) node[right] {$t$};\draw[->] (0,0)--(0,3) node[above] {$E/E_0$};\draw[dashed] (0,1)--(5,1);\draw[thick,domain=0:4.5,samples=80] plot(\x,{exp(.21*\x)});\node at (3.4,2.6) {Euler};',
+              ('PHY210-B',1):r'\draw[thick] (0,2.8)--(0,.8) (0,2.8)--(1.2,1.2);\fill (0,.8) circle (.14);\fill (1.2,1.2) circle (.14);\draw[->] (0,2.05) arc (-90:-53:.75);\node at (.55,1.9) {$\theta_0$};',
+              ('PHY210-B',2):r'\draw[->] (0,0)--(4,0) node[right] {$x$};\draw[->] (0,0)--(0,3) node[above] {$y$};\draw[thick] (0,.2)--(3.8,2.8);\draw[dashed] (0,.4)--(3.8,2.2);\foreach \x/\y in {1/.9,2/1.5,3/2.2}{\fill (\x,\y) circle (.055);\draw (\x,\y-.2)--(\x,\y+.2);}'}
+              return r'\begin{center}\begin{tikzpicture}[scale=1.15]'+figs[key]+r'\end{tikzpicture}\end{center}'
+          for (code,lang),parts in r.books.items():
+              title=parts[0][1]
+              author='TS. Đặng Minh Tuấn' if lang=='vi' else 'Dr. Dang Minh Tuan'
+              pre=r'\documentclass[11pt,a4paper,openany]{book}'+'\n'+r'\usepackage[margin=24mm]{geometry}\usepackage{fontspec}\setmainfont{DejaVu Serif}\usepackage{amsmath,amssymb,tikz,microtype}\usetikzlibrary{decorations.pathmorphing}\usepackage[hidelinks]{hyperref}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\emergencystretch}{2em}'
+              if lang=='vi':
+                  pre+=r'\renewcommand{\chaptername}{Chương}\renewcommand{\contentsname}{Mục lục}'
+              pre+=r'\begin{document}\title{V-TALENT 2045\\'+fmt(title)+r'}\author{'+author+r'}\date{2026 -- '+('Bản thảo V4.0' if lang=='vi' else 'Draft V4.0')+r'}\hypersetup{pdfauthor={'+author+r'}}\maketitle\tableofcontents'
+              body=[]
+              in_appendix=False
+              ch=0
+              for tag,value in parts[2:]:
+                  if tag=='h3':
+                      if value.startswith(('Full solutions','Lời giải chi tiết')):
+                          in_appendix=True
+                          body.append(r'\appendix\chapter{'+fmt(value)+'}')
+                      else:
+                          ch+=1
+                          body.append(r'\chapter{'+fmt(re.sub(r'^\d+\.\s*','',value))+'}'+diagram(code,ch))
+                  elif tag=='h4':
+                      body.append(r'\section{'+fmt(value)+'}')
+                  else:
+                      body.append(fmt(value))
+              assert ch==2
+              (Path('/tmp/foundations-olympiad')/(code+'-'+lang+'.tex')).write_text(pre+'\n\n'+'\n\n'.join(body)+'\n'+r'\end{document}',encoding='utf-8')
+          PY
+      - name: Compile and verify all twenty PDF candidates
+        run: |
+          set -euo pipefail
+          cd /tmp/foundations-olympiad
+          failed=0
+          for f in *.tex; do
+            stem=$(basename "$f" .tex)
+            if ! latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error "$f"; then failed=1; continue; fi
+            pdfinfo "$stem.pdf"
+            pdftotext "$stem.pdf" "$stem.txt"
+            if grep -q 'Missing character:' "$stem.log"; then echo "::error file=$f::Missing glyph"; failed=1; fi
+          done
+          test "$failed" -eq 0
+          python3 - <<'PY'
+          from pathlib import Path
+          import unicodedata
+          pdfs=list(Path('.').glob('*.pdf'))
+          assert len(pdfs)==20
+          for p in pdfs:
+              s=' '.join(unicodedata.normalize('NFC',p.with_suffix('.txt').read_text()).split())
+              author='TS. Đặng Minh Tuấn' if p.stem.endswith('-vi') else 'Dr. Dang Minh Tuan'
+              assert author in s,p
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: foundations-olympiad-pdf-candidates
+          path: /tmp/foundations-olympiad/*.pdf
+          if-no-files-found: error
