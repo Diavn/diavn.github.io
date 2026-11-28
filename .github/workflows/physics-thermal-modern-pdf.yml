@@ -1,0 +1,136 @@
+name: Thermal and modern physics PDF candidates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/physics-thermal-modern-pdf.yml'
+      - 'truongchuyen/physics-thermal-modern.html'
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-pictures texlive-fonts-recommended fonts-noto-core fonts-dejavu-core poppler-utils latexmk
+      - name: Generate temporary LaTeX sources from bilingual learning page
+        run: |
+          mkdir -p /tmp/thermal-modern
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          import re
+          class Reader(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.books={}
+                  self.book=None
+                  self.tag=None
+                  self.buf=[]
+              def handle_starttag(self,tag,attrs):
+                  attrs=dict(attrs)
+                  if tag=='article' and 'data-book' in attrs:
+                      self.book=(attrs['data-book'],attrs['lang'])
+                      self.books[self.book]=[]
+                  if self.book and tag in ('h2','h3','h4','p'):
+                      self.tag=tag
+                      self.buf=[]
+              def handle_data(self,data):
+                  if self.book and self.tag:
+                      self.buf.append(data)
+              def handle_endtag(self,tag):
+                  if self.book and tag==self.tag:
+                      self.books[self.book].append((tag,''.join(self.buf)))
+                      self.tag=None
+                  if tag=='article':
+                      self.book=None
+          r=Reader()
+          r.feed(Path('truongchuyen/physics-thermal-modern.html').read_text())
+          assert len(r.books)==14
+          esc={'&':r'\&','%':r'\%','$':r'\$','#':r'\#','_':r'\_','{':r'\{','}':r'\}','\\':r'\textbackslash{}','~':r'\textasciitilde{}','^':r'\textasciicircum{}','≈':r'\ensuremath{\approx}','≤':r'\ensuremath{\le}','≥':r'\ensuremath{\ge}','−':r'\ensuremath{-}','×':r'\ensuremath{\times}','β':r'\ensuremath{\beta}','θ':r'\ensuremath{\theta}','ν':r'\ensuremath{\nu}','ρ':r'\ensuremath{\rho}','µ':r'\ensuremath{\mu}','²':r'\textsuperscript{2}','³':r'\textsuperscript{3}','⁴':r'\textsuperscript{4}'}
+          esc.update({'≪':r'\ensuremath{\ll}','≫':r'\ensuremath{\gg}','⁻':r'\textsuperscript{-}','₀':r'\textsubscript{0}'})
+          esc.update({'μ':r'\ensuremath{\mu}','Ω':r'\ensuremath{\Omega}','σ':r'\ensuremath{\sigma}','λ':r'\ensuremath{\lambda}','₁':r'\textsubscript{1}','₂':r'\textsubscript{2}','₃':r'\textsubscript{3}','₄':r'\textsubscript{4}','ₛ':r'\textsubscript{s}','¹':r'\textsuperscript{1}','⁰':r'\textsuperscript{0}','⁵':r'\textsuperscript{5}','⁶':r'\textsuperscript{6}','⁷':r'\textsuperscript{7}','⁸':r'\textsuperscript{8}','⁹':r'\textsuperscript{9}'})
+          esc.update({'Δ':r'\ensuremath{\Delta}','Φ':r'\ensuremath{\Phi}','γ':r'\ensuremath{\gamma}','π':r'\ensuremath{\pi}','√':r'\ensuremath{\sqrt{\phantom{x}}}','→':r'\ensuremath{\to}','⁻':r'\textsuperscript{-}','⁴':r'\textsuperscript{4}'})
+          def fmt(s):
+              out=[]
+              for i,part in enumerate(re.split(r'(\\\(.*?\\\))',s)):
+                  out.append(part if i%2 else ''.join(esc.get(c,c) for c in part))
+              return ''.join(out)
+          def diagram(code,ch):
+              key=(code,ch)
+              figs={
+              ('PHY103-A',1):r'\draw[thick] (0,0)--(0,1.5)--(2,1.5)--(2,0)--cycle;\fill[gray!20] (.05,.05) rectangle (1.95,.95);\node at (1,.55) {$T_1$};\draw[thick] (4,0)--(4,1.5)--(6,1.5)--(6,0)--cycle;\fill[gray!40] (4.05,.05) rectangle (5.95,.95);\node at (5,.55) {$T_2$};\draw[->,thick] (2.2,.7)--(3.8,.7) node[midway,above] {$Q$};\node at (3,-.4) {$T_1>T_2$};',
+              ('PHY103-A',2):r'\draw[->] (0,0)--(5,0) node[right] {$Q$};\draw[->] (0,0)--(0,3) node[above] {$T$};\draw[thick] (.2,.4)--(1.3,1.2)--(3.4,1.2)--(4.6,2.5);\draw[dashed] (0,1.2)--(3.4,1.2);\node[left] at (0,1.2) {$T_m$};\draw[<->] (1.3,.9)--(3.4,.9) node[midway,below] {$mL$};',
+              ('PHY203-A',1):r'\draw[thick] (0,3)--(0,0)--(3,0)--(3,3);\fill[gray!30] (0,1.7) rectangle (3,1.95);\node at (1.5,.8) {$p,V,T$};\draw[->,thick] (1.5,2.9)--(1.5,2) node[midway,right] {$Mg+p_{\rm out}A$};\draw[->,thick] (.7,.9)--(.7,1.65) node[left] {$pA$};',
+              ('PHY203-A',2):r'\draw[thick] (0,0) rectangle (4,2.8);\fill (2,1.4) circle (.08);\draw[->,thick] (2,1.4)--(3.5,2.3) node[above] {$\mathbf v$};\draw[dashed] (2,1.4)--(3.5,1.4) node[midway,below] {$v_x$};\draw[<->] (0,-.3)--(4,-.3) node[midway,below] {$L$};',
+              ('PHY203-B',1):r'\draw[->] (0,0)--(5,0) node[right] {$V$};\draw[->] (0,0)--(0,3.2) node[above] {$p$};\fill[gray!20] (1,.7) rectangle (4,2.5);\draw[thick,->] (1,.7)--(1,2.5);\draw[thick,->] (1,2.5)--(4,2.5);\draw[thick,->] (4,2.5)--(4,.7);\draw[thick,->] (4,.7)--(1,.7);\node at (2.5,1.6) {$W_{\rm net}$};',
+              ('PHY203-B',2):r'\fill[gray!20] (0,0) rectangle (2,2);\fill[gray!50] (2,0) rectangle (4,2);\draw[thick] (0,0) rectangle (4,2);\draw[thick] (2,0)--(2,2);\node at (1,1) {$R_1$};\node at (3,1) {$R_2$};\draw[->,thick] (0,2.4)--(4,2.4) node[midway,above] {$\dot Q$};\node[left] at (0,1) {$T_h$};\node[right] at (4,1) {$T_c$};',
+              ('PHY203-C',1):r'\draw[fill=gray!30] (0,3) rectangle (4,3.6);\draw[fill=gray!10] (0,0) rectangle (4,.6);\node at (2,3.3) {$T_h$};\node at (2,.3) {$T_c$};\draw[thick] (2,1.8) circle (.55);\draw[->,thick] (2,3)--(2,2.35) node[right] {$Q_h$};\draw[->,thick] (2,1.25)--(2,.6) node[right] {$Q_c$};\draw[->,thick] (2.55,1.8)--(4,1.8) node[right] {$W$};',
+              ('PHY203-C',2):r'\draw[->] (0,0)--(6,0) node[right] {$N$};\draw[->] (0,-1.3)--(0,2.4) node[above] {$x/a$};\draw[thick] (0,0)--(.8,1)--(1.6,0)--(2.4,-1)--(3.2,0)--(4,1)--(4.8,2)--(5.6,1);\draw[dashed] (0,0)--(5.6,0);',
+              ('PHY204-E',1):r'\draw[->] (0,0)--(5,0) node[right] {$\omega/\omega_0$};\draw[->] (0,0)--(0,2.6) node[above] {$I/I_{\max}$};\draw[thick,domain=.1:2.4,samples=100] plot ({2*\x},{2/sqrt(1+9*(\x-1/\x)^2)});\draw[dashed] (2,0)--(2,2);\node[below] at (2,0) {$1$};',
+              ('PHY204-E',2):r'\draw[->] (0,0)--(5,0) node[right] {$\omega RC$};\draw[->] (0,0)--(0,2.6) node[above] {$|H|$};\draw[thick,domain=0:4.8,samples=70] plot(\x,{2/sqrt(1+\x^2)});\draw[dashed] (1,0)--(1,1.414)--(0,1.414);\node[below] at (1,0) {$1$};\node[left] at (0,1.414) {$1/\sqrt2$};',
+              ('PHY206-B',1):r'\draw[->] (0,0)--(4.5,0) node[right] {$f$};\draw[->] (0,0)--(0,2.5) node[above] {$K_{\max}$};\draw[thick] (1.3,0)--(4,2.1);\node[below] at (1.3,0) {$\Phi/h$};\node[above] at (3,1.4) {$h$};',
+              ('PHY206-B',2):r'\draw[->] (-.4,0)--(5,0) node[right] {$x$};\draw[very thick] (0,0)--(0,2.6) (4,0)--(4,2.6);\draw[thick,domain=0:4,samples=80] plot(\x,{1.6*sin(45*\x)});\node[below] at (4,0) {$L$};\node[above] at (2,1.6) {$\psi_1$};',
+              ('PHY206-B',3):r'\draw[thick] (0,0)--(3,0) node[right] {$n=1$};\draw[thick] (0,2.2)--(3,2.2) node[right] {$n=2$};\draw[thick] (0,2.75)--(3,2.75) node[right] {$n=3$};\draw[->,thick] (1.5,2.15)--(1.5,.05) node[midway,right] {$hf$};',
+              ('PHY207-A',1):r'\foreach \y in {0,1,2}{\draw[thick] (0,\y)--(5,\y);}\draw[->,thick] (.4,2.8)--(2,2);\draw[->,thick] (2,2)--(3.6,2.8);\draw[dashed] (.9,2)--(2.5,2);\draw[<->] (4.4,1)--(4.4,2) node[midway,right] {$d$};\node at (1.35,2.18) {$\theta$};',
+              ('PHY207-A',2):r'\draw[->] (-3.4,0)--(3.4,0) node[right] {$ka$};\draw[->] (0,0)--(0,2.5) node[above] {$\omega/\omega_{\max}$};\draw[thick,domain=-3.14159:3.14159,samples=100] plot(\x,{2*abs(sin(deg(\x/2)))});\node[below] at (-3.14,0) {$-\pi$};\node[below] at (3.14,0) {$\pi$};\node[left] at (0,2) {$1$};',
+              ('PHY207-A',3):r'\draw[fill=gray!35] (0,0) rectangle (4,.65);\draw[fill=gray!20] (0,1.65) rectangle (4,2.3);\draw[dashed] (-.3,1.15)--(4.4,1.15) node[right] {$E_F$};\node at (2,.3) {VB};\node at (2,2) {CB};\draw[<->] (4.1,.65)--(4.1,1.65) node[midway,right] {$E_g$};'}
+              return r'\begin{center}\begin{tikzpicture}[scale=1.15]'+figs[key]+r'\end{tikzpicture}\end{center}'
+          for (code,lang),parts in r.books.items():
+              title=parts[0][1]
+              author='TS. Đặng Minh Tuấn' if lang=='vi' else 'Dr. Dang Minh Tuan'
+              pre=r'\documentclass[11pt,a4paper,openany]{book}'+'\n'+r'\usepackage[margin=24mm]{geometry}\usepackage{fontspec}\setmainfont{DejaVu Serif}\usepackage{amsmath,amssymb,tikz,microtype}\usepackage[hidelinks]{hyperref}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\emergencystretch}{2em}'
+              if lang=='vi':
+                  pre+=r'\renewcommand{\chaptername}{Chương}\renewcommand{\contentsname}{Mục lục}'
+              pre+=r'\begin{document}\title{V-TALENT 2045\\'+fmt(title)+r'}\author{'+author+r'}\date{2026 -- '+('Bản thảo V3.8' if lang=='vi' else 'Draft V3.8')+r'}\hypersetup{pdfauthor={'+author+r'}}\maketitle\tableofcontents'
+              body=[]
+              in_appendix=False
+              ch=0
+              for tag,value in parts[2:]:
+                  if tag=='h3':
+                      if value.startswith(('Full solutions','Lời giải chi tiết')):
+                          in_appendix=True
+                          body.append(r'\appendix\chapter{'+fmt(value)+'}')
+                      else:
+                          ch+=1
+                          body.append(r'\chapter{'+fmt(re.sub(r'^\d+\.\s*','',value))+'}'+diagram(code,ch))
+                  elif tag=='h4':
+                      body.append(r'\section{'+fmt(value)+'}')
+                  else:
+                      body.append(fmt(value))
+              assert ch==(3 if code in ('PHY206-B','PHY207-A') else 2)
+              (Path('/tmp/thermal-modern')/(code+'-'+lang+'.tex')).write_text(pre+'\n\n'+'\n\n'.join(body)+'\n'+r'\end{document}',encoding='utf-8')
+          PY
+      - name: Compile and verify all fourteen PDF candidates
+        run: |
+          set -euo pipefail
+          cd /tmp/thermal-modern
+          failed=0
+          for f in *.tex; do
+            stem=$(basename "$f" .tex)
+            if ! latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error "$f"; then failed=1; continue; fi
+            pdfinfo "$stem.pdf"
+            pdftotext "$stem.pdf" "$stem.txt"
+            if grep -q 'Missing character:' "$stem.log"; then echo "::error file=$f::Missing glyph"; failed=1; fi
+          done
+          test "$failed" -eq 0
+          python3 - <<'PY'
+          from pathlib import Path
+          import unicodedata
+          pdfs=list(Path('.').glob('*.pdf'))
+          assert len(pdfs)==14
+          for p in pdfs:
+              s=' '.join(unicodedata.normalize('NFC',p.with_suffix('.txt').read_text()).split())
+              author='TS. Đặng Minh Tuấn' if p.stem.endswith('-vi') else 'Dr. Dang Minh Tuan'
+              assert author in s,p
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: thermal-modern-pdf-candidates
+          path: /tmp/thermal-modern/*.pdf
+          if-no-files-found: error
