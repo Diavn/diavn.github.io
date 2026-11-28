@@ -9390,7 +9390,8 @@
         "candidate_page": "physics-volume01-v61.html",
         "status": "integrated_companion_candidate",
         "candidate_chapters": 20,
-        "candidate_practice_count": 48
+        "candidate_practice_count": 84,
+        "candidate_new_companion_practice_count": 48
       },
       {
         "id": "V02",
