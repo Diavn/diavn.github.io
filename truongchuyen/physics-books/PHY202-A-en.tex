@@ -15,7 +15,7 @@
 \begin{document}
 \title{V-TALENT 2045\\ PHY202-A --- Newtonian dynamics, friction and constraints\\\large Level 2 · Advanced mechanics · Grades 10–12}
 \author{Dr. Dang Minh Tuan -- TS. Đặng Minh Tuấn}
-\date{2026 · v1.0}
+\date{2026 · v1.1}
 \maketitle
 \tableofcontents
 \chapter*{Learning objectives}\addcontentsline{toc}{chapter}{Learning objectives}
@@ -50,6 +50,11 @@ Two blocks: upper 2 kg, lower 3 kg, smooth floor. A horizontal force on the lowe
 A 4 kg block is already sliding on a horizontal surface. A 20 N force pulls at an angle θ above horizontal, μk=0.25, g=10. Determine the angle giving maximum forward acceleration, and verify contact.
 
 \textbf{Solution.} For forward slip, $N=40-20\sin\theta>0$ for every allowed angle. The acceleration is $a=[20(\cos\theta+0.25\sin\theta)-10]/4$. Write $\cos\theta+0.25\sin\theta=\sqrt{1+0.25^2}\cos(\theta-\arctan0.25)$. Hence $\theta=\arctan0.25\approx14.04^\circ$ and $a_{\max}=[20\sqrt{1.0625}-10]/4\approx2.654$ m/s\textsuperscript{2}. At the optimum $N\approx35.15$ N. This applies while sliding forward.
+\section{Application and transfer}
+A mobile robot of mass 20 kg transports an unsecured 4 kg parcel. On a level platform with $\mu_s=0.35$, the parcel follows the platform only if $|a|\leq\mu_sg=3.43$ m/s$^2$ (use $g=9.81$). With a commanded acceleration of 4 m/s$^2$, it cannot remain stationary relative to the platform. If $\mu_k=0.25$ and the platform maintains its acceleration, the parcel accelerates at 2.45 m/s$^2$ relative to the ground; the relative acceleration is $-1.55$ m/s$^2$. Starting at zero relative velocity, it slides backward 0.775 m in 1 s if it remains on the platform. In real control systems, payload restraint, jerk limits and uncertainty in friction are important. Design a test using a low-speed model cart rather than full-size equipment.
+
+\textbf{Source-guided further reading:} SW section section 2.3, 3.2; SJ ch 8; JP problem 2.9; VPhO index group 1.
+
 \section{End-of-topic practice}
 \begin{enumerate}
 \item \textbf{PHY202-A-1.1}. Upper mass 1 kg, lower 4 kg; smooth floor, μs=0.5, μk=0.3, g=10. Force on lower block: 20 N, then 40 N. Determine each acceleration in the two cases.
@@ -76,6 +81,11 @@ A uniform solid cylinder rolls from rest down a 30\textdegree{} incline of verti
 \textbf{Solution.} $\kappa=1/2$ gives $a=5/1.5=10/3$ m/s\textsuperscript{2}. The path length is $1.2/\sin30^\circ=2.4$ m. Using $v^2=2as=16$, $v=4$ m/s. Energy confirms $2gh/(1+\kappa)=16$. Required $\mu_s=(1/3)\tan30^\circ=1/(3\sqrt3)\approx0.192$. Below this value the rolling-only model is invalid.
 \section{Experimental investigation}
 Use two cylinders of comparable radius but different mass distributions and a low ramp. Film each from rest; measure distance versus time, fit s against t\textsuperscript{2}, compare slope with g sinθ/[2(1+κ)]. Mark the rim and check v≈Rω from video; if slipping, do not interpret data as pure rolling. Report angle uncertainty, rolling resistance, timing and repeatability.
+\section{Application and transfer}
+A small electric motor must lift a 12 kg payload with an ideal movable pulley by 0.5 m in 2 s at constant speed. The required load-side power is $mgh/t=29.43$ W. With two supporting rope segments, the input rope travels 1 m, tension is $58.86$ N, and input power is unchanged in the ideal case. If measured electrical power is 45 W, total efficiency is $29.43/45=0.654$. A real pulley adds rotational inertia during startup and bearing losses during steady operation. Explain why mechanical advantage does not multiply energy. Compare a solid and hollow pulley of equal mass for startup torque at the same angular acceleration.
+
+\textbf{Source-guided further reading:} SW section 3.4; JP section section 2.8 and problem 2.9; SJ ch 17, 44; KZ M5 solutions.
+
 \section{End-of-topic practice}
 \begin{enumerate}
 \item \textbf{PHY202-A-2.1}. Atwood masses 3 kg and 7 kg, disk pulley mass 2 kg. Find a and tensions with g=10.
@@ -107,4 +117,6 @@ VPhO 2001 group 1 item 1.1 (printed p. 5); VPhO 2003 group 5 item 5.1 (pp. 14–
 \item \textbf{PHY202-A-2.3}. Pure rolling requires $\mu_s\ge\tan\theta/3=0.2$, so it fails. Gravity causes downslope contact slip, friction acts uphill. $\cos\theta=1/\sqrt{1.36}$ and $\sin\theta=0.6/\sqrt{1.36}$. Then $a=g(\sin\theta-0.1\cos\theta)=0.5g/\sqrt{1.36}$; $\alpha=fR/I=0.2g/(R\sqrt{1.36})$. Since $a-R\alpha=0.3g/\sqrt{1.36}>0$, the assumed slip is consistent.
 \item \textbf{PHY202-A-2.4}. The rope length constraint is $2y+x=\text{constant}$ for downward load coordinate $y$ and free-end coordinate $x$. Thus $\Delta y=-0.4$ m: load rises 0.4 m. Constant speed gives $2T=mg=60$ N, so $T=30$ N. Input work $T(0.8)=24$ J, equal to $mgh=6(10)(0.4)=24$ J.
 \end{enumerate}
+\chapter*{International resource crosswalk}
+\url{https://diavn.github.io/truongchuyen/physics-curriculum.html}
 \end{document}
