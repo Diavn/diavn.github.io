@@ -1,5 +1,5 @@
 {
-  "version": "3.7",
+  "version": "3.8",
   "date": "2026-11-28",
   "sources": [
     {
@@ -220,8 +220,11 @@
         "en": "Building insulation",
         "vi": "Cách nhiệt công trình"
       },
-      "status": "planned",
-      "prerequisite": "PHY101-A / PHY101-B as needed"
+      "status": "online_draft",
+      "prerequisite": "PHY101-A / PHY101-B as needed",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 1,
@@ -514,8 +517,11 @@
         "en": "Atmospheric physics",
         "vi": "Vật lý khí quyển"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -532,8 +538,11 @@
         "en": "Heat pumps and chip cooling",
         "vi": "Bơm nhiệt và làm mát chip"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -550,8 +559,11 @@
         "en": "Diffusion and materials",
         "vi": "Khuếch tán và vật liệu"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -652,8 +664,11 @@
         "en": "Communications and power grids",
         "vi": "Viễn thông và lưới điện"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -760,8 +775,11 @@
         "en": "Lasers and quantum sensing",
         "vi": "Laser và cảm biến lượng tử"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 3,
+      "worked_examples": 3,
+      "practice_count": 6
     },
     {
       "level": 2,
@@ -778,8 +796,11 @@
         "en": "Thermoelectric materials",
         "vi": "Vật liệu nhiệt điện"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 3,
+      "worked_examples": 3,
+      "practice_count": 6
     },
     {
       "level": 2,
@@ -2663,16 +2684,18 @@
     {
       "id": "KS-T",
       "source": "KS",
-      "title": "Thermodynamics solutions (88 problems in source)",
+      "title": "Thermodynamics solutions, ed. 1.2.1 (2020)",
       "book": [
+        "PHY103-A",
         "PHY203-A",
         "PHY203-B",
+        "PHY203-C",
         "PHY202-F"
       ],
       "kind": "solution",
-      "locator": "76 PDF pages; full review pending",
+      "locator": "76 PDF pages; preface says 84 problems; landing page reports 88; numbering varies; selected section starts verified, not full solution audit",
       "url": "https://physoly.tech/static/files/KaldaThermo-121.pdf",
-      "status": "pdf_endpoint_opened_not_reviewed",
+      "status": "selected_section_locators_verified_text_only",
       "pdf_pages": 76
     },
     {
@@ -5846,6 +5869,59 @@
       "locator": "Q173; PDF p. 43",
       "url": "https://physoly.tech/static/files/KaldaEM-ENG.pdf#page=43",
       "status": "section_or_question_locator_verified_translation_unreviewed"
+    },
+    {
+      "id": "KS-TH-01",
+      "source": "KS",
+      "title": "Heat and motion",
+      "book": [
+        "PHY103-A",
+        "PHY203-B"
+      ],
+      "kind": "solution locator",
+      "locator": "Q1–8; PDF pp. 3–7",
+      "url": "https://physoly.tech/static/files/KaldaThermo-121.pdf#page=3",
+      "status": "section_locator_verified_text_only_not_solution_audited"
+    },
+    {
+      "id": "KS-TH-02",
+      "source": "KS",
+      "title": "Gases",
+      "book": [
+        "PHY203-A"
+      ],
+      "kind": "solution locator",
+      "locator": "Q9–14; PDF pp. 8–10",
+      "url": "https://physoly.tech/static/files/KaldaThermo-121.pdf#page=8",
+      "status": "section_locator_verified_text_only_not_solution_audited"
+    },
+    {
+      "id": "KS-TH-03",
+      "source": "KS",
+      "title": "Adiabatic processes",
+      "book": [
+        "PHY203-B",
+        "PHY203-C"
+      ],
+      "kind": "solution locator",
+      "locator": "Section starts Q15–24 according to heading; PDF p. 11; later numbering requires review",
+      "url": "https://physoly.tech/static/files/KaldaThermo-121.pdf#page=11",
+      "status": "section_locator_verified_text_only_not_solution_audited"
+    },
+    {
+      "id": "KS-TH-04",
+      "source": "KS",
+      "title": "Revision problems",
+      "book": [
+        "PHY203-A",
+        "PHY203-B",
+        "PHY203-C",
+        "PHY202-F"
+      ],
+      "kind": "solution locator",
+      "locator": "Section heading Q38–86; PDF p. 30; numbering discrepancy retained",
+      "url": "https://physoly.tech/static/files/KaldaThermo-121.pdf#page=30",
+      "status": "section_locator_verified_text_only_not_solution_audited"
     }
   ],
   "scope": "Bibliographic and TOC mapping only. No third-party PDF mirrors. URLs may point to collection pages rather than individual files; review status is explicit. English and Vietnamese curriculum titles are editorial; external resource titles retain original language. SJPO entries are source occurrences, not unique exam questions. Direct PDF endpoints checked where indicated, no full-text review. Mathematics subsection locators are TOC-derived; no claim of full review."
