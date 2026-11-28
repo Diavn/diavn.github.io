@@ -1,5 +1,5 @@
 {
-  "version": "6.5.0",
+  "version": "6.6.0",
   "date": "2026-11-28",
   "sources": [
     {
@@ -677,7 +677,16 @@
         "advanced_practice": "FMA19 easy problems, only after prerequisites; prior VPhO/SJPO archive",
         "revision_target": "diagnostic mixed problems; do not infer official entrance alignment",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy104.html",
+      "learning_page": "physics-olympiad-compendium-v59.html",
+      "edition": "5.9",
+      "extension_v59": {
+        "chapters": 3,
+        "practice_count": 6,
+        "chapter_diagrams": 3
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 1,
@@ -1859,7 +1868,16 @@
         "advanced_practice": "DM14 for mechanics methods; source items retain IDs",
         "revision_target": "multi-step and symbolic derivation",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy209-a.html",
+      "learning_page": "physics-olympiad-compendium-v59.html",
+      "edition": "5.9",
+      "extension_v59": {
+        "chapters": 3,
+        "practice_count": 6,
+        "chapter_diagrams": 3
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -1889,7 +1907,16 @@
         "advanced_practice": "prior SJPO/JPhO/IPhO/ZPUMC; FMA only mechanics",
         "revision_target": "holdout exam sets, alternate solution methods",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy209-b.html",
+      "learning_page": "physics-olympiad-compendium-v59.html",
+      "edition": "5.9",
+      "extension_v59": {
+        "chapters": 3,
+        "practice_count": 6,
+        "chapter_diagrams": 3
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed"
     },
     {
       "level": 2,
@@ -9885,7 +9912,12 @@
           "PHY104",
           "PHY209-A",
           "PHY209-B"
-        ]
+        ],
+        "candidate_page": "physics-volume11-v66.html",
+        "candidate_chapters": 15,
+        "candidate_practice_count": 30,
+        "candidate_figures": 15,
+        "status": "illustrated_integrated_candidate"
       }
     ],
     "status": "editorial_plan_preserve_existing_modules",
