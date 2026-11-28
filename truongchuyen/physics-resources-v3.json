@@ -1,5 +1,5 @@
 {
-  "version": "3.8",
+  "version": "3.9",
   "date": "2026-11-28",
   "sources": [
     {
@@ -262,8 +262,11 @@
         "en": "Cameras and vision",
         "vi": "Camera và thị giác"
       },
-      "status": "planned",
-      "prerequisite": "PHY101-A / PHY101-B as needed"
+      "status": "online_draft",
+      "prerequisite": "PHY101-A / PHY101-B as needed",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 1,
@@ -280,8 +283,11 @@
         "en": "Acoustics and ultrasound",
         "vi": "Âm học và siêu âm"
       },
-      "status": "planned",
-      "prerequisite": "PHY101-A / PHY101-B as needed"
+      "status": "online_draft",
+      "prerequisite": "PHY101-A / PHY101-B as needed",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 1,
@@ -316,8 +322,11 @@
         "en": "Citizen science",
         "vi": "Khoa học cộng đồng"
       },
-      "status": "planned",
-      "prerequisite": "PHY101-A / PHY101-B as needed"
+      "status": "online_draft",
+      "prerequisite": "PHY101-A / PHY101-B as needed",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -685,8 +694,11 @@
         "en": "Seismic isolation",
         "vi": "Cách chấn"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -703,8 +715,11 @@
         "en": "Medical ultrasound",
         "vi": "Siêu âm y tế"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -721,8 +736,11 @@
         "en": "Optical instruments",
         "vi": "Thiết bị quang học"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -739,8 +757,11 @@
         "en": "Interferometry and microscopy",
         "vi": "Giao thoa kế và kính hiển vi"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -757,8 +778,11 @@
         "en": "GPS (also requires GR)",
         "vi": "GPS (cần cả tương đối rộng)"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -838,8 +862,11 @@
         "en": "PET imaging",
         "vi": "Chẩn đoán PET"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -856,8 +883,11 @@
         "en": "Metrology",
         "vi": "Đo lường học"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -2728,13 +2758,13 @@
       "source": "KS",
       "title": "Waves solutions (19 problems in source)",
       "book": [
-        "PHY205-B",
+        "PHY205-C",
         "PHY205-D"
       ],
       "kind": "solution",
-      "locator": "8 PDF pages; full review pending",
-      "url": "https://physoly.tech/static/files/KaldaWaves-131.pdf",
-      "status": "pdf_endpoint_opened_not_reviewed",
+      "locator": "Edition 1.2.1, 14 May 2020; 8 PDF pages; solutions to selected Q2,3,9,15–19 only; extracted equations need checking",
+      "url": "https://physoly.tech/static/files/KaldaWaves-121.pdf",
+      "status": "text_locators_verified_screenshots_unavailable",
       "pdf_pages": 8
     },
     {
@@ -5922,6 +5952,80 @@
       "locator": "Section heading Q38–86; PDF p. 30; numbering discrepancy retained",
       "url": "https://physoly.tech/static/files/KaldaThermo-121.pdf#page=30",
       "status": "section_locator_verified_text_only_not_solution_audited"
+    },
+    {
+      "id": "KS-W-02-03",
+      "source": "KS",
+      "title": "Interference and phasor superposition",
+      "book": [
+        "PHY205-D"
+      ],
+      "kind": "solution locator",
+      "locator": "Q2–3; PDF pp. 3–4; formula extraction requires checking",
+      "url": "https://physoly.tech/static/files/KaldaWaves-121.pdf#page=3",
+      "status": "text_locator_verified_solution_not_validated"
+    },
+    {
+      "id": "KS-W-09",
+      "source": "KS",
+      "title": "Three polarizers",
+      "book": [
+        "PHY205-D"
+      ],
+      "kind": "solution locator",
+      "locator": "Q9; PDF p. 4",
+      "url": "https://physoly.tech/static/files/KaldaWaves-121.pdf#page=4",
+      "status": "text_locator_verified_solution_not_validated"
+    },
+    {
+      "id": "KS-W-15",
+      "source": "KS",
+      "title": "Thin-film interference",
+      "book": [
+        "PHY205-D"
+      ],
+      "kind": "solution locator",
+      "locator": "Q15; PDF pp. 4–5",
+      "url": "https://physoly.tech/static/files/KaldaWaves-121.pdf#page=4",
+      "status": "text_locator_verified_solution_not_validated"
+    },
+    {
+      "id": "KS-W-16",
+      "source": "KS",
+      "title": "Optical fibre resonance",
+      "book": [
+        "PHY205-D",
+        "PHY205-C"
+      ],
+      "kind": "solution locator",
+      "locator": "Q16; PDF p. 5",
+      "url": "https://physoly.tech/static/files/KaldaWaves-121.pdf#page=5",
+      "status": "text_locator_verified_solution_not_validated"
+    },
+    {
+      "id": "KS-W-17-18",
+      "source": "KS",
+      "title": "Mirror interference and fibre coupling",
+      "book": [
+        "PHY205-D"
+      ],
+      "kind": "solution locator",
+      "locator": "Q17–18; PDF pp. 6–7",
+      "url": "https://physoly.tech/static/files/KaldaWaves-121.pdf#page=6",
+      "status": "text_locator_verified_solution_not_validated"
+    },
+    {
+      "id": "KS-W-19",
+      "source": "KS",
+      "title": "Optical imaging and diffraction",
+      "book": [
+        "PHY205-C",
+        "PHY205-D"
+      ],
+      "kind": "solution locator",
+      "locator": "Q19; PDF pp. 7–8; extracted equations require checking",
+      "url": "https://physoly.tech/static/files/KaldaWaves-121.pdf#page=7",
+      "status": "text_locator_verified_solution_not_validated"
     }
   ],
   "scope": "Bibliographic and TOC mapping only. No third-party PDF mirrors. URLs may point to collection pages rather than individual files; review status is explicit. English and Vietnamese curriculum titles are editorial; external resource titles retain original language. SJPO entries are source occurrences, not unique exam questions. Direct PDF endpoints checked where indicated, no full-text review. Mathematics subsection locators are TOC-derived; no claim of full review."
