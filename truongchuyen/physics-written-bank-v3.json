@@ -1,0 +1,837 @@
+{
+  "version": "3.3",
+  "items": [
+    {
+      "id": "PHY101-B-1.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 1,
+      "skill": {
+        "en": "Similarity and optical geometry",
+        "vi": "Đồng dạng và hình học quang học"
+      },
+      "stem": {
+        "en": "A 1.5 m pole casts a 2 m shadow; a tower casts 18 m. Find tower height under the same conditions.",
+        "vi": "Cọc 1,5 m có bóng 2 m; tháp có bóng 18 m. Tìm chiều cao tháp."
+      },
+      "solution": {
+        "en": "$H=18(1.5/2)=13.5$ m.",
+        "vi": "$H=18(1{,}5/2)=13{,}5$ m."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-1.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 1,
+      "skill": {
+        "en": "Similarity and optical geometry",
+        "vi": "Đồng dạng và hình học quang học"
+      },
+      "stem": {
+        "en": "A pinhole image of a 30 cm object at distance 2 m is 6 mm high. Find screen distance.",
+        "vi": "Ảnh lỗ kim của vật 30 cm ở xa 2 m cao 6 mm. Tìm khoảng cách màn."
+      },
+      "solution": {
+        "en": "$d_i=2(0.006/0.30)=0.040$ m.",
+        "vi": "$d_i=2(0{,}006/0{,}30)=0{,}040$ m."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-1.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 1,
+      "skill": {
+        "en": "Similarity and optical geometry",
+        "vi": "Đồng dạng và hình học quang học"
+      },
+      "stem": {
+        "en": "A ray makes 25 degrees with a plane mirror surface. Find incidence and reflection angles.",
+        "vi": "Tia hợp mặt gương phẳng 25 độ. Tìm góc tới và phản xạ."
+      },
+      "solution": {
+        "en": "Normal is perpendicular to surface: $i=90^\\circ-25^\\circ=65^\\circ=r$.",
+        "vi": "Pháp tuyến vuông góc mặt: $i=90^\\circ-25^\\circ=65^\\circ=r$."
+      },
+      "difficulty": "application",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-1.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 1,
+      "skill": {
+        "en": "Similarity and optical geometry",
+        "vi": "Đồng dạng và hình học quang học"
+      },
+      "stem": {
+        "en": "A lamp is at height 3 m, a 1 m rod stands 2 m horizontally from the lamp base. On level ground find the rod's shadow length beyond its foot.",
+        "vi": "Đèn cao 3 m, cọc cao 1 m cách chân đèn 2 m theo phương ngang. Tìm chiều dài bóng kể từ chân cọc trên đất ngang."
+      },
+      "solution": {
+        "en": "Let shadow length s. Similar triangles give $3/(2+s)=1/s$, so $3s=2+s$ and $s=1$ m.",
+        "vi": "Gọi bóng dài s. Đồng dạng cho $3/(2+s)=1/s$, nên $3s=2+s$, $s=1$ m."
+      },
+      "difficulty": "transfer",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-2.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 2,
+      "skill": {
+        "en": "Trigonometry, vectors and navigation",
+        "vi": "Lượng giác, vector và dẫn đường"
+      },
+      "stem": {
+        "en": "Resolve a 20 N force at 60 degrees above +x.",
+        "vi": "Phân tích lực 20 N hợp 60 độ phía trên +x."
+      },
+      "solution": {
+        "en": "$F_x=10$ N; $F_y=10\\sqrt3$ N.",
+        "vi": "$F_x=10$ N; $F_y=10\\sqrt3$ N."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-2.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 2,
+      "skill": {
+        "en": "Trigonometry, vectors and navigation",
+        "vi": "Lượng giác, vector và dẫn đường"
+      },
+      "stem": {
+        "en": "Add vectors (−3,4) and (5,−1) in metres; find magnitude.",
+        "vi": "Cộng vector (−3,4) và (5,−1) theo mét; tìm độ lớn."
+      },
+      "solution": {
+        "en": "Sum $(2,3)$ m; magnitude $\\sqrt{13}$ m.",
+        "vi": "Tổng $(2,3)$ m; độ lớn $\\sqrt{13}$ m."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-2.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 2,
+      "skill": {
+        "en": "Trigonometry, vectors and navigation",
+        "vi": "Lượng giác, vector và dẫn đường"
+      },
+      "stem": {
+        "en": "A boat moves at 5 m/s relative to water; current is 3 m/s. Find across speed when heading to land opposite.",
+        "vi": "Thuyền đi 5 m/s so với nước; dòng 3 m/s. Tìm tốc độ ngang khi hướng tới điểm đối diện."
+      },
+      "solution": {
+        "en": "Upstream component 3 m/s; across $\\sqrt{25-9}=4$ m/s.",
+        "vi": "Thành phần ngược dòng 3 m/s; ngang $\\sqrt{25-9}=4$ m/s."
+      },
+      "difficulty": "application",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-2.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 2,
+      "skill": {
+        "en": "Trigonometry, vectors and navigation",
+        "vi": "Lượng giác, vector và dẫn đường"
+      },
+      "stem": {
+        "en": "Two forces have magnitudes 6 N and 8 N. Can their resultant be 1 N? Can it be 10 N? Explain.",
+        "vi": "Hai lực có độ lớn 6 N và 8 N. Hợp lực có thể là 1 N? 10 N? Giải thích."
+      },
+      "solution": {
+        "en": "Range 2 to 14 N. 1 N is impossible; 10 N occurs at a right angle by Pythagoras.",
+        "vi": "Miền 2 đến 14 N. 1 N không thể; 10 N xảy ra khi vuông góc theo Pythagoras."
+      },
+      "difficulty": "transfer",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-3.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 3,
+      "skill": {
+        "en": "Graphs, gradients and accumulated quantities",
+        "vi": "Đồ thị, độ dốc và đại lượng tích lũy"
+      },
+      "stem": {
+        "en": "Position rises from 2 m to 14 m over 3 s on a straight x–t segment. Find velocity.",
+        "vi": "Tọa độ tăng từ 2 m lên 14 m trong 3 s trên đoạn thẳng x–t. Tìm vận tốc."
+      },
+      "solution": {
+        "en": "$v=(14-2)/3=4$ m/s.",
+        "vi": "$v=(14-2)/3=4$ m/s."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-3.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 3,
+      "skill": {
+        "en": "Graphs, gradients and accumulated quantities",
+        "vi": "Đồ thị, độ dốc và đại lượng tích lũy"
+      },
+      "stem": {
+        "en": "Velocity is 3 m/s for 4 s then −2 m/s for 3 s. Find displacement and distance.",
+        "vi": "Vận tốc 3 m/s trong 4 s rồi −2 m/s trong 3 s. Tìm độ dời, quãng đường."
+      },
+      "solution": {
+        "en": "$12-6=6$ m displacement; $12+6=18$ m distance.",
+        "vi": "Độ dời $12-6=6$ m; quãng đường $12+6=18$ m."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-3.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 3,
+      "skill": {
+        "en": "Graphs, gradients and accumulated quantities",
+        "vi": "Đồ thị, độ dốc và đại lượng tích lũy"
+      },
+      "stem": {
+        "en": "A U–I graph is linear through (0.1 A,2 V) and (0.3 A,6 V). Find slope and intercept.",
+        "vi": "Đồ thị U–I tuyến tính qua (0,1 A;2 V) và (0,3 A;6 V). Tìm độ dốc và giao trục."
+      },
+      "solution": {
+        "en": "Slope $(6-2)/(0.3-0.1)=20$ V/A = 20 ohms; intercept $2-20(0.1)=0$ V.",
+        "vi": "Độ dốc $(6-2)/(0{,}3-0{,}1)=20$ V/A = 20 ohm; giao trục $2-20(0{,}1)=0$ V."
+      },
+      "difficulty": "application",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-3.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 3,
+      "skill": {
+        "en": "Graphs, gradients and accumulated quantities",
+        "vi": "Đồ thị, độ dốc và đại lượng tích lũy"
+      },
+      "stem": {
+        "en": "A 100 W lamp runs for 15 min. Express energy in J and Wh.",
+        "vi": "Đèn 100 W hoạt động 15 phút. Biểu diễn năng lượng theo J và Wh."
+      },
+      "solution": {
+        "en": "$E=100(900)=90000$ J; $100(0.25)=25$ Wh.",
+        "vi": "$E=100(900)=90000$ J; $100(0{,}25)=25$ Wh."
+      },
+      "difficulty": "transfer",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-4.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 4,
+      "skill": {
+        "en": "Geometric optimization and model transfer",
+        "vi": "Tối ưu hình học và chuyển giao mô hình"
+      },
+      "stem": {
+        "en": "A rectangle has perimeter 28 m. Find maximum area.",
+        "vi": "Hình chữ nhật chu vi 28 m. Tìm diện tích lớn nhất."
+      },
+      "solution": {
+        "en": "$A=x(14-x)=49-(x-7)^2$; max 49 m$^2$ at 7 by 7.",
+        "vi": "$A=x(14-x)=49-(x-7)^2$; cực đại 49 m$^2$ khi 7 x 7."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-4.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 4,
+      "skill": {
+        "en": "Geometric optimization and model transfer",
+        "vi": "Tối ưu hình học và chuyển giao mô hình"
+      },
+      "stem": {
+        "en": "A=(0,3), B=(8,1), mirror y=0. Find reflection point and length.",
+        "vi": "A=(0,3), B=(8,1), gương y=0. Tìm điểm phản xạ và chiều dài."
+      },
+      "solution": {
+        "en": "Reflect B to $(8,-1)$; fraction $3/4$ gives P=(6,0); length $\\sqrt{64+16}=4\\sqrt5$.",
+        "vi": "Phản xạ B thành $(8,-1)$; tỉ phần $3/4$ cho P=(6,0); độ dài $\\sqrt{64+16}=4\\sqrt5$."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-4.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 4,
+      "skill": {
+        "en": "Geometric optimization and model transfer",
+        "vi": "Tối ưu hình học và chuyển giao mô hình"
+      },
+      "stem": {
+        "en": "A 15 N force moves a crate 4 m. Compare work for angles 0, 60 and 90 degrees.",
+        "vi": "Lực 15 N dịch thùng 4 m. So sánh công với góc 0, 60, 90 độ."
+      },
+      "solution": {
+        "en": "$W=60\\cos\\theta$: 60 J, 30 J, 0 J. Net work may include other forces.",
+        "vi": "$W=60\\cos\\theta$: 60 J, 30 J, 0 J. Công tổng có thể gồm lực khác."
+      },
+      "difficulty": "application",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY101-B-4.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 1,
+      "module": "PHY101-B",
+      "chapter": 4,
+      "skill": {
+        "en": "Geometric optimization and model transfer",
+        "vi": "Tối ưu hình học và chuyển giao mô hình"
+      },
+      "stem": {
+        "en": "Why might a shortest-distance route not minimize time when crossing two materials with different wave speeds? Give a counterexample using distances and speeds.",
+        "vi": "Vì sao tuyến ngắn nhất có thể không nhanh nhất khi đi qua hai môi trường tốc độ sóng khác nhau? Cho phản ví dụ bằng khoảng cách và tốc độ."
+      },
+      "solution": {
+        "en": "Time sums $d_i/v_i$, not distances. Route A: 4 m slow region at 1 m/s and 1 m fast at 5 m/s gives 4.2 s. Route B: 1 m slow and 5 m fast gives 2 s despite 6 m versus 5 m. Actual feasible geometry must be checked.",
+        "vi": "Thời gian cộng $d_i/v_i$, không cộng riêng độ dài. A: 4 m chậm ở 1 m/s và 1 m nhanh ở 5 m/s mất 4,2 s. B: 1 m chậm, 5 m nhanh mất 2 s dù dài 6 m so với 5 m. Cần kiểm tra hình học khả thi thực tế."
+      },
+      "difficulty": "transfer",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-1.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 1,
+      "skill": {
+        "en": "First-order ODEs and relaxation",
+        "vi": "ODE bậc nhất và quá trình hồi phục"
+      },
+      "stem": {
+        "en": "Solve dy/dt=−3y, y(0)=8; find half-life.",
+        "vi": "Giải dy/dt=−3y, y(0)=8; tìm thời gian giảm nửa."
+      },
+      "solution": {
+        "en": "$y=8e^{-3t}$; $e^{-3t}=1/2$ gives $t_{1/2}=\\ln2/3$.",
+        "vi": "$y=8e^{-3t}$; $e^{-3t}=1/2$ cho $t_{1/2}=\\ln2/3$."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-1.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 1,
+      "skill": {
+        "en": "First-order ODEs and relaxation",
+        "vi": "ODE bậc nhất và quá trình hồi phục"
+      },
+      "stem": {
+        "en": "A 4 V charged capacitor discharges with RC=0.5 s. Find voltage after 1 s.",
+        "vi": "Tụ nạp 4 V phóng với RC=0,5 s. Tìm điện áp sau 1 s."
+      },
+      "solution": {
+        "en": "$U=4e^{-1/0.5}=4e^{-2}\\approx0.541$ V.",
+        "vi": "$U=4e^{-1/0{,}5}=4e^{-2}\\approx0{,}541$ V."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-1.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 1,
+      "skill": {
+        "en": "First-order ODEs and relaxation",
+        "vi": "ODE bậc nhất và quá trình hồi phục"
+      },
+      "stem": {
+        "en": "A 0.2 kg body falls from rest with b=0.1 kg/s and g=10 m/s². Find terminal speed and speed after 2 s.",
+        "vi": "Vật 0,2 kg rơi từ nghỉ với b=0,1 kg/s, g=10 m/s². Tìm tốc độ giới hạn và sau 2 s."
+      },
+      "solution": {
+        "en": "$v_T=mg/b=20$ m/s; $\\tau=m/b=2$ s; $v(2)=20(1-e^{-1})=12.64$ m/s.",
+        "vi": "$v_T=mg/b=20$ m/s; $\\tau=m/b=2$ s; $v(2)=20(1-e^{-1})=12{,}64$ m/s."
+      },
+      "difficulty": "application",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-1.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 1,
+      "skill": {
+        "en": "First-order ODEs and relaxation",
+        "vi": "ODE bậc nhất và quá trình hồi phục"
+      },
+      "stem": {
+        "en": "Solve y'+y=e^(−t), y(0)=0, and verify.",
+        "vi": "Giải y'+y=e^(−t), y(0)=0 và kiểm tra."
+      },
+      "solution": {
+        "en": "Multiply by $e^t$: $(e^ty)'=1$. Integrate: $e^ty=t$, hence $y=te^{-t}$. Derivative $(1-t)e^{-t}$ plus y equals $e^{-t}$.",
+        "vi": "Nhân $e^t$: $(e^ty)'=1$. Tích phân $e^ty=t$, nên $y=te^{-t}$. Đạo hàm $(1-t)e^{-t}$ cộng y bằng $e^{-t}$."
+      },
+      "difficulty": "transfer",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-2.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 2,
+      "skill": {
+        "en": "Complex numbers, Euler form and phasors",
+        "vi": "Số phức, dạng Euler và giản đồ pha"
+      },
+      "stem": {
+        "en": "Find (2+i)(1−3i).",
+        "vi": "Tìm (2+i)(1−3i)."
+      },
+      "solution": {
+        "en": "$2-6i+i-3i^2=5-5i$.",
+        "vi": "$2-6i+i-3i^2=5-5i$."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-2.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 2,
+      "skill": {
+        "en": "Complex numbers, Euler form and phasors",
+        "vi": "Số phức, dạng Euler và giản đồ pha"
+      },
+      "stem": {
+        "en": "Express z=−1−i in polar form with argument in (−π,π].",
+        "vi": "Biểu diễn z=−1−i dạng cực với argument trong (−π,π]."
+      },
+      "solution": {
+        "en": "$r=\\sqrt2$, $\\phi=-3\\pi/4$, so $z=\\sqrt2e^{-3i\\pi/4}$.",
+        "vi": "$r=\\sqrt2$, $\\phi=-3\\pi/4$, nên $z=\\sqrt2e^{-3i\\pi/4}$."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-2.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 2,
+      "skill": {
+        "en": "Complex numbers, Euler form and phasors",
+        "vi": "Số phức, dạng Euler và giản đồ pha"
+      },
+      "stem": {
+        "en": "For x=0.1cos(20t+0.3), obtain the velocity phasor and real velocity.",
+        "vi": "Với x=0,1cos(20t+0,3), tìm phasor vận tốc và vận tốc thực."
+      },
+      "solution": {
+        "en": "$X=0.1e^{0.3i}$; $V=i20X=2e^{i(0.3+\\pi/2)}$; $v=-2\\sin(20t+0.3)$ m/s.",
+        "vi": "$X=0{,}1e^{0{,}3i}$; $V=i20X=2e^{i(0{,}3+\\pi/2)}$; $v=-2\\sin(20t+0{,}3)$ m/s."
+      },
+      "difficulty": "application",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-2.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 2,
+      "skill": {
+        "en": "Complex numbers, Euler form and phasors",
+        "vi": "Số phức, dạng Euler và giản đồ pha"
+      },
+      "stem": {
+        "en": "Two coherent signals each have amplitude 2 and phase difference 120 degrees. Find combined amplitude.",
+        "vi": "Hai tín hiệu kết hợp mỗi biên độ 2, lệch pha 120 độ. Tìm biên độ tổng."
+      },
+      "solution": {
+        "en": "$2A|\\cos(\\delta/2)|=4\\cos60^\\circ=2$.",
+        "vi": "$2A|\\cos(\\delta/2)|=4\\cos60^\\circ=2$."
+      },
+      "difficulty": "transfer",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-3.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 3,
+      "skill": {
+        "en": "Second-order ODEs: free and damped oscillations",
+        "vi": "ODE bậc hai: dao động tự do và tắt dần"
+      },
+      "stem": {
+        "en": "Find critical b for m=2 kg, k=18 N/m.",
+        "vi": "Tìm b tới hạn với m=2 kg, k=18 N/m."
+      },
+      "solution": {
+        "en": "$b_c=2\\sqrt{mk}=2\\sqrt{36}=12$ kg/s.",
+        "vi": "$b_c=2\\sqrt{mk}=2\\sqrt{36}=12$ kg/s."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-3.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 3,
+      "skill": {
+        "en": "Second-order ODEs: free and damped oscillations",
+        "vi": "ODE bậc hai: dao động tự do và tắt dần"
+      },
+      "stem": {
+        "en": "Solve x''+2x'+5x=0, x(0)=0, x'(0)=4.",
+        "vi": "Giải x''+2x'+5x=0, x(0)=0, x'(0)=4."
+      },
+      "solution": {
+        "en": "Roots $-1\\pm2i$. $x=e^{-t}(A\\cos2t+B\\sin2t)$; A=0, 2B=4, so $x=2e^{-t}\\sin2t$.",
+        "vi": "Nghiệm $-1\\pm2i$. $x=e^{-t}(A\\cos2t+B\\sin2t)$; A=0, 2B=4, nên $x=2e^{-t}\\sin2t$."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-3.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 3,
+      "skill": {
+        "en": "Second-order ODEs: free and damped oscillations",
+        "vi": "ODE bậc hai: dao động tự do và tắt dần"
+      },
+      "stem": {
+        "en": "Solve x''+5x'+6x=0, x(0)=1, x'(0)=0.",
+        "vi": "Giải x''+5x'+6x=0, x(0)=1, x'(0)=0."
+      },
+      "solution": {
+        "en": "Roots -2,-3; $A+B=1$, $-2A-3B=0$, giving A=3,B=-2. $x=3e^{-2t}-2e^{-3t}$.",
+        "vi": "Nghiệm -2,-3; $A+B=1$, $-2A-3B=0$, cho A=3,B=-2. $x=3e^{-2t}-2e^{-3t}$."
+      },
+      "difficulty": "application",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-3.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 3,
+      "skill": {
+        "en": "Second-order ODEs: free and damped oscillations",
+        "vi": "ODE bậc hai: dao động tự do và tắt dần"
+      },
+      "stem": {
+        "en": "Successive positive peaks are 8 cm and 4 cm separated by 2 s. Estimate γ and explain the model assumption.",
+        "vi": "Hai đỉnh dương liên tiếp 8 cm và 4 cm cách 2 s. Ước lượng γ và nêu giả thiết."
+      },
+      "solution": {
+        "en": "$\\gamma=\\ln(8/4)/2=\\ln2/2\\approx0.347$ s$^{-1}$. Assumes free linear viscously damped oscillation and same-sign peaks.",
+        "vi": "$\\gamma=\\ln(8/4)/2=\\ln2/2\\approx0{,}347$ s$^{-1}$. Giả sử dao động tự do cản nhớt tuyến tính và hai đỉnh cùng dấu."
+      },
+      "difficulty": "transfer",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-4.1",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 4,
+      "skill": {
+        "en": "Forced response, resonance and AC circuits",
+        "vi": "Đáp ứng cưỡng bức, cộng hưởng và mạch AC"
+      },
+      "stem": {
+        "en": "For ω0=5 rad/s and γ=1 rad/s, compute displacement resonance frequency.",
+        "vi": "Với ω0=5 rad/s, γ=1 rad/s, tính tần số góc cộng hưởng li độ."
+      },
+      "solution": {
+        "en": "$\\omega_r=\\sqrt{25-2}=\\sqrt{23}\\approx4.796$ rad/s.",
+        "vi": "$\\omega_r=\\sqrt{25-2}=\\sqrt{23}\\approx4{,}796$ rad/s."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-4.2",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 4,
+      "skill": {
+        "en": "Forced response, resonance and AC circuits",
+        "vi": "Đáp ứng cưỡng bức, cộng hưởng và mạch AC"
+      },
+      "stem": {
+        "en": "For ω0=4 rad/s and γ=3 rad/s, does a nonzero displacement peak exist?",
+        "vi": "Với ω0=4 rad/s, γ=3 rad/s, có đỉnh li độ ở tần số khác 0 không?"
+      },
+      "solution": {
+        "en": "$\\omega_0^2-2\\gamma^2=16-18<0$. No; maximum at zero frequency.",
+        "vi": "$\\omega_0^2-2\\gamma^2=16-18<0$. Không; cực đại tại tần số 0."
+      },
+      "difficulty": "foundation",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-4.3",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 4,
+      "skill": {
+        "en": "Forced response, resonance and AC circuits",
+        "vi": "Đáp ứng cưỡng bức, cộng hưởng và mạch AC"
+      },
+      "stem": {
+        "en": "At ω=100 rad/s, R=4 ohms, L=0.05 H, C=0.01 F, source peak 10 V. Find impedance, current amplitude and lag.",
+        "vi": "Tại ω=100 rad/s, R=4 ohm, L=0,05 H, C=0,01 F, nguồn đỉnh 10 V. Tìm trở kháng, biên độ dòng và pha trễ."
+      },
+      "solution": {
+        "en": "$Z=4+i(5-1)=4+4i$. $|I|=10/(4\\sqrt2)=1.768$ A; current lags voltage by $\\pi/4$.",
+        "vi": "$Z=4+i(5-1)=4+4i$. $|I|=10/(4\\sqrt2)=1{,}768$ A; dòng trễ áp $\\pi/4$."
+      },
+      "difficulty": "application",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    },
+    {
+      "id": "PHY201-B-4.4",
+      "source_type": "original_written",
+      "format": "constructed_response",
+      "topic": "math",
+      "level": 2,
+      "module": "PHY201-B",
+      "chapter": 4,
+      "skill": {
+        "en": "Forced response, resonance and AC circuits",
+        "vi": "Đáp ứng cưỡng bức, cộng hưởng và mạch AC"
+      },
+      "stem": {
+        "en": "An RC low-pass has RC=0.02 s. Find gain and phase at ω=50 rad/s and interpret.",
+        "vi": "Bộ lọc thông thấp RC có RC=0,02 s. Tìm độ lợi và pha tại ω=50 rad/s, diễn giải."
+      },
+      "solution": {
+        "en": "$\\omega RC=1$, so gain $1/\\sqrt2$, phase $-\\pi/4$. This is the cutoff: output peak is 70.7 percent of input peak.",
+        "vi": "$\\omega RC=1$, nên độ lợi $1/\\sqrt2$, pha $-\\pi/4$. Đây là điểm cắt: biên độ đầu ra 70,7 phần trăm đầu vào."
+      },
+      "difficulty": "transfer",
+      "review_status": "draft_not_independently_reviewed",
+      "rights": "original_draft",
+      "source": "V-TALENT textbook series",
+      "assessment_eligible": false
+    }
+  ]
+}
