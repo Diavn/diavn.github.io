@@ -1,5 +1,5 @@
 {
-  "version": "6.6.0",
+  "version": "7.2.2",
   "date": "2026-11-28",
   "sources": [
     {
@@ -363,7 +363,15 @@
         "revision_target": "relative motion, piecewise models, graphical and algebraic solutions",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
       },
-      "topic_page": "topic-phy102-a.html"
+      "topic_page": "topic-phy102-a.html",
+      "foundation_v722": {
+        "chapters": 1,
+        "practice_count": 2,
+        "figures": 2,
+        "learning_page": "physics-mechanics-foundations-v722.html",
+        "status": "original_synthesis_draft",
+        "sources": "HRW10, YF13, selected Morin and HyperPhysics concept references"
+      }
     },
     {
       "level": 1,
@@ -404,7 +412,15 @@
         "revision_target": "FBD, constraints, static friction, tipping",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
       },
-      "topic_page": "topic-phy102-b.html"
+      "topic_page": "topic-phy102-b.html",
+      "foundation_v722": {
+        "chapters": 1,
+        "practice_count": 2,
+        "figures": 2,
+        "learning_page": "physics-mechanics-foundations-v722.html",
+        "status": "original_synthesis_draft",
+        "sources": "HRW10, YF13, selected Morin and HyperPhysics concept references"
+      }
     },
     {
       "level": 1,
@@ -492,7 +508,15 @@
         "revision_target": "work sign, energy graphs, loss and power",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
       },
-      "topic_page": "topic-phy102-d.html"
+      "topic_page": "topic-phy102-d.html",
+      "foundation_v722": {
+        "chapters": 1,
+        "practice_count": 2,
+        "figures": 2,
+        "learning_page": "physics-mechanics-foundations-v722.html",
+        "status": "original_synthesis_draft",
+        "sources": "HRW10, YF13, selected Morin and HyperPhysics concept references"
+      }
     },
     {
       "level": 1,
@@ -890,7 +914,15 @@
         "chapter_diagrams": 4
       },
       "review_status": "illustrated_draft_not_independently_reviewed",
-      "topic_page": "topic-phy202-a.html"
+      "topic_page": "topic-phy202-a.html",
+      "foundation_v722": {
+        "chapters": 1,
+        "practice_count": 2,
+        "figures": 2,
+        "learning_page": "physics-mechanics-foundations-v722.html",
+        "status": "original_synthesis_draft",
+        "sources": "HRW10, YF13, selected Morin and HyperPhysics concept references"
+      }
     },
     {
       "level": 2,
@@ -932,7 +964,15 @@
         "chapter_diagrams": 2
       },
       "review_status": "illustrated_draft_not_independently_reviewed",
-      "topic_page": "topic-phy202-b.html"
+      "topic_page": "topic-phy202-b.html",
+      "foundation_v722": {
+        "chapters": 1,
+        "practice_count": 2,
+        "figures": 2,
+        "learning_page": "physics-mechanics-foundations-v722.html",
+        "status": "original_synthesis_draft",
+        "sources": "HRW10, YF13, selected Morin and HyperPhysics concept references"
+      }
     },
     {
       "level": 2,
@@ -974,7 +1014,15 @@
         "chapter_diagrams": 2
       },
       "review_status": "illustrated_draft_not_independently_reviewed",
-      "topic_page": "topic-phy202-c.html"
+      "topic_page": "topic-phy202-c.html",
+      "foundation_v722": {
+        "chapters": 1,
+        "practice_count": 2,
+        "figures": 2,
+        "learning_page": "physics-mechanics-foundations-v722.html",
+        "status": "original_synthesis_draft",
+        "sources": "HRW10, YF13, selected Morin and HyperPhysics concept references"
+      }
     },
     {
       "level": 2,
@@ -1016,7 +1064,15 @@
         "chapter_diagrams": 2
       },
       "review_status": "illustrated_draft_not_independently_reviewed",
-      "topic_page": "topic-phy202-d.html"
+      "topic_page": "topic-phy202-d.html",
+      "foundation_v722": {
+        "chapters": 1,
+        "practice_count": 2,
+        "figures": 2,
+        "learning_page": "physics-mechanics-foundations-v722.html",
+        "status": "original_synthesis_draft",
+        "sources": "HRW10, YF13, selected Morin and HyperPhysics concept references"
+      }
     },
     {
       "level": 2,
@@ -1058,7 +1114,15 @@
         "chapter_diagrams": 2
       },
       "review_status": "illustrated_draft_not_independently_reviewed",
-      "topic_page": "topic-phy202-e.html"
+      "topic_page": "topic-phy202-e.html",
+      "foundation_v722": {
+        "chapters": 1,
+        "practice_count": 2,
+        "figures": 2,
+        "learning_page": "physics-mechanics-foundations-v722.html",
+        "status": "original_synthesis_draft",
+        "sources": "HRW10, YF13, selected Morin and HyperPhysics concept references"
+      }
     },
     {
       "level": 2,
@@ -9753,9 +9817,9 @@
         ],
         "candidate_page": "physics-volume02-v62.html",
         "status": "illustrated_integrated_candidate",
-        "candidate_chapters": 10,
-        "candidate_practice_count": 26,
-        "candidate_figures": 10
+        "candidate_chapters": 13,
+        "candidate_practice_count": 32,
+        "candidate_figures": 16
       },
       {
         "id": "V03",
@@ -9772,9 +9836,9 @@
         ],
         "candidate_page": "physics-volume03-v62.html",
         "status": "illustrated_integrated_candidate",
-        "candidate_chapters": 23,
-        "candidate_practice_count": 49,
-        "candidate_figures": 26
+        "candidate_chapters": 28,
+        "candidate_practice_count": 59,
+        "candidate_figures": 36
       },
       {
         "id": "V04",
