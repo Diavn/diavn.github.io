@@ -80,6 +80,10 @@ jobs:
           git add truongchuyen/physics-pdfs/*.pdf truongchuyen/physics-pdf-library.html
           if ! git diff --cached --quiet; then
             git commit -m "Publish 18 compiled physics review-draft PDFs and PDF-only library"
-            git pull --rebase origin main
-            git push origin HEAD:main
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 2
+            done
+            exit 1
           fi
