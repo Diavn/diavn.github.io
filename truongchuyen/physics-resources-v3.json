@@ -1,5 +1,5 @@
 {
-  "version": "4.0",
+  "version": "5.1",
   "date": "2026-11-28",
   "sources": [
     {
@@ -134,11 +134,14 @@
         "en": "Sensor calibration",
         "vi": "Hiệu chuẩn cảm biến"
       },
-      "status": "draft_exists",
+      "status": "online_draft",
       "prerequisite": "Basic fractions, powers of ten and equations",
       "chapters": 4,
-      "worked_examples": 12,
-      "practice_count": 20
+      "worked_examples": 16,
+      "practice_count": 32,
+      "edition": "5.1",
+      "review_status": "expanded_original_draft_not_independently_reviewed",
+      "learning_page": "physics-math-level1-v51.html"
     },
     {
       "level": 1,
@@ -155,11 +158,14 @@
         "en": "Navigation and mapping",
         "vi": "Dẫn đường và bản đồ"
       },
-      "status": "draft_exists",
+      "status": "online_draft",
       "prerequisite": "PHY101-A and basic geometry",
       "chapters": 4,
-      "worked_examples": 8,
-      "practice_count": 16
+      "worked_examples": 12,
+      "practice_count": 28,
+      "edition": "5.1",
+      "review_status": "expanded_original_draft_not_independently_reviewed",
+      "learning_page": "physics-math-level1-v51.html"
     },
     {
       "level": 1,
@@ -5545,7 +5551,7 @@
       "kind": "subsection locator",
       "locator": "§5.1.1, printed p. 20; PDF p. 20",
       "url": "https://tchlabs.net/physics/SJPO.pdf#page=20",
-      "status": "toc_mapped_not_full_review"
+      "status": "selected_text_rechecked_page_image_unavailable"
     },
     {
       "id": "SJ-SEC-5.1.2",
@@ -5557,7 +5563,7 @@
       "kind": "subsection locator",
       "locator": "§5.1.2, printed p. 21; PDF p. 21",
       "url": "https://tchlabs.net/physics/SJPO.pdf#page=21",
-      "status": "toc_mapped_not_full_review"
+      "status": "selected_text_rechecked_page_image_unavailable"
     },
     {
       "id": "SJ-SEC-5.1.3",
@@ -5569,7 +5575,7 @@
       "kind": "subsection locator",
       "locator": "§5.1.3, printed p. 21; PDF p. 21",
       "url": "https://tchlabs.net/physics/SJPO.pdf#page=21",
-      "status": "toc_mapped_not_full_review"
+      "status": "selected_text_rechecked_page_image_unavailable"
     },
     {
       "id": "SJ-SEC-5.1.4",
@@ -5827,7 +5833,7 @@
       "locator": "§4.3, p. 15",
       "url": "https://tchlabs.net/physics/SJPO.pdf#page=15",
       "kind": "subsection locator",
-      "status": "toc_mapped_not_full_review"
+      "status": "selected_text_rechecked_page_image_unavailable"
     },
     {
       "id": "KS-EM-01",
