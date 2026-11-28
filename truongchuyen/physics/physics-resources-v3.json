@@ -1,5 +1,5 @@
 {
-  "version": "6.2",
+  "version": "6.3",
   "date": "2026-11-28",
   "sources": [
     {
@@ -290,7 +290,8 @@
         "advanced_practice": "DM14 §1.1.2 dimension check",
         "revision_target": "SI, scaling, estimation and uncertainty; avoid unitless numbers",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy101-a.html"
     },
     {
       "level": 1,
@@ -323,7 +324,8 @@
         "advanced_practice": "DM14 ch2–3",
         "revision_target": "vectors, signed graph areas, geometry and inverse tasks",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy101-b.html"
     },
     {
       "level": 1,
@@ -360,7 +362,8 @@
         "advanced_practice": "DM14 §2.3, §3.3; FMA19 topic tables",
         "revision_target": "relative motion, piecewise models, graphical and algebraic solutions",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy102-a.html"
     },
     {
       "level": 1,
@@ -400,7 +403,8 @@
         "advanced_practice": "DM14 §4.3, §7.3, ch9; FMA19",
         "revision_target": "FBD, constraints, static friction, tipping",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy102-b.html"
     },
     {
       "level": 1,
@@ -422,9 +426,9 @@
       "chapters": 2,
       "worked_examples": 2,
       "practice_count": 4,
-      "edition": "5.2",
-      "learning_page": "physics-mechanics-level1-v52.html",
-      "review_status": "companion_draft_not_independently_reviewed",
+      "edition": "5.5",
+      "learning_page": "physics-thermal-level2-v55.html",
+      "review_status": "illustrated_draft_not_independently_reviewed",
       "companion": {
         "chapters": 3,
         "worked_examples": 3,
@@ -440,7 +444,14 @@
         "advanced_practice": "FMA19 buoyancy topics via difficulty tables",
         "revision_target": "pressure, flotation, inverse density, scale readings",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "extension_v55": {
+        "chapters": 1,
+        "practice_count": 2,
+        "chapter_diagrams": 1,
+        "retains_prior_volume": true
+      },
+      "topic_page": "topic-phy102-c.html"
     },
     {
       "level": 1,
@@ -480,7 +491,8 @@
         "advanced_practice": "DM14 §5.3; FMA19",
         "revision_target": "work sign, energy graphs, loss and power",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "topic_page": "topic-phy102-d.html"
     },
     {
       "level": 1,
@@ -510,7 +522,17 @@
         "advanced_practice": "YF13 ch17–20",
         "revision_target": "heat balance, phase changes, losses",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.5",
+      "learning_page": "physics-thermal-level2-v55.html",
+      "extension_v55": {
+        "chapters": 2,
+        "practice_count": 4,
+        "chapter_diagrams": 2,
+        "retains_prior_volume": true
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed",
+      "topic_page": "topic-phy103-a.html"
     },
     {
       "level": 1,
@@ -701,7 +723,8 @@
         "retains_prior_volume": true,
         "chapter_diagrams": 5
       },
-      "review_status": "expanded_original_draft_not_independently_reviewed"
+      "review_status": "expanded_original_draft_not_independently_reviewed",
+      "topic_page": "topic-phy201-a.html"
     },
     {
       "level": 2,
@@ -742,7 +765,8 @@
         "retains_prior_volume": true,
         "chapter_diagrams": 5
       },
-      "review_status": "expanded_original_draft_not_independently_reviewed"
+      "review_status": "expanded_original_draft_not_independently_reviewed",
+      "topic_page": "topic-phy201-b.html"
     },
     {
       "level": 2,
@@ -783,7 +807,8 @@
         "retains_prior_volume": true,
         "chapter_diagrams": 8
       },
-      "review_status": "expanded_original_draft_not_independently_reviewed"
+      "review_status": "expanded_original_draft_not_independently_reviewed",
+      "topic_page": "topic-phy201-c.html"
     },
     {
       "level": 2,
@@ -821,7 +846,8 @@
         "retains_prior_volume": true,
         "chapter_diagrams": 4
       },
-      "review_status": "illustrated_draft_not_independently_reviewed"
+      "review_status": "illustrated_draft_not_independently_reviewed",
+      "topic_page": "topic-phy202-a.html"
     },
     {
       "level": 2,
@@ -862,7 +888,8 @@
         "retains_prior_volume": true,
         "chapter_diagrams": 2
       },
-      "review_status": "illustrated_draft_not_independently_reviewed"
+      "review_status": "illustrated_draft_not_independently_reviewed",
+      "topic_page": "topic-phy202-b.html"
     },
     {
       "level": 2,
@@ -903,7 +930,8 @@
         "retains_prior_volume": true,
         "chapter_diagrams": 2
       },
-      "review_status": "illustrated_draft_not_independently_reviewed"
+      "review_status": "illustrated_draft_not_independently_reviewed",
+      "topic_page": "topic-phy202-c.html"
     },
     {
       "level": 2,
@@ -944,7 +972,8 @@
         "retains_prior_volume": true,
         "chapter_diagrams": 2
       },
-      "review_status": "illustrated_draft_not_independently_reviewed"
+      "review_status": "illustrated_draft_not_independently_reviewed",
+      "topic_page": "topic-phy202-d.html"
     },
     {
       "level": 2,
@@ -985,7 +1014,8 @@
         "retains_prior_volume": true,
         "chapter_diagrams": 2
       },
-      "review_status": "illustrated_draft_not_independently_reviewed"
+      "review_status": "illustrated_draft_not_independently_reviewed",
+      "topic_page": "topic-phy202-e.html"
     },
     {
       "level": 2,
@@ -1015,7 +1045,17 @@
         "advanced_practice": "FMA19 topic tables; DM14 not a fluids source",
         "revision_target": "continuity, Bernoulli, hydrostatics and model limits",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.5",
+      "learning_page": "physics-thermal-level2-v55.html",
+      "extension_v55": {
+        "chapters": 4,
+        "practice_count": 8,
+        "chapter_diagrams": 4,
+        "retains_prior_volume": true
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed",
+      "topic_page": "topic-phy202-f.html"
     },
     {
       "level": 2,
@@ -1045,7 +1085,17 @@
         "advanced_practice": "YF13 ch18 end problems",
         "revision_target": "ideal gas, rms speed, molecular interpretation",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.5",
+      "learning_page": "physics-thermal-level2-v55.html",
+      "extension_v55": {
+        "chapters": 2,
+        "practice_count": 4,
+        "chapter_diagrams": 2,
+        "retains_prior_volume": true
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed",
+      "topic_page": "topic-phy203-a.html"
     },
     {
       "level": 2,
@@ -1075,7 +1125,17 @@
         "advanced_practice": "YF13 ch19 end problems",
         "revision_target": "first law, path dependence, cycles",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.5",
+      "learning_page": "physics-thermal-level2-v55.html",
+      "extension_v55": {
+        "chapters": 3,
+        "practice_count": 6,
+        "chapter_diagrams": 3,
+        "retains_prior_volume": true
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed",
+      "topic_page": "topic-phy203-b.html"
     },
     {
       "level": 2,
@@ -1105,7 +1165,17 @@
         "advanced_practice": "statistical physics extension needs specialist source",
         "revision_target": "entropy, reversibility, microstates",
         "status": "chapter_or_selected_page_mapping_not_item_validated"
-      }
+      },
+      "edition": "5.5",
+      "learning_page": "physics-thermal-level2-v55.html",
+      "extension_v55": {
+        "chapters": 3,
+        "practice_count": 6,
+        "chapter_diagrams": 3,
+        "retains_prior_volume": true
+      },
+      "review_status": "illustrated_draft_not_independently_reviewed",
+      "topic_page": "topic-phy203-c.html"
     },
     {
       "level": 2,
@@ -9500,7 +9570,12 @@
           "PHY203-A",
           "PHY203-B",
           "PHY203-C"
-        ]
+        ],
+        "candidate_page": "physics-volume04-v63.html",
+        "status": "illustrated_integrated_candidate",
+        "candidate_chapters": 32,
+        "candidate_practice_count": 67,
+        "candidate_figures": 32
       },
       {
         "id": "V05",
@@ -9601,7 +9676,8 @@
       "chapter_schematic_required": true,
       "problem_diagram_when_geometry_requires": true,
       "source": "original inline SVG; PDF vector conversion",
-      "scope": "V01–V03 candidate chapters; other volumes pending"
-    }
+      "scope": "V01–V04 integrated candidates; related diagrams in older V04 chapters not exact exercise diagrams"
+    },
+    "canonical_catalog": "truongchuyen/physics/"
   }
 }
