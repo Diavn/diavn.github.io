@@ -1,5 +1,5 @@
 {
-  "version": "3.9",
+  "version": "4.0",
   "date": "2026-11-28",
   "sources": [
     {
@@ -166,8 +166,11 @@
         "en": "Structures and biomechanics",
         "vi": "Kết cấu và cơ sinh học"
       },
-      "status": "planned",
-      "prerequisite": "PHY101-A / PHY101-B as needed"
+      "status": "online_draft",
+      "prerequisite": "PHY101-A / PHY101-B as needed",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 1,
@@ -184,8 +187,11 @@
         "en": "Ocean engineering",
         "vi": "Kỹ thuật đại dương"
       },
-      "status": "planned",
-      "prerequisite": "PHY101-A / PHY101-B as needed"
+      "status": "online_draft",
+      "prerequisite": "PHY101-A / PHY101-B as needed",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 1,
@@ -202,8 +208,11 @@
         "en": "Regenerative braking",
         "vi": "Phanh tái sinh"
       },
-      "status": "planned",
-      "prerequisite": "PHY101-A / PHY101-B as needed"
+      "status": "online_draft",
+      "prerequisite": "PHY101-A / PHY101-B as needed",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 1,
@@ -304,8 +313,11 @@
         "en": "Engineering estimation",
         "vi": "Ước lượng kỹ thuật"
       },
-      "status": "planned",
-      "prerequisite": "PHY101-A / PHY101-B as needed"
+      "status": "online_draft",
+      "prerequisite": "PHY101-A / PHY101-B as needed",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 1,
@@ -385,8 +397,11 @@
         "en": "Inverse problems",
         "vi": "Bài toán ngược"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -904,8 +919,11 @@
         "en": "Instrument design",
         "vi": "Thiết kế thiết bị"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -922,8 +940,11 @@
         "en": "Cross-topic modelling",
         "vi": "Mô hình hóa liên chuyên đề"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -940,8 +961,11 @@
         "en": "Scientific argumentation",
         "vi": "Lập luận khoa học"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -958,8 +982,11 @@
         "en": "Digital twins",
         "vi": "Bản sao số"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     },
     {
       "level": 2,
@@ -976,8 +1003,11 @@
         "en": "Interdisciplinary research",
         "vi": "Nghiên cứu liên ngành"
       },
-      "status": "planned",
-      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject"
+      "status": "online_draft",
+      "prerequisite": "PHY201-A and relevant Level 1 foundations; sequence within subject",
+      "chapters": 2,
+      "worked_examples": 2,
+      "practice_count": 4
     }
   ],
   "records": [
