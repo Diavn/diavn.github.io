@@ -15,7 +15,7 @@
 \begin{document}
 \title{V-TALENT 2045\\ PHY102-A --- Chuyển động, đồ thị và vận tốc tương đối\\\large Level 1 · Cơ học nền tảng · Lớp 8–9}
 \author{Dr. Dang Minh Tuan -- TS. Đặng Minh Tuấn}
-\date{2026 · v1.0}
+\date{2026 · v1.1}
 \maketitle
 \tableofcontents
 \chapter*{Mục tiêu năng lực}\addcontentsline{toc}{chapter}{Mục tiêu năng lực}
@@ -39,6 +39,11 @@ Một học sinh đi 120 m về phía đông trong 60 s, chờ 30 s, rồi đi 8
 Người đi xe đạp đi hai quãng đường bằng nhau với tốc độ 12 km/h và 18 km/h. Suy ra tốc độ trung bình và so sánh với trung bình cộng.
 
 \textbf{Lời giải.} Gọi mỗi quãng đường là $d$ km. Khi đó $t=d/12+d/18=5d/36$ giờ và $\bar u=2d/(5d/36)=14{,}4$ km/h. Trung bình cộng là 15 km/h. Chặng chậm kéo dài hơn nên có trọng số thời gian lớn hơn; kết quả nằm giữa 12 và 18.
+\section{Ứng dụng và chuyển giao}
+Kỹ sư giao thông ước lượng quãng đường dừng xe từ đồ thị vận tốc--thời gian. Giả sử xe chạy 18 m/s, người lái phản ứng trong 0,75 s rồi phanh chậm dần đều đến khi dừng sau 3 s. Quãng đường phản ứng $18(0{,}75)=13{,}5$ m; quãng đường phanh $\frac12(18)(3)=27$ m, tổng 40,5 m. Gia tốc phanh $-6\,\mathrm{m\,s^{-2}}$. Thiết kế an toàn còn cần dự phòng đường ướt, độ trễ và biến thiên. Dùng đồ thị dự đoán thành phần nào thay đổi nếu thời gian phản ứng tăng gấp đôi. Gia tốc không đổi là mô hình, không bảo đảm hiệu năng ngoài thực tế.
+
+\textbf{Đọc mở rộng theo nguồn:} SW ch 2 pp. 55–62; JP ch 2, problems 2.1–2.4; SJ ch 4 pp. 14–19.
+
 \section{Luyện tập cuối chuyên đề}
 \begin{enumerate}
 \item \textbf{PHY102-A-1.1}. Đi 90 m về bắc trong 45 s và 30 m về nam trong 15 s. Xác định bốn đại lượng chuyển động đã học.
@@ -74,6 +79,11 @@ Sông rộng 120 m. Người bơi với tốc độ 1,5 m/s so với nước the
 \textbf{Lời giải.} Thành phần qua sông 1,5 m/s nên $t=120/1{,}5=80$ s và độ trôi $0{,}9(80)=72$ m. Muốn triệt độ trôi, thành phần hướng thượng lưu cần bằng 0,9 m/s; theo Pythagoras thành phần qua sông $\sqrt{1{,}5^2-0{,}9^2}=1{,}2$ m/s. Do đó $t=100$ s. Đi thẳng đến đối diện lâu hơn vì một phần vận tốc bơi dùng để bù dòng.
 \section{Nhiệm vụ thực nghiệm}
 Quay xe đồ chơi cạnh thước với khoảng thời gian giữa khung hình đã biết. Lấy ít nhất sáu cặp (t,x), vẽ x theo t, ước lượng độ dốc từ hai điểm cách xa rồi so sánh các đoạn. Báo cáo hiệu chuẩn pixel–chiều dài và bất định thời gian. Nếu độ dốc khác nhau vượt bất định, bác bỏ mô hình đều thay vì lấy trung bình để che khác biệt.
+\section{Ứng dụng và chuyển giao}
+Robot dưới nước chuyển động 0,8 m/s so với nước và cần khảo sát theo tuyến vuông góc dòng chảy 0,6 m/s. Muốn đi đúng tuyến, thành phần vận tốc ngược dòng phải bằng 0,6 m/s. Tốc độ ngang dòng $\sqrt{0{,}8^2-0{,}6^2}=0{,}529$ m/s nên tuyến 100 m mất khoảng 189 s. Hướng điều khiển khác hướng quỹ đạo mong muốn. Nếu dòng biến thiên theo độ sâu, mô hình dòng đều không còn đúng; kỹ sư phải cập nhật hướng từ phép đo. Hãy vẽ vector khi dòng nhanh hơn robot và giải thích vì sao không thể triệt độ trôi.
+
+\textbf{Đọc mở rộng theo nguồn:} SW ch 2; KZ M1 (kinematics); Kalda Kinematics v2.0 (advanced reading).
+
 \section{Luyện tập cuối chuyên đề}
 \begin{enumerate}
 \item \textbf{PHY102-A-2.1}. A và B cách nhau 42 km, đi về phía nhau với 12 và 9 km/h. Tính thời gian và vị trí gặp tính từ A.
@@ -105,4 +115,6 @@ OpenStax Physics; PhET; Tracker; kho SJPO. Bài VPhO là phần mở rộng Leve
 \item \textbf{PHY102-A-2.3}. $a=(8-(-4))/6=2$ m/s\textsuperscript{2}. Vận tốc bằng 0 ở $t=2$ s. Tam giác âm có diện tích $-4(2)/2=-4$ m; tam giác dương $8(4)/2=16$ m. Độ dời $12$ m; quãng đường $20$ m.
 \item \textbf{PHY102-A-2.4}. Thời gian nhỏ nhất $240/5=48$ s, độ trôi $3(48)=144$ m. Muốn bù dòng, thành phần ngược dòng 3 m/s và thành phần ngang sông $\sqrt{25-9}=4$ m/s. Thời gian đến đối diện $240/4=60$ s. Kiểm tra tính khả thi: $5>3$.
 \end{enumerate}
+\chapter*{Danh mục nguồn quốc tế}
+\url{https://diavn.github.io/truongchuyen/physics-curriculum.html}
 \end{document}
