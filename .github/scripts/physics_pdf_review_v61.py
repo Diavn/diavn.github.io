@@ -59,6 +59,7 @@ SYMBOLS={"−":"-","×":r"\ensuremath{\times}","≤":r"\ensuremath{\le}","≥":r
 for x,y in zip("⁰¹²³⁴⁵⁶⁷⁸⁹⁻","0123456789-"):SYMBOLS[x]=r"\textsuperscript{"+y+"}"
 for x,y in zip("₀₁₂₃₄₅₆₇₈₉","0123456789"):SYMBOLS[x]=r"\textsubscript{"+y+"}"
 SPECIAL.update(SYMBOLS)
+SPECIAL.update({"≫":r"\ensuremath{\gg}","√":r"\ensuremath{\surd}","∥":r"\ensuremath{\parallel}"})
 SPECIAL.update({"ℓ":r"\ensuremath{\ell}","ₜ":r"\textsubscript{t}","†":r"\ensuremath{\dagger}"})
 def prepare_figures(text, filename):
     counter=0
