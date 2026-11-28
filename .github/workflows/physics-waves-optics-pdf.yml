@@ -1,0 +1,141 @@
+name: Waves optics and modern physics PDF candidates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/physics-waves-optics-pdf.yml'
+      - 'truongchuyen/physics-waves-optics-modern.html'
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-pictures texlive-fonts-recommended fonts-noto-core fonts-dejavu-core poppler-utils latexmk
+      - name: Generate temporary LaTeX sources from bilingual learning page
+        run: |
+          mkdir -p /tmp/waves-optics
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          import re
+          class Reader(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.books={}
+                  self.book=None
+                  self.tag=None
+                  self.buf=[]
+              def handle_starttag(self,tag,attrs):
+                  attrs=dict(attrs)
+                  if tag=='article' and 'data-book' in attrs:
+                      self.book=(attrs['data-book'],attrs['lang'])
+                      self.books[self.book]=[]
+                  if self.book and tag in ('h2','h3','h4','p'):
+                      self.tag=tag
+                      self.buf=[]
+              def handle_data(self,data):
+                  if self.book and self.tag:
+                      self.buf.append(data)
+              def handle_endtag(self,tag):
+                  if self.book and tag==self.tag:
+                      self.books[self.book].append((tag,''.join(self.buf)))
+                      self.tag=None
+                  if tag=='article':
+                      self.book=None
+          r=Reader()
+          r.feed(Path('truongchuyen/physics-waves-optics-modern.html').read_text())
+          assert len(r.books)==20
+          esc={'&':r'\&','%':r'\%','$':r'\$','#':r'\#','_':r'\_','{':r'\{','}':r'\}','\\':r'\textbackslash{}','~':r'\textasciitilde{}','^':r'\textasciicircum{}','≈':r'\ensuremath{\approx}','≤':r'\ensuremath{\le}','≥':r'\ensuremath{\ge}','−':r'\ensuremath{-}','×':r'\ensuremath{\times}','β':r'\ensuremath{\beta}','θ':r'\ensuremath{\theta}','ν':r'\ensuremath{\nu}','ρ':r'\ensuremath{\rho}','µ':r'\ensuremath{\mu}','²':r'\textsuperscript{2}','³':r'\textsuperscript{3}','⁴':r'\textsuperscript{4}'}
+          esc.update({'≪':r'\ensuremath{\ll}','≫':r'\ensuremath{\gg}','⁻':r'\textsuperscript{-}','₀':r'\textsubscript{0}'})
+          esc.update({'μ':r'\ensuremath{\mu}','Ω':r'\ensuremath{\Omega}','σ':r'\ensuremath{\sigma}','λ':r'\ensuremath{\lambda}','₁':r'\textsubscript{1}','₂':r'\textsubscript{2}','₃':r'\textsubscript{3}','₄':r'\textsubscript{4}','ₛ':r'\textsubscript{s}','¹':r'\textsuperscript{1}','⁰':r'\textsuperscript{0}','⁵':r'\textsuperscript{5}','⁶':r'\textsuperscript{6}','⁷':r'\textsuperscript{7}','⁸':r'\textsuperscript{8}','⁹':r'\textsuperscript{9}'})
+          esc.update({'Δ':r'\ensuremath{\Delta}','Φ':r'\ensuremath{\Phi}','γ':r'\ensuremath{\gamma}','π':r'\ensuremath{\pi}','√':r'\ensuremath{\sqrt{\phantom{x}}}','→':r'\ensuremath{\to}','⁻':r'\textsuperscript{-}','⁴':r'\textsuperscript{4}'})
+          esc.update({'δ':r'\ensuremath{\delta}','α':r'\ensuremath{\alpha}','ω':r'\ensuremath{\omega}','τ':r'\ensuremath{\tau}','ℏ':r'\ensuremath{\hbar}','′':r'\ensuremath{\prime}','≠':r'\ensuremath{\ne}','±':r'\ensuremath{\pm}','ₓ':r'\textsubscript{x}','ₛ':r'\textsubscript{s}','⁺':r'\textsuperscript{+}'})
+          def fmt(s):
+              out=[]
+              for i,part in enumerate(re.split(r'(\\\(.*?\\\))',s)):
+                  out.append(part if i%2 else ''.join(esc.get(c,c) for c in part))
+              return ''.join(out)
+          def diagram(code,ch):
+              key=(code,ch)
+              figs={
+              ('PHY103-C',1):r'\draw[thick] (-3,0)--(3,0);\draw[dashed] (0,-2)--(0,2);\draw[->,thick] (-1.5,2)--(0,0);\draw[->,thick] (0,0)--(2,-1.5);\draw[->] (0,0)--(1.5,2);\node at (-2.2,1.2) {$n_1$};\node at (-2.2,-1.2) {$n_2<n_1$};\node at (-.4,1) {$i$};\node at (.5,-1) {$r$};',
+              ('PHY103-C',2):r'\draw[dashed] (-3,0)--(4,0);\draw[very thick] (0,-1.7)--(0,1.7);\draw[->,thick] (-2,0)--(-2,1);\draw[->,thick] (3,0)--(3,-1.5);\draw (-2,1)--(0,1)--(3,-1.5);\draw (-2,1)--(3,-1.5);\fill (1.2,0) circle (.05) node[below] {$F$};',
+              ('PHY103-D',1):r'\draw[fill=gray!20] (-2,-.45) rectangle (2,.45);\node at (-1.4,0) {N};\node at (1.4,0) {S};\foreach \h in {.7,1.1,1.5}{\draw[->,thick] (-2,0) .. controls (-3,\h) and (1,\h+1) .. (2,0);\draw[->,thick] (-2,0) .. controls (-3,-\h) and (1,-\h-1) .. (2,0);}',
+              ('PHY103-D',2):r'\draw[->] (0,0)--(6,0) node[right] {$x$};\draw[thick,domain=0:5.7,samples=80] plot(\x,{.7*sin(180*\x)});\draw[<->] (.5,1)--(2.5,1) node[midway,above] {$\lambda$};',
+              ('PHY105',1):r'\draw[thick] (0,0) rectangle (6,.55);\foreach \x in {0,.5,...,6}{\draw (\x,.55)--(\x,.25);}\foreach \x in {0,1,...,6}{\node[below] at (\x,0) {\x};}\draw[fill=gray!25] (1.3,.7) rectangle (4.2,1.1);\draw[dashed] (1.3,.7)--(1.3,.1) (4.2,.7)--(4.2,.1);',
+              ('PHY105',2):r'\draw[->] (0,0)--(5,0) node[right] {$x$};\draw[->] (0,0)--(0,3.5) node[above] {$F$};\draw[thick] (0,0)--(4,3);\foreach \x/\y in {1/.77,2/1.43,3/2.3,4/3.03}{\fill (\x,\y) circle (.06);}',
+              ('PHY205-A',1):r'\draw[->] (0,0)--(6,0) node[right] {$t$};\draw[->] (0,-1.6)--(0,1.8) node[above] {$x$};\draw[thick,domain=0:5.7,samples=130] plot(\x,{1.3*exp(-.3*\x)*cos(200*\x)});\draw[dashed,domain=0:5.7,samples=50] plot(\x,{1.3*exp(-.3*\x)});\draw[dashed,domain=0:5.7,samples=50] plot(\x,{-1.3*exp(-.3*\x)});',
+              ('PHY205-A',2):r'\draw[very thick] (0,-.6)--(0,1) (7,-.6)--(7,1);\draw[fill=gray!25] (1.6,0) rectangle (2.6,.8) (4.4,0) rectangle (5.4,.8);\draw[thick,decorate,decoration={zigzag,segment length=5pt,amplitude=2pt}] (0,.4)--(1.6,.4) (2.6,.4)--(4.4,.4) (5.4,.4)--(7,.4);\node at (2.1,.4) {$m$};\node at (4.9,.4) {$m$};\node[above] at (3.5,.5) {$K$};\node[above] at (.8,.5) {$k$};\node[above] at (6.2,.5) {$k$};',
+              ('PHY205-B',1):r'\draw[->] (0,0)--(6,0) node[right] {$x$};\draw[thick,domain=0:5.7,samples=100] plot(\x,{.6*sin(180*\x)});\draw[->,thick] (3,1.2)--(4.5,1.2) node[midway,above] {$v$};',
+              ('PHY205-B',2):r'\draw[very thick] (0,-.7)--(0,.7) (6,-.7)--(6,.7);\draw[dashed] (0,0)--(6,0);\draw[thick,domain=0:6,samples=100] plot(\x,{.65*sin(90*\x)});\draw[thick,dashed,domain=0:6,samples=100] plot(\x,{-.65*sin(90*\x)});\foreach \x in {0,2,4,6}{\fill (\x,0) circle (.055);}',
+              ('PHY205-C',1):r'\draw[dashed] (-1,0)--(6,0);\draw[very thick] (0,-1.4)--(0,1.4) (4,-1.4)--(4,1.4);\draw[thick] (-1,.6)--(0,.6)--(4,-1.2)--(5.8,-1.2);\node[above] at (0,1.4) {$L_1$};\node[above] at (4,1.4) {$L_2$};\draw[<->] (0,-1.7)--(4,-1.7) node[midway,below] {$f_1+f_2$};',
+              ('PHY205-C',2):r'\draw[->] (0,0)--(6,0) node[right] {$z$};\draw[thick,domain=0:5.5,samples=100] plot(\x,{.8*cos(130*\x)});\draw[dashed] (0,1)--(5.7,1) (0,-1)--(5.7,-1);\node at (3.3,1.3) {GRIN};',
+              ('PHY205-D',1):r'\draw[very thick] (0,-1.5)--(0,-.6) (0,-.4)--(0,.4) (0,.6)--(0,1.5);\draw[very thick] (5,-1.5)--(5,1.5);\draw[thick] (0,.5)--(5,1.1) (0,-.5)--(5,1.1);\draw[<->] (-.3,-.5)--(-.3,.5) node[midway,left] {$d$};\draw[<->] (0,-1.8)--(5,-1.8) node[midway,below] {$D$};',
+              ('PHY205-D',2):r'\draw[->] (-3,0)--(3,0) node[right] {$\beta/\pi$};\draw[->] (0,0)--(0,2.3) node[above] {$I/I_0$};\draw[thick,domain=-2.8:-.015,samples=140] plot(\x,{2*(sin(180*\x)/(pi*\x))^2});\draw[thick,domain=.015:2.8,samples=140] plot(\x,{2*(sin(180*\x)/(pi*\x))^2});\draw[thick] (-.015,2)--(.015,2);\node[below] at (-1,0) {$-1$};\node[below] at (1,0) {$1$};',
+              ('PHY206-A',1):r'\draw[->] (-2,0)--(2.8,0) node[right] {$x$};\draw[->] (0,0)--(0,3) node[above] {$ct$};\draw[dashed] (0,0)--(2.4,2.4) (0,0)--(-2.4,2.4);\draw[->,thick] (0,0)--(1.6,2.5) node[right] {$ct^\prime$};\draw[->,thick] (0,0)--(2.5,1.6) node[right] {$x^\prime$};',
+              ('PHY206-A',2):r'\draw[->] (0,0)--(5,0) node[right] {$p/(mc)$};\draw[->] (0,0)--(0,3.5) node[above] {$E/(mc^2)$};\draw[thick,domain=0:3,samples=70] plot({1.5*\x},{sqrt(1+\x^2)});\draw[dashed] (0,0)--(4.5,3);\node[left] at (0,1) {$1$};',
+              ('PHY207-C',1):r'\draw[->] (0,0)--(6,0) node[right] {$t/T_{1/2}$};\draw[->] (0,0)--(0,3) node[above] {$N/N_0$};\draw[thick,domain=0:5,samples=100] plot(\x,{2.5*exp(-ln(2)*\x)});\foreach \x in {1,2,3,4}{\draw[dashed] (\x,0)--(\x,{2.5*exp(-ln(2)*\x)});\node[below] at (\x,0) {\x};}',
+              ('PHY207-C',2):r'\draw[thick] (0,2.3)--(2.5,2.3) node[right] {$\sum m_i c^2$};\draw[thick] (0,.6)--(2.5,.6) node[right] {$m_{\rm nucleus}c^2$};\draw[<->,thick] (1.25,.65)--(1.25,2.25) node[midway,right] {$B$};',
+              ('PHY208-A',1):r'\draw[->] (0,0)--(5,0) node[right] {$x$};\draw[->] (0,0)--(0,3) node[above] {$y$};\foreach \x/\y in {1/.8,2/1.5,3/2.15,4/2.6}{\draw (\x,\y-.22)--(\x,\y+.22) (\x-.1,\y-.22)--(\x+.1,\y-.22) (\x-.1,\y+.22)--(\x+.1,\y+.22);\fill (\x,\y) circle (.055);}\draw[dashed] (.6,.45)--(4.4,2.9);',
+              ('PHY208-A',2):r'\draw[->] (0,0)--(5,0) node[right] {$x$};\draw[->] (0,-1.3)--(0,1.4) node[above] {$e$};\foreach \x/\y in {1/1,2/-1,3/-1,4/1}{\draw[gray] (\x,0)--(\x,\y);\fill (\x,\y) circle (.07);}'}
+              return r'\begin{center}\begin{tikzpicture}[scale=1.15]'+figs[key]+r'\end{tikzpicture}\end{center}'
+          for (code,lang),parts in r.books.items():
+              title=parts[0][1]
+              author='TS. Đặng Minh Tuấn' if lang=='vi' else 'Dr. Dang Minh Tuan'
+              pre=r'\documentclass[11pt,a4paper,openany]{book}'+'\n'+r'\usepackage[margin=24mm]{geometry}\usepackage{fontspec}\setmainfont{DejaVu Serif}\usepackage{amsmath,amssymb,tikz,microtype}\usetikzlibrary{decorations.pathmorphing}\usepackage[hidelinks]{hyperref}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\emergencystretch}{2em}'
+              if lang=='vi':
+                  pre+=r'\renewcommand{\chaptername}{Chương}\renewcommand{\contentsname}{Mục lục}'
+              pre+=r'\begin{document}\title{V-TALENT 2045\\'+fmt(title)+r'}\author{'+author+r'}\date{2026 -- '+('Bản thảo V3.9' if lang=='vi' else 'Draft V3.9')+r'}\hypersetup{pdfauthor={'+author+r'}}\maketitle\tableofcontents'
+              body=[]
+              in_appendix=False
+              ch=0
+              for tag,value in parts[2:]:
+                  if tag=='h3':
+                      if value.startswith(('Full solutions','Lời giải chi tiết')):
+                          in_appendix=True
+                          body.append(r'\appendix\chapter{'+fmt(value)+'}')
+                      else:
+                          ch+=1
+                          body.append(r'\chapter{'+fmt(re.sub(r'^\d+\.\s*','',value))+'}'+diagram(code,ch))
+                  elif tag=='h4':
+                      body.append(r'\section{'+fmt(value)+'}')
+                  else:
+                      body.append(fmt(value))
+              assert ch==2
+              (Path('/tmp/waves-optics')/(code+'-'+lang+'.tex')).write_text(pre+'\n\n'+'\n\n'.join(body)+'\n'+r'\end{document}',encoding='utf-8')
+          PY
+      - name: Compile and verify all twenty PDF candidates
+        run: |
+          set -euo pipefail
+          cd /tmp/waves-optics
+          failed=0
+          for f in *.tex; do
+            stem=$(basename "$f" .tex)
+            if ! latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error "$f"; then failed=1; continue; fi
+            pdfinfo "$stem.pdf"
+            pdftotext "$stem.pdf" "$stem.txt"
+            if grep -q 'Missing character:' "$stem.log"; then echo "::error file=$f::Missing glyph"; failed=1; fi
+          done
+          test "$failed" -eq 0
+          python3 - <<'PY'
+          from pathlib import Path
+          import unicodedata
+          pdfs=list(Path('.').glob('*.pdf'))
+          assert len(pdfs)==20
+          for p in pdfs:
+              s=' '.join(unicodedata.normalize('NFC',p.with_suffix('.txt').read_text()).split())
+              author='TS. Đặng Minh Tuấn' if p.stem.endswith('-vi') else 'Dr. Dang Minh Tuan'
+              assert author in s,p
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: waves-optics-pdf-candidates
+          path: /tmp/waves-optics/*.pdf
+          if-no-files-found: error
