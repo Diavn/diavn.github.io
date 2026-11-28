@@ -1,0 +1,66 @@
+name: Physics textbook PDF build
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/physics-pdf.yml'
+permissions:
+  contents: read
+concurrency:
+  group: physics-pdf-candidates
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XeLaTeX and Unicode fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-pictures fonts-noto-core poppler-utils latexmk
+      - name: Compile all existing editions
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/physics-build
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          src=Path('truongchuyen/physics-books')
+          out=Path('/tmp/physics-build')
+          expected={f'{i}-{lang}' for i in ('PHY101-A','PHY101-B','PHY102-A','PHY201-A','PHY201-B','PHY202-A') for lang in ('vi','en')}
+          for stem in sorted(expected):
+              file=src/(stem+'.tex')
+              content=file.read_text(encoding='utf-8')
+              author='TS. Đặng Minh Tuấn' if stem.endswith('-vi') else 'Dr. Dang Minh Tuan'
+              content,n=re.subn(r'\\author\{[^{}]*\}',lambda _: r'\author{'+author+'}',content,count=1)
+              assert n==1, stem
+              content=content.replace(r'\maketitle',r'\hypersetup{pdfauthor={'+author+r'}}'+'\n'+r'\maketitle',1)
+              (out/file.name).write_text(content,encoding='utf-8')
+          PY
+          cd /tmp/physics-build
+          for f in *.tex; do
+            stem=$(basename "$f" .tex)
+            latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error "$f"
+            test -s "$stem.pdf"
+            pdfinfo "$stem.pdf"
+            pdftotext "$stem.pdf" "$stem.txt"
+          done
+          python3 - <<'PY'
+          from pathlib import Path
+          import unicodedata
+          for f in Path('.').glob('*.pdf'):
+              expected='TS. Đặng Minh Tuấn' if f.stem.endswith('-vi') else 'Dr. Dang Minh Tuan'
+              data=' '.join(unicodedata.normalize('NFC',f.with_suffix('.txt').read_text()).split())
+              if expected not in data:
+                  raise SystemExit('Author verification failed: '+f.name)
+          assert len(list(Path('.').glob('*.pdf')))==12
+          PY
+      - name: Upload PDF candidates for visual and academic review
+        uses: actions/upload-artifact@v4
+        with:
+          name: physics-textbooks-pdf-candidates
+          path: /tmp/physics-build/*.pdf
+          if-no-files-found: error
