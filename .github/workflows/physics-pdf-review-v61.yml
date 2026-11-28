@@ -1,4 +1,4 @@
-name: Physics V5.1–V5.5 and V6.3 illustrated PDF review
+name: Physics V5.1–V5.6 and V6.3 illustrated PDF review
 on:
   workflow_dispatch:
   push:
@@ -15,6 +15,9 @@ on:
       - 'truongchuyen/physics/physics-volume03-v62.html'
       - 'truongchuyen/physics/physics-thermal-level2-v55.html'
       - 'truongchuyen/physics/physics-volume04-v63.html'
+      - 'truongchuyen/physics/physics-electromagnetism-v56.html'
+      - 'truongchuyen/physics/physics-volume05-v63.html'
+      - 'truongchuyen/physics/physics-volume06-v63.html'
 permissions:
   contents: read
 jobs:
@@ -27,7 +30,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-fonts-recommended fonts-dejavu-core latexmk poppler-utils librsvg2-bin
-      - name: Build and inspect 48 illustrated PDF candidates
+      - name: Build and inspect 64 illustrated PDF candidates
         run: python3 .github/scripts/physics_pdf_review_v61.py
       - name: Upload diagnostics
         if: always()
@@ -44,12 +47,12 @@ jobs:
       - name: Upload PDF candidates only if checks passed
         uses: actions/upload-artifact@v4
         with:
-          name: physics-v63-illustrated-pdf-candidates
+          name: physics-v631-illustrated-pdf-candidates
           path: |
             /tmp/vtalent-pdf-review/PHY*-V*-vi.pdf
             /tmp/vtalent-pdf-review/PHY*-V*-en.pdf
             /tmp/vtalent-pdf-review/V0*-V62-vi.pdf
             /tmp/vtalent-pdf-review/V0*-V62-en.pdf
-            /tmp/vtalent-pdf-review/V04-V63-vi.pdf
-            /tmp/vtalent-pdf-review/V04-V63-en.pdf
+            /tmp/vtalent-pdf-review/V0*-V63-vi.pdf
+            /tmp/vtalent-pdf-review/V0*-V63-en.pdf
           if-no-files-found: error

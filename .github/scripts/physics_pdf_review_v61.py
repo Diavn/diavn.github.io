@@ -14,7 +14,10 @@ SPECS=[
 ("physics-volume02-v62.html","V62",2),
 ("physics-volume03-v62.html","V62",2),
 ("physics-thermal-level2-v55.html","V55",12),
-("physics-volume04-v63.html","V63",2)]
+("physics-volume04-v63.html","V63",2),
+("physics-electromagnetism-v56.html","V56",12),
+("physics-volume05-v63.html","V63",2),
+("physics-volume06-v63.html","V63",2)]
 class Reader(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -83,7 +86,7 @@ def fmt(s):
         return "".join(result)
     return "".join(x if i%2 else prose(x) for i,x in enumerate(re.split(r'(\\\(.*?\\\))',s,flags=re.S)))
 
-ID=re.compile(r"\bPHY(?:101|102|103|201|202|203)-[A-F]-(?:V\d+-)?\d+\.\d+\b")
+ID=re.compile(r"\bPHY(?:101|102|103|201|202|203|204)-[A-F]-(?:V\d+-)?\d+\.\d+\b")
 expected={}
 for filename,version,num in SPECS:
     p=Reader()
@@ -98,7 +101,7 @@ for filename,version,num in SPECS:
         stem=code+"-"+version+"-"+lang
         figure_count=sum(v.startswith("FIGTOKEN") for t,v,z in parts)
         expected[stem]=(author,question_ids,figure_count)
-        pre=r"\documentclass[11pt,a4paper,openany]{book}"+"\n"+r"\usepackage[margin=23mm]{geometry}\usepackage{fontspec}\setmainfont{DejaVu Serif}\usepackage{amsmath,amssymb,mathtools,microtype,graphicx,xurl}\usepackage[hidelinks]{hyperref}\urlstyle{same}\raggedright\sloppy\pagestyle{plain}\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}\setlength{\emergencystretch}{5em}\setlength{\hfuzz}{0pt}"
+        pre=r"\documentclass[11pt,a4paper,openany]{book}"+"\n"+r"\usepackage[margin=23mm]{geometry}\usepackage{fontspec}\setmainfont{DejaVu Serif}\usepackage{amsmath,amssymb,mathtools,microtype,graphicx,xurl}\usepackage[hidelinks]{hyperref}\urlstyle{same}\raggedright\sloppy\pagestyle{plain}\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}\setlength{\emergencystretch}{5em}\setlength{\hfuzz}{0pt}\setcounter{secnumdepth}{0}\setcounter{tocdepth}{1}"
         if lang=="vi":pre+=r"\renewcommand{\chaptername}{Chương}\renewcommand{\contentsname}{Mục lục}"
         pre+=r"\hypersetup{pdfauthor={"+author+r"},pdftitle={V-TALENT Physics "+code+r" "+version+r"}}"
         pre+=r"\begin{document}\pagestyle{plain}\title{\Large V-TALENT Physics\par\medskip\large "+fmt(title)+r"}\author{"+author+r"}\date{2026 -- "+version+(" -- Bản thảo kiểm tra" if lang=="vi" else " -- Review candidate")+r"}\maketitle\tableofcontents"
@@ -116,7 +119,7 @@ for filename,version,num in SPECS:
                 b.append(r"\subsection{"+fmt(value)+"}")
             else:b.append(fmt(value))
         (OUT/(stem+".tex")).write_text(pre+"\n\n"+"\n\n".join(b)+r"\end{document}",encoding="utf-8")
-assert len(expected)==48
+assert len(expected)==64
 report=["V-TALENT Physics PDF review: candidate builds, not independently validated textbooks.","Existing published PDFs (page counts and extracted IDs; not proof of correctness):"]
 for code in ["PHY101-A","PHY101-B","PHY102-A","PHY102-B","PHY102-C","PHY102-D"]:
     for lang in ["vi","en"]:
@@ -150,7 +153,8 @@ for stem,(author,ids,figure_count) in expected.items():
     if glyphs:errors.append(stem+" missing glyphs "+str(glyphs[:5]))
     if severe:
         errors.append(stem+" overfull >5pt "+str(severe[:5]))
-        report.extend(line for line in log.splitlines() if "Overfull" in line)
+        for match in re.finditer(r"Overfull[^\n]*(?:\n[^\n]*){0,3}",log):
+            report.append(match.group(0))
     report.append(f"{stem}: {pages} pages; {len(ids)} IDs expected, {len(missing)} missing; {figure_count} vector diagrams included by generator; {len(glyphs)} glyph warnings; {len(severe)} severe overfull boxes")
     # Rasterize title and first content page for human review.
     subprocess.run(["pdftoppm","-f","1","-l","1","-r","95","-png",str(pdf),str(OUT/(stem+"-cover"))],check=True)
